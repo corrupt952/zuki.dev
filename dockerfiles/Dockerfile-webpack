@@ -1,5 +1,5 @@
 FROM node:10
-RUN npm install -y yarn \
+RUN npm install -g yarn \
 	&& mkdir -p /app
 WORKDIR /app
 COPY ./dockerfiles/docker-entrypoint-webpack.sh /app/dockerfiles/docker-entrypoint-webpack.sh

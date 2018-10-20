@@ -1,0 +1,47 @@
+---
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: golang:1.11
+    steps:
+      - run:
+          name: Install Hugo
+          command: |
+            cd /root
+            wget -O hugo.tgz https://github.com/gohugoio/hugo/releases/download/v0.49.2/hugo_0.49.2_Linux-64bit.tar.gz
+            tar xzvf hugo.tgz
+            mv ./hugo /usr/local/bin/hugo
+            cd /root/project
+      - checkout
+      - run:
+          name: Build site
+          command: hugo
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public/*
+      - store_artifacts:
+          path: public
+  deploy:
+    docker:
+      - image: node:10
+    steps:
+      - run:
+          name: Install firebase-tools
+          command: npm install -g firebase-tools
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: ls -la public/
+      - run:
+          name: Deploy to Firebase
+          command: firebase deploy -p ./public --token "$FIREBASE_TOKEN"
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires: [build]
