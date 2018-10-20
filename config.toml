@@ -1,0 +1,22 @@
+baseUrl = "https://www.khasegawa.net"
+languageCode = "ja-jp"
+title = "khasegawa.net"
+copyright = "Copyright © 2014- www.khasegawa.net All Rights Reserved."
+paginate = 10
+theme = "hello-friend"
+
+[params]
+  subtitle = "Your site subtitle"
+
+[params.logo]
+  logoText = "khasegawa.net"
+#   or
+#
+#   path = "/img/your-example-logo.svg"
+#   alt = "Your example logo alt text"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
