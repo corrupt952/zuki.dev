@@ -17,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: Build site
-          command: hugo
+          command: hugo --config ./config.toml
       - persist_to_workspace:
           root: .
           paths:
