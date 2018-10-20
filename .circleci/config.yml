@@ -22,7 +22,7 @@ jobs:
             git submodule update --remote
       - run:
           name: Build site
-          command: hugo --config ./config.toml
+          command: hugo
       - persist_to_workspace:
           root: .
           paths:

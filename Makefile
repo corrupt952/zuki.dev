@@ -1,2 +1,2 @@
 run:
-	hugo server -D --bind 0.0.0.0 --watch --disableFastRender
+	hugo server -F -D --bind 0.0.0.0 --watch --disableFastRender

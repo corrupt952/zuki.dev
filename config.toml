@@ -2,8 +2,8 @@ baseUrl = "https://hephaestos.khasegawa.net/"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja"
 title = "khasegawa.net"
-copyright = "Copyright © 2014- www.khasegawa.net All Rights Reserved."
-paginate = 10
+copyright = "Copyright © 2014-2018 www.khasegawa.net All Rights Reserved."
+paginate = 5
 theme = "hello-friend"
 
 [params]

@@ -1,6 +1,6 @@
 +++
 title = "BloggerからHugoに移行した"
-date = "2018-10-20T07:25:10Z"
+date = "2018-10-22T07:25:10Z"
 draft = "false"
 author = "K@zuki."
 cover = "2018/10/hugo/cover.jpg"
