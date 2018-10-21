@@ -5,7 +5,10 @@ jobs:
   build:
     docker:
       - image: golang:1.11
+        environment:
+          TZ: Asia/Tokyo
     steps:
+      - run: date
       - run:
           name: Install Hugo
           command: |
@@ -32,6 +35,8 @@ jobs:
   deploy:
     docker:
       - image: node:10
+        environment:
+          TZ: Asia/Tokyo
     steps:
       - run:
           name: Install firebase-tools
@@ -39,7 +44,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: ls -la public/
       - run:
           name: Deploy to Firebase
           command: firebase deploy -p ./public --token "$FIREBASE_TOKEN"
