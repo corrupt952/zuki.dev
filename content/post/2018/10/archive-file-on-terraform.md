@@ -1,6 +1,6 @@
 +++
 title = "Terraformでファイルを圧縮する"
-date = "2018-10-24T00:00:00Z"
+date = "2018-10-24T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
 cover = "2018/10/archive-file-on-terraform/cover.jpg"
