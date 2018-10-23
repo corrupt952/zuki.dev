@@ -25,7 +25,7 @@ jobs:
             git submodule update --remote
       - run:
           name: Build site
-          command: hugo
+          command: make build
       - persist_to_workspace:
           root: .
           paths:
