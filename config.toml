@@ -7,7 +7,7 @@ paginate = 5
 theme = "hello-friend"
 
 [params]
-  subtitle = "Your site subtitle"
+  subtitle = "ゆるりと"
 
 [params.logo]
   logoText = "khasegawa.net"
