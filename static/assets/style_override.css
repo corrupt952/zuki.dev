@@ -6,6 +6,10 @@
   margin-top: 0.9rem;
 }
 
+.posts {
+  max-width: 100%;
+}
+
 .post-header__mark:before {
   content: '>';
   display: block;
