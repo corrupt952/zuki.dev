@@ -3,6 +3,6 @@ RUN wget -O hugo.tgz https://github.com/gohugoio/hugo/releases/download/v0.49.2/
 	&& tar xzvf hugo.tgz \
 	&& mv ./hugo /usr/local/bin/hugo \
 	&& apk update \
-	&& apk add --no-cache make imagemagick bash \
+	&& apk add --no-cache make imagemagick git bash pngquant file \
 	&& mkdir /app
 WORKDIR /app

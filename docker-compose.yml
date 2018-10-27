@@ -1,6 +1,8 @@
 version: '3'
 services:
   hugo:
+    container_name: khasegawa.net-hugo
+    image: khasegawa.net/hugo
     build:
       context: dockerfiles/hugo/
     volumes:
@@ -9,6 +11,8 @@ services:
       - '1313:1313'
     command: make run
   webpack:
+    container_name: khasegawa.net-webpack
+    image: khasegawa.net/webpack
     build:
       context: dockerfiles/webpack/
     volumes:

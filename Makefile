@@ -4,7 +4,10 @@ FIND_INAME_OPTIONS=-iname "*.png" -o -iname "*.jpg" -o -iname "*.css" -o -iname 
 define COMPRESS_ASSETS
 for f in $$(find public/**/* $(FIND_INAME_OPTIONS))
 do
-	gzip --best -c "./$${f}" > "$${f}.gz"
+	case $$(file --mime-type -b $${f}) in
+		image/png) pngquant --ext .png -f $${f} ;;
+	esac
+	gzip -9 -c "./$${f}" > "$${f}.gz"
 	touch --no-create --reference="$${f}" "$${f}.gz"
 done
 endef
