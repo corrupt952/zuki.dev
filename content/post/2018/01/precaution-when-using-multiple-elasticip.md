@@ -5,6 +5,7 @@ draft = "false"
 author = "K@zuki."
 cover = "2018/01/precaution-when-using-multiple-elasticip/cover.jpg"
 description = "今の案件で、複数のElasticIPを利用しようと思った時のメモ。"
+tags = ["AWS"]
 +++
 
 今の案件で、複数のElasticIPを利用しようと思った時のメモ。

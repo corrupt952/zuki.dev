@@ -5,6 +5,7 @@ draft = "false"
 author = "K@zuki."
 cover = "2018/10/close-current-tab/cover.jpg"
 description = ""
+tags = ["Javascript"]
 +++
 
 ## TL;DR

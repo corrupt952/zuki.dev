@@ -5,6 +5,7 @@ draft = "false"
 author = "K@zuki."
 cover = "2018/10/impression-when-try-dry-configurable-on-production/cover.jpg"
 description = "前職でリリースしてからしばらく経ったので、dry-configurableを使用したアプリケーションを運用してみてという話を書いてみようかと思います。"
+tags = ["Ruby", "Ruby on Rails"]
 +++
 
 前職でリリースしてからしばらく経ったので、dry-configurableを使用したアプリケーションを運用してみてという話を書いてみようかと思います。

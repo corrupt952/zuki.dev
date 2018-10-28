@@ -5,6 +5,7 @@ draft = "false"
 author = "K@zuki."
 cover = "2018/01/about-multi-az-for-rds/cover.jpg"
 description = "[Amazon RDS Multi-AZ 配備](https://aws.amazon.com/jp/rds/details/multi-az/)という公式のドキュメントに書いてあることだが、RDSのインスタンスを**Multi-AZ 配備**という項目を設定するだけで、簡単にMulti-AZ構成にすることができる。"
+tags = ["AWS"]
 +++
 
 [Amazon RDS Multi-AZ 配備](https://aws.amazon.com/jp/rds/details/multi-az/)という公式のドキュメントに書いてあることだが、RDSのインスタンスを**Multi-AZ 配備**という項目を設定するだけで、簡単にMulti-AZ構成にすることができる。

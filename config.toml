@@ -6,6 +6,10 @@ copyright = "Copyright © 2014-2018 www.khasegawa.net All Rights Reserved."
 paginate = 5
 theme = "hello-friend"
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 [params]
   subtitle = "ゆるりと"
 

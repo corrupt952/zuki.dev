@@ -5,6 +5,7 @@ draft = "false"
 author = "K@zuki."
 cover = "2018/01/reading-how-to-win-friends-and-influence-people/cover.jpg"
 description = "帰省中に読んだ本の中の1冊である[人を動かす](https://www.amazon.co.jp/%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E6%96%B0%E8%A3%85%E7%89%88-D%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%8D%E3%82%AE%E3%83%BC-ebook/dp/B00UBSPBPA/ref=dp_kinw_strp_1)を読んだ感想です。"
+tags = ["読書"]
 +++
 
 帰省中に読んだ本の中の1冊である[人を動かす](https://www.amazon.co.jp/%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E6%96%B0%E8%A3%85%E7%89%88-D%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%8D%E3%82%AE%E3%83%BC-ebook/dp/B00UBSPBPA/ref=dp_kinw_strp_1)を読んだ感想です。

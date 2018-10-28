@@ -5,6 +5,7 @@ draft = "false"
 author = "K@zuki."
 cover = "2018/01/note-when-changing-sasl-passwd-in-postfix/cover.jpg"
 description = "PostfixでSESにリレーしてメールを配信する仕組みを作っている時の作業を忘れがちなため、メモ書きを残す。"
+tags = ["Postfix"]
 +++
 
 PostfixでSESにリレーしてメールを配信する仕組みを作っている時の作業を忘れがちなため、メモ書きを残す。

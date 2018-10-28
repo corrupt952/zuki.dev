@@ -5,6 +5,7 @@ draft = "false"
 author = "K@zuki."
 cover = "2018/10/archive-file-on-terraform/cover.jpg"
 description = "Terraformでファイルを圧縮するには[archive_file](https://www.terraform.io/docs/providers/archive/d/archive_file.html)を使って、ファイルを圧縮します。"
+tags = ["Terraform"]
 +++
 
 Terraformでファイルを圧縮するには[archive_file](https://www.terraform.io/docs/providers/archive/d/archive_file.html)を使って、ファイルを圧縮します。
