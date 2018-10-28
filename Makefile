@@ -6,6 +6,7 @@ for f in $$(find public/**/* $(FIND_INAME_OPTIONS))
 do
 	case $$(file --mime-type -b $${f}) in
 		image/png) pngquant --ext .png -f $${f} ;;
+		image/jpeg) jpegoptim --strip-all --max=90 $${f} ;;
 	esac
 	gzip -9 -c "./$${f}" > "$${f}.gz"
 	touch --no-create --reference="$${f}" "$${f}.gz"
