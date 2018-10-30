@@ -67,7 +67,7 @@ workflows:
   daily_deploy:
     triggers:
       - schedule:
-          cron: "00 22 * * *"
+          cron: "00 16 * * *"
           filters:
             branches:
               only: [master]
