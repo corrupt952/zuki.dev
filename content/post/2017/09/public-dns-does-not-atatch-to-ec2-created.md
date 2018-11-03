@@ -3,7 +3,7 @@ title = "Terraformで作成したEC2にPublic DNSがつかない"
 date = "2017-09-26T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = ""
+cover = "2017/09/public-dns-does-not-atatch-to-ec2-created/cover.jpg"
 description = "今回はHow-to系でも、問題解決系でもなく、率直に思ったことを書く"
 tags = ["Terraform", "AWS"]
 +++

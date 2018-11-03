@@ -3,7 +3,7 @@ title = "Terraformの反映をCircleCIで自動化"
 date = "2017-12-05T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = ""
+cover = "2017/12/automating-terraform-apply-with-circleci/cover.jpg"
 description = "今の仕事では、アプリのテストもデプロイも、全てCircleCIで自動化しています。その自動化の流れにのって、Terraformでの構成管理もCircleCIで自動化ています。**.circleci/config.yml**の内容を備忘録。"
 tags = ["Terraform", "CircleCI", "CI"]
 +++
