@@ -42,8 +42,6 @@ jobs:
           root: .
           paths:
             - public/*
-      - store_artifacts:
-          path: public
 
   deploy:
     executor: deployer
