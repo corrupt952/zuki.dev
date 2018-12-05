@@ -8,52 +8,52 @@ description = "参加してきた時のメモを残しておきます."
 tags = ["イベント/勉強会", "Docker", "Apache Mesos", "Kubernetes", "Cloud Native"]
 +++
 
-参加してきた時のメモを残しておきます.
+参加してきた時のメモを残しておきます.  
 ※ 写真を撮りたかったのですが準備ができてなかったのでテキストデータのみです.
 
-まず最初にJapan Container Daysを開催・運営してくださった方々、登壇してくださった方々に感謝を.
-とても刺激的な2日間でよい時間を過ごせました.
+まず最初にJapan Container Daysを開催・運営してくださった方々、登壇してくださった方々に感謝を.  
+とても刺激的な2日間でよい時間を過ごせました.  
 ありがとうございました.
 
 ## Microservices Platform on Kubernetes at Mercari
 <script async class="speakerdeck-embed" data-id="5ce5dcf2ea464d0d97b41ecbc6841273" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-メルカリ内部のマイクロサービスプラットフォームがどうなっているのかがまとまっていた.
+メルカリ内部のマイクロサービスプラットフォームがどうなっているのかがまとまっていた.  
 メルカリはCloud Nativeを利用するだけではなく、Cloud Native関連のOSSを公開していくことで貢献していっているというスタンスはとても良い.（前から知ってるけど）
 
 ## Kubernetesによる機械学習基盤への挑戦
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/HOaF4FFWFsbiKK" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/pfi/kubernetes-125013757" title="Kubernetesによる機械学習基盤への挑戦" target="_blank">Kubernetesによる機械学習基盤への挑戦</a> </strong> from <strong><a href="https://www.slideshare.net/pfi" target="_blank">Preferred Networks</a></strong> </div>
 
-PFNの機械学習基盤でどうKubernetesが使われているのかがまとまっていた.
+PFNの機械学習基盤でどうKubernetesが使われているのかがまとまっていた.  
 こちらでもOSSで貢献していくというスタンスはとても良いと思う.
 
 ## LINE Engineerを支える CaaS基盤の今とこれから
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/2DA1FmBFKTyozd" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/linecorp/line-engineer-caas" title="LINE Engineerを支える CaaS基盤の今とこれから" target="_blank">LINE Engineerを支える CaaS基盤の今とこれから</a> </strong> from <strong><a href="https://www.slideshare.net/linecorp" target="_blank">LINE Corporation</a></strong> </div>
 
-LINEのプライベートクラウドの開発基盤の変遷についてまとまっていた.
-まず一言言えば、**規模が違う**.
-とはいえ、開発者のために使いやすい環境を提供するというスタンスは良いと思った.
-ここまでの規模は難しくても、それを意識していきたい.
+LINEのプライベートクラウドの開発基盤の変遷についてまとまっていた.  
+まず一言言えば、**規模が違う**.  
+とはいえ、開発者のために使いやすい環境を提供するというスタンスは良いと思った.  
+ここまでの規模は難しくても、それを意識していきたい.  
 
 ## Cloud Native の未来とIBMの取り組み
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/IbWobbGt583mpD" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/capsmalt/jkdv1812keynoteibmcapsmalt" title="JKDv18.12_keynote_ibm_capsmalt" target="_blank">JKDv18.12_keynote_ibm_capsmalt</a> </strong> from <strong><a href="https://www.slideshare.net/capsmalt" target="_blank">capsmalt</a></strong> </div>
 
-IBMがどうCloud Nativeに関わっているのか、どういうサービスを展開しているのかが分かる発表だった.
-Kubernetesを使うことで、どこでもWatsonを動かすことが可能になったという話は興味深かった.
+IBMがどうCloud Nativeに関わっているのか、どういうサービスを展開しているのかが分かるセッションだった.  
+Kubernetesを使うことで、どこでもWatsonを動かすことが可能になったという話は興味深かった.  
 
 ## ZOZOTOWNリプレイスにおけるKubernetes活用
 <script async class="speakerdeck-embed" data-id="c194db73d6c541bda9d241f932f109ca" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-ZOZOがどうKubernetesを活用しているのか、活用した上でどう運用しているのかが分かる発表だった.
-k8sを導入することで、運用コストが下がって、信頼性が向上したというのは興味深いですね.
+ZOZOがどうKubernetesを活用しているのか、活用した上でどう運用しているのかが分かるセッションだった.  
+k8sを導入することで、運用コストが下がって、信頼性が向上したというのは興味深いですね.  
 
 ## IBM Cloud Kubernetesの全貌と始め方
 <script async class="speakerdeck-embed" data-id="6635fd8d1cc24e12980acd39ed072118" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-IBM Cloudのサービスの1つであるIBM Cloud Kubernetesについての説明.
-当初思っていたよりも、思っていたよりも使いやすそうだった.
-IKSの具体的な使い方はスライドを見てもらった方が良さそう.
-年齢的に知らないはずだけど何故か知ってるOS/2 WarpがIBMの歴史で出てきたのが嬉しかった.
+IBM Cloudのサービスの1つであるIBM Cloud Kubernetesについての説明.  
+当初思っていたよりも、思っていたよりも使いやすそうだった.  
+IKSの具体的な使い方はスライドを見てもらった方が良さそう.  
+年齢的に知らないはずだけど何故か知ってるOS/2 WarpがIBMの歴史で出てきたのが嬉しかった.  
 
 * Redhat買収するぐらいCloudNativeに力を入れてる
   * まだまだこれから
@@ -77,8 +77,8 @@ IKSの具体的な使い方はスライドを見てもらった方が良さそ�
 ## Kubernetes がもたらす 分散システムの脅威との戦い
 <script async class="speakerdeck-embed" data-id="fbd1b8ed2e444d80976bbf585459c761" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-Kubernetesを導入した時から、組織や仕組みについての説明.
-システムを導入するために組織を変革するのはとても勇気がいる判断だと思うし、それで導入しているのは正直凄い.
+Kubernetesを導入した時から、組織や仕組みについての説明.  
+システムを導入するために組織を変革するのはとても勇気がいる判断だと思うし、それで導入しているのは正直凄い.  
 
 * 全てのシステムをk8sに移行した
   * これで分散システムの恩恵を受けたが、問題も発生した
@@ -109,15 +109,15 @@ Kubernetesを導入した時から、組織や仕組みについての説明.
 ## 40 topics of Kubernetes
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/gSAH6woAqbvSFG" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/tyoshio2002/japan-container-day-2018" title="Japan Container Day 2018" target="_blank">Japan Container Day 2018</a> </strong> from <strong><a href="https://www.slideshare.net/tyoshio2002" target="_blank">Yoshio Terada</a></strong> </div>
 
-KubernetesだけでなくDockerを使う上での心構え的な話しもあった.
-改めて振り返ることができたので面白いトピックだった.
-てらだよしおがんばった. ([参考](https://twitter.com/search?q=%23%E3%81%A6%E3%82%89%E3%81%A0%E3%82%88%E3%81%97%E3%81%8A%E3%81%8C%E3%82%93%E3%81%B0%E3%82%8C&src=typd))
+KubernetesだけでなくDockerを使う上での心構え的な話しもあった.  
+改めて振り返ることができたので面白いトピックだった.  
+てらだよしおがんばった. ([参考](https://twitter.com/search?q=%23%E3%81%A6%E3%82%89%E3%81%A0%E3%82%88%E3%81%97%E3%81%8A%E3%81%8C%E3%82%93%E3%81%B0%E3%82%8C&src=typd))  
 
 ## Ansible,Terraform,Packerで作るSelf-Hosted Kubernetes
 <script async class="speakerdeck-embed" data-id="fa9323ec50b0498d90c31a2f52020dfe" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-KubernetesでKubernetesクラスタを管理することで、Kubernetesが持つ機能の恩恵を受けようという話.
-実際にどうSelf-Hostingしていくかの話が盛り込んであって学びのある良いセッションだった.
+KubernetesでKubernetesクラスタを管理することで、Kubernetesが持つ機能の恩恵を受けようという話.  
+実際にどうSelf-Hostingしていくかの話が盛り込んであって学びのある良いセッションだった.  
 
 * OpenStackを用いたPrivateCloudを使っているが、PublicCloudも一部使っている
 * (C,P,F)aaSを提供することで生産性を向上させたい
@@ -160,15 +160,15 @@ KubernetesでKubernetesクラスタを管理することで、Kubernetesが持�
     * k8s管理下におけるとよりよくできそう
 
 ## Knativeのすべて
-記事作成時点でスライド未発見.(見つけ次第アップデートするかもしれない)
-眠かったので正直あんまり覚えてない...
-Knativeは、こんなに簡単に扱えるよ！っていうセッションだったはず.
-まともに覚えてるのAge of EmpiresとCiv6の話が出てたということ.
-いや、ほんとすんません... まじで...
+記事作成時点でスライド未発見.(見つけ次第アップデートするかもしれない)  
+眠かったので正直あんまり覚えてない...  
+Knativeは、こんなに簡単に扱えるよ！っていうセッションだったはず.  
+まともに覚えてるのAge of EmpiresとCiv6の話が出てたということ.  
+いや、ほんとすんません... まじで...  
 
 ### Civ6知らない人向けの話
-Civ6のテクノロジツリーでは、以下のように8時代あります.
-スライドで出ていたのは、この時代の中の最初と最後です.
+Civ6のテクノロジツリーでは、以下のように8時代あります.  
+スライドで出ていたのは、この時代の中の最初と最後です.  
 
 * 太古
 * 古典
@@ -179,14 +179,14 @@ Civ6のテクノロジツリーでは、以下のように8時代あります.
 * 原子力時代
 * 情報時代
 
-**太古は灌漑や畜産、青銅器などが始まる時代**で、**情報時代はステルス技術やロボット工学が始まる時代**です.
+**太古は灌漑や畜産、青銅器などが始まる時代**で、**情報時代はステルス技術やロボット工学が始まる時代**です.  
 Age of Empiresの例では、石器時代から鉄器時代への進化という例を出していて、この程度の進化じゃなくて、Civ6の太古時代から情報時代ぐらいへの進化が求めているものですよねっていう話だったと思います.
 
 ## Cloud Native プロダクト 1000本ノック
-記事作成時点でスライド未発見.(見つけ次第アップデートするかもしれない)
-Cloud Nativeプロジェクトについてざっと話していた.
-最後はCNCF LandscapeのTrail mapの画像を出して、これぐらいあるんですよで終了.
-結構知らない技術も多かったので知る機会が得られて良かった.
+記事作成時点でスライド未発見.(見つけ次第アップデートするかもしれない)  
+Cloud Nativeプロジェクトについてざっと話していた.  
+最後はCNCF LandscapeのTrail mapの画像を出して、これぐらいあるんですよで終了.  
+結構知らない技術も多かったので知る機会が得られて良かった.  
 
 *  What is Cloud Native
   * 疎結合なシステム
@@ -265,8 +265,8 @@ Cloud Nativeプロジェクトについてざっと話していた.
 ## runcだけじゃないlow level runtime徹底比較
 <script async class="speakerdeck-embed" data-id="3bd372ee2c91404d9bf50b0f078f2e4b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-結構しっかり書いていて、面白い内容だったと思う.
-ここに載ってないランタイムもあるそうなので、誰かやってくれるのか期待.
+結構しっかり書いていて、面白い内容だったと思う.  
+ここに載ってないランタイムもあるそうなので、誰かやってくれるのか期待.  
 
 * 色々なlow level runtime
   * runc,runv,cc-runtime,kata-runtime,runq,runnc,runsc,railcar
@@ -292,8 +292,8 @@ Cloud Nativeプロジェクトについてざっと話していた.
 ## Kubernetesと暮らすRancherな生活
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/LHvJt4semoPJlZ" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/gchiba/kubernetesrancher-125017022" title="Kubernetesと暮らすRancherな生活" target="_blank">Kubernetesと暮らすRancherな生活</a> </strong> from <strong><a href="https://www.slideshare.net/gchiba" target="_blank">Go Chiba</a></strong> </div>
 
-Rancherとその周辺ツールについて簡単にまとまっていた.
-初めて触ったのが1系だったので、今は結構変わってるんだなと実感.
+Rancherとその周辺ツールについて簡単にまとまっていた.  
+初めて触ったのが1系だったので、今は結構変わってるんだなと実感.  
 
 *  What's Rancher?
   * OSSなコンテナ管理ツール
@@ -337,9 +337,9 @@ Rancherとその周辺ツールについて簡単にまとまっていた.
     * http://slack.rancher.jp/
 
 ## showKs
-記事作成時点でスライド未発見.(見つけ次第アップデートするかもしれない)
-showKsの開発裏側を説明していた.
-結構楽しそうに話していたので、学生時代の夜更かしして何かやっていた時を思い出した.
+記事作成時点でスライド未発見.(見つけ次第アップデートするかもしれない)  
+showKsの開発裏側を説明していた.  
+結構楽しそうに話していたので、学生時代の夜更かしして何かやっていた時を思い出した.  
 
 * 10/11開発開始したけど、打ち合わせするたびに複雑化していく構成
 * 開発活動時間帯 22:00-28:00
@@ -360,7 +360,7 @@ showKsの開発裏側を説明していた.
 ### Apache Mesos
 <script async class="speakerdeck-embed" data-id="d3cbbb215b044973ab360fc5279d4417" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-Apache Mesosについて分かりやすい発表であった.
+Apache Mesosについて分かりやすいセッションであった.  
 
 * Apache Mesos
   * 従来のシステム管理だと、マシンリソース管理や、冗長性を管理するのがつらい
@@ -393,8 +393,8 @@ Apache Mesosについて分かりやすい発表であった.
 ### IQONクローラー基盤【Mesosユーザ事例】
 <script async class="speakerdeck-embed" data-id="f95374a831894f9f8250eb700f2a54a8" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-2016年当時のクローラー基盤が抱えていた課題の話から、その課題にマッチしたのがMesosであったということが分かりやすくまとまっていた.
-最後のスライドに詳しく知りたい人向けのリンクが載っている.
+2016年当時のクローラー基盤が抱えていた課題の話から、その課題にマッチしたのがMesosであったということが分かりやすくまとまっていた.  
+最後のスライドに詳しく知りたい人向けのリンクが載っている.  
 
 * IQONでは、クローラー基盤としてMesosを利用している.
 * 2016年当時、300 EC Sites, 1,000,000 fashion itemsほどのデータをクロールしていた
@@ -420,14 +420,14 @@ Apache Mesosについて分かりやすい発表であった.
 ## Kubernetes Meetup Tokyo 2年間の振り返りと未来
 <script async class="speakerdeck-embed" data-id="4e92bdb0ec4e447faa7e8ba8300a1542" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-Kubernetesと簡単な歴史とKubernetes Meetup Tokyoの歴史を時系列で遡っていったセッションだった.
-最後にスピーカー達が気になる話をしていて、個人的には[virtual-kubelet](https://github.com/virtual-kubelet/virtual-kubelet)が面白そうだなといった印象を受けた.
+Kubernetesと簡単な歴史とKubernetes Meetup Tokyoの歴史を時系列で遡っていったセッションだった.  
+最後にスピーカー達が気になる話をしていて、個人的には[virtual-kubelet](https://github.com/virtual-kubelet/virtual-kubelet)が面白そうだなといった印象を受けた.  
 
 ## 最後に
-とても参加する意義のある日々だったと思う.
-結構Kubernetesの話が多かったので、他のCloud Native話を聞けると個人的にはもっと嬉しかった.
-とはいえ、俺が期待している細かい中の話は勉強会やもっと小規模なイベントでする話なのかもしれないなと思う.
-イベントの中で一番心に残ったのは、**Dockerを知っていても、使い方を知っている人はそこまで居ない**です.
+とても参加する意義のある日々だったと思う.  
+結構Kubernetesの話が多かったので、他のCloud Native話を聞けると個人的にはもっと嬉しかった.  
+とはいえ、俺が期待している細かい中の話は勉強会やもっと小規模なイベントでする話なのかもしれないなと思う.  
+イベントの中で一番心に残ったのは、**Dockerを知っていても、使い方を知っている人はそこまで居ない**です.  
 言われみれば「確かに確かに」と納得するのですが、結構忘れがちかなと思いました.
 
 次回からは、**Cloud Native Days**に名称変更されるので、次回も参加できるようであれば参加していきたい.
