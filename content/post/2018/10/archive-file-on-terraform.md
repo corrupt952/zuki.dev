@@ -19,7 +19,7 @@ Terraformでファイルを圧縮するには[archive_file](https://www.terrafor
 * macOS ... 10.13.4
 * Terraform ... v0.11.7
 
-今回の検証に使ったソースコードは、[Githubのリポジトリ](https://github.com/corrupt952/terraform_archive_file)にコミットしてあります。
+今回の検証に使ったソースコードは、[Githubのリポジトリ](https://github.com/corrupt952/survey/tree/master/terraform/archive-file)にコミットしてあります。
 
 ## 単一ファイルを圧縮する
 単一ファイルを圧縮する場合は、`source_file`にファイルのパスを指定します。
