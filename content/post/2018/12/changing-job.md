@@ -1,5 +1,5 @@
 +++
-title = "転職エントリ"
+title = "転職しました"
 date = "2018-12-10T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
