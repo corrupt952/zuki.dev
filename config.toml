@@ -1,8 +1,6 @@
 baseUrl = "https://www.khasegawa.net/"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja"
-title = "khasegawa.net"
-copyright = "Copyright © 2014-2018 www.khasegawa.net All Rights Reserved."
 paginate = 5
 theme = "hello-friend"
 
@@ -11,17 +9,29 @@ theme = "hello-friend"
   tag = "tags"
 
 [params]
-  subtitle = "ゆるりと"
+  # dir name of your blog content (default is `content/posts`)
+  # contentTypeName = "posts"
+  # "light" or "dark"
+  defaultTheme = "dark"
 
-[params.logo]
-  logoText = "khasegawa.net"
-#   or
-#
-#   path = "/img/your-example-logo.svg"
-#   alt = "Your example logo alt text"
+[languages]
+  [languages.ja]
+    title = "khasegawa.net"
+    subtitle = "ゆるりと"
+    readMore = "Read more"
+    writtenBy = "Written by"
+    copyright = "Copyright © 2014-2018 www.khasegawa.net All Rights Reserved."
+    readOtherPosts = "Read other posts"
 
-[menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    [languages.ja.params.logo]
+    logoText = "khasegawa.net"
+    #   or
+    #
+    #   path = "/img/your-example-logo.svg"
+    #   alt = "Your example logo alt text"
+
+    [languages.ja.menu]
+      [[languages.ja.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
