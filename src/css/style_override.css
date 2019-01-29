@@ -1,2 +1,6 @@
 @import "logo_override.css";
 @import "list_override.css";
+
+p {
+  line-height: 1.6em;
+}

@@ -45,7 +45,9 @@
   margin: 0;
 }
 
-
+p {
+  line-height: 1.6em;
+}
 
 
 /*# sourceMappingURL=style_override.css.map*/
