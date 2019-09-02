@@ -3,7 +3,7 @@ title = "InkdropからBoostnoteに乗り換えた"
 date = "2019-09-03T00:00:00+09:00"
 draft = "false"
 author = ""
-cover = "2019/09/change-memo-tool/cover.jpg"
+cover = "2019/09/inkdrop-to-boostnote/cover.jpg"
 description = "1年半程度はInkdropでブログの下書き・メモ・議事録の下書きをしてきたが、Inkdropである必要がなくなってきたので一旦Inkdropを解約してBoostnoteに乗り換えました."
 tags = ["雑記"]
 +++
@@ -70,7 +70,7 @@ Google Driveを手元のPCと同期させるには、**バックアップと同�
 [ドライブファイルストーリムを導入する](https://support.google.com/a/answer/7491144?hl=ja)を参考に導入し、Boostnote用のディレクトリ作成します.
 後はそのディレクトリを同期すれば準備は完了です.
 
-{{< figure src="/img/2019/09/change-memo-tool/dfs.jpg" >}}
+{{< figure src="/img/2019/09/inkdrop-to-boostnote/dfs.jpg" >}}
 
 Boostnote with DFSの導入自体は非常に簡単でした.
 
