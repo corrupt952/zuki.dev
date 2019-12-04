@@ -12,7 +12,7 @@ theme = "hello-friend"
   # dir name of your blog content (default is `content/posts`)
   # contentTypeName = "posts"
   # "light" or "dark"
-  defaultTheme = "dark"
+  defaultTheme = "light"
 
 [languages]
   [languages.ja]
