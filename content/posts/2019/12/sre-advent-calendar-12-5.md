@@ -1,6 +1,6 @@
 +++
 title = "某社SREとしての1年間"
-date = "2019-12-05T00:00:00+09:00"
+date = "2019-12-04T00:22:00+09:00"
 draft = "false"
 author = "K@zuki."
 cover = "2019/12/sre-advent-calendar-12-5/cover.jpg"
