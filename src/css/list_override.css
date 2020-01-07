@@ -2,6 +2,10 @@
   max-width: 100%;
 }
 
+.post-header__mark {
+  display: inline-block;
+}
+
 .post-header__mark:before {
   content: '>';
   display: block;
