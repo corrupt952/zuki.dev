@@ -20,7 +20,7 @@ theme = "hello-friend"
     subtitle = "ゆるりと"
     readMore = "Read more"
     writtenBy = "Written by"
-    copyright = "Copyright © 2014-2018 www.khasegawa.net All Rights Reserved."
+    copyright = "Copyright © 2014-2020 www.khasegawa.net All Rights Reserved."
     readOtherPosts = "Read other posts"
 
     [languages.ja.params.logo]
