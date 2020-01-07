@@ -28,3 +28,6 @@ run:
 build:
 	hugo
 	echo "$${COMPRESS_ASSETS}" | ${SHELL}
+
+update_themes:
+	git submodule update --remote
