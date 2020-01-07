@@ -3,7 +3,7 @@ title = "転職しました"
 date = "2018-12-10T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/12/changing-job/cover.jpg"
+cover = "img/2018/12/changing-job/cover.jpg"
 description = "転職してから2ヶ月と少し経ちました.  今更ですが転職エントリを書いていこうと思います."
 tags = ["雑記"]
 +++

@@ -3,7 +3,7 @@ title = "zshでfunction definition file not foundの続き"
 date = "2017-08-15T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/08/function-definition-file-not-found-2/cover.jpg"
+# TODO: cover = "img/2017/08/function-definition-file-not-found-2/cover.jpg"
 description = "[前回の記事](/post/2017/08/function-definition-file-not-found/)なんですが、恐らく解決した。"
 tags = ["zsh"]
 +++

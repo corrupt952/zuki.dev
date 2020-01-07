@@ -3,7 +3,7 @@ title = "開発合宿してきました"
 date = "2019-02-15T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/02/dev-camp/cover.jpg"
+cover = "img/2019/02/dev-camp/cover.jpg"
 description = "2/9~2/11の3連休は開発合宿と称した温泉旅行に行ってきました.宿泊先は伊香保のホテル天坊で、ホテル内に飲み屋もあり、比較的宿泊しやすい施設だったと思います."
 tags = ["雑記"]
 +++

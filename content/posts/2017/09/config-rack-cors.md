@@ -3,7 +3,7 @@ title = "Rack::CorsでCORSの設定"
 date = "2017-09-25T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/09/config-rack-cors/cover.jpg"
+# TODO: cover = "img/2017/09/config-rack-cors/cover.jpg"
 description = "SinatraやRailsでCORSの設定をする時に、よくRack::Corsを利用します。riginsメソッドの引数は、可変長引数となっているため、**example.com**を追加します。"
 tags = ["Ruby", "Rack", "Ruby on Rails"]
 +++

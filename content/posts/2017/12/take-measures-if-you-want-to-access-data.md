@@ -3,7 +3,7 @@ title = "データへアクセスさせるなら必ず対策をしよう"
 date = "2017-12-28T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/take-measures-if-you-want-to-access-data/cover.jpg"
+# TODO: cover = "img/2017/12/take-measures-if-you-want-to-access-data/cover.jpg"
 description = "つい先日、特定のテーブルのレコードが全削除されるような事件を、初めて目の当たりにしました。（私が関わってるわけでない）そこで再確認できたことは、**アクセス権を渡すなら権限を絞ること**の重要さでした。"
 tags = ["DB"]
 +++

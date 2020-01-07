@@ -3,7 +3,7 @@ title = "このサイトの記事一覧・詳細が表示されていなかっ�
 date = "2019-01-28T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/01/not-visible-this-site/cover.jpg"
+cover = "img/2019/01/not-visible-this-site/cover.jpg"
 description = "先週の金曜日から今日にかけて記事一覧・詳細が表示されていない現象に遭遇した."
 tags = ["雑記"]
 +++

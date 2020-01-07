@@ -3,7 +3,7 @@ title = "ゼロトラスト超入門"
 date = "2019-04-19T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/04/reading-zero-trust-introduction/cover.jpg"
+cover = "img/2019/04/reading-zero-trust-introduction/cover.jpg"
 description = "同僚でもある[おかしん](https://twitter.com/okash1n)さんが技術書典で出していた[ゼロトラスト超入門](https://booth.pm/ja/items/1318558)を読んだ."
 tags = ["読書"]
 +++

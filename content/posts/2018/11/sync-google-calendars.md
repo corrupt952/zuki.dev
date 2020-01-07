@@ -3,7 +3,7 @@ title = "Googleカレンダーを同期するGASを書いた"
 date = "2018-11-29T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/sync-google-calendars/cover.jpg"
+cover = "img/2018/11/sync-google-calendars/cover.jpg"
 description = "最近は、イベントに参加することも多く、複数のGoogleアカウント感でスケジュールを手動コピーすることが多くなってきました.さすがに手動コピーは面倒なので、複数のGoogleカレンダーから1つのカレンダーへ同期するようなスクリプトを書きました."
 tags = ["Google Apps Script"]
 +++

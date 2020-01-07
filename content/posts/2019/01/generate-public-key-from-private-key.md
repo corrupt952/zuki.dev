@@ -3,7 +3,7 @@ title = "秘密鍵から公開鍵を生成する"
 date = "2019-01-25T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/01/generate-public-key-from-private-key/cover.jpg"
+cover = "img/2019/01/generate-public-key-from-private-key/cover.jpg"
 description = "sshで利用する秘密鍵から対応する公開鍵を生成する時のメモです."
 tags = ["SSH"]
 +++

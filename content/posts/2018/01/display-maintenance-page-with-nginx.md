@@ -3,7 +3,7 @@ title = "Nginxでメンテナンスページを表示する"
 date = "2018-01-02T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2018/01/display-maintenance-page-with-nginx/cover.jpg"
+# TODO: cover = "img/2018/01/display-maintenance-page-with-nginx/cover.jpg"
 description = "Nginxでメンテナンスページを表示させる仕組みを作った時の覚書。"
 tags = ["Nginx"]
 +++

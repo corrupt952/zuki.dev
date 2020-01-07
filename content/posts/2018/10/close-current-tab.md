@@ -3,7 +3,7 @@ title = "ブラウザの現在開いているタブを閉じる"
 date = "2018-10-25T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/10/close-current-tab/cover.jpg"
+cover = "img/2018/10/close-current-tab/cover.jpg"
 description = ""
 tags = ["Javascript"]
 +++

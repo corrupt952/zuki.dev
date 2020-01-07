@@ -3,7 +3,7 @@ title = "RubyでLTSVをハッシュに変換する"
 date = "2018-10-30T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/10/ltsv-to-hash-on-ruby/cover.jpg"
+cover = "img/2018/10/ltsv-to-hash-on-ruby/cover.jpg"
 description = "Rubyで、LTSVファイルをライブラリを使わずハッシュに変換する時のメモ。"
 tags = ["Ruby"]
 +++

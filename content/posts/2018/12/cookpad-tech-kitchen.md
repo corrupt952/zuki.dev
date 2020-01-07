@@ -3,7 +3,7 @@ title = "Cookpad Tech Kitchen参加してきた"
 date = "2018-12-05T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/12/cookpad-tech-kitchen/cover.jpg"
+cover = "img/2018/12/cookpad-tech-kitchen/cover.jpg"
 description = "Coopad Tech Kitchen#20に参加してきました.その時のメモを書いておきます."
 tags = ["イベント/勉強会", "Docker", "Amazon ECS"]
 +++

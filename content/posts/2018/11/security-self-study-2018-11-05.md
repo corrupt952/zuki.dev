@@ -3,7 +3,7 @@ title = "セキュリティ自己学習 2018/11/05"
 date = "2018-11-06T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/security-self-study-2018-11-05/cover.jpg"
+cover = "img/2018/11/security-self-study-2018-11-05/cover.jpg"
 description = "今日もとりあえずハニーポッタースライドを読みます."
 tags = ["セキュリティ"]
 +++

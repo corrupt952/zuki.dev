@@ -3,7 +3,7 @@ title = "ActionMailerで配信前にメールの宛先を変更する"
 date = "2018-01-22T00:00:00Z"
 draft = "false"
 author = "K@zuki."
-cover = "2018/01/change-address-before-delivery-in-actionmailer/cover.jpg"
+cover = "img/2018/01/change-address-before-delivery-in-actionmailer/cover.jpg"
 description = "Railsガイドを読んだことある人であれば知っていると思いますが、ActionMailerには`register_interceptor`というメソッドがあり、これに特定のクラスを登録することで、メール配信前のフックを実現することができます。"
 tags = ["Ruby on Rails"]
 +++

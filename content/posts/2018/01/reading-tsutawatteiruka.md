@@ -3,7 +3,7 @@ title = "伝わっているか？を読んで"
 date = "2018-01-01T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/01/reading-tsutawatteiruka/cover.jpg"
+cover = "img/2018/01/reading-tsutawatteiruka/cover.jpg"
 description = "帰省中に読んだ本の中の1冊である[伝わっているか？](https://www.amazon.co.jp/%E4%BC%9D%E3%82%8F%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%EF%BC%9F-%E5%AE%A3%E4%BC%9D%E4%BC%9A%E8%AD%B0-%E5%B0%8F%E8%A5%BF%E5%88%A9%E8%A1%8C-ebook/dp/B00KST3AT6)を読んだ感想です。"
 tags = ["読書"]
 +++

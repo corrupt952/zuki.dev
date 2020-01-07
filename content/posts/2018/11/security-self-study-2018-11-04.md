@@ -3,7 +3,7 @@ title = "セキュリティ自己学習 2018/11/04"
 date = "2018-11-04T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/security-self-study-2018-11-04/cover.jpg"
+cover = "img/2018/11/security-self-study-2018-11-04/cover.jpg"
 description = "転職してからSREエンジニアに必要なことを勉強する必要性がかなり高まりました.通常業務の間や、それ以外の時間で勉強するほかないこともあるので、1日15分程度軽く情報を集めてみます."
 tags = ["セキュリティ"]
 +++

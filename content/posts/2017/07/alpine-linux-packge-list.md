@@ -3,7 +3,7 @@ title = "Alpine Linuxのパッケージ一覧"
 date = "2017-07-26T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/07/alpine-linux-packge-list/cover.jpg"
+# TODO: cover = "img/2017/07/alpine-linux-packge-list/cover.jpg"
 description = "仕事ではDockerに触れる機会が余りないのですが、プライベートでは結構使っています。"
 tags = ["Alpine Linux"]
 +++

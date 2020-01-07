@@ -3,7 +3,7 @@ title = "EnvoyでHTTP/1.1のFront Proxyしてみた"
 date = "2018-12-11T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/12/http1.1-front-envoy/cover.jpg"
+cover = "img/2018/12/http1.1-front-envoy/cover.jpg"
 description = "EnvoyはHTTP/1.1とHTTP/2ともにサポートしているということで、HTTP/1.1のFront Proxyができるのか試してみました."
 tags = ["Envoy", "Docker"]
 +++

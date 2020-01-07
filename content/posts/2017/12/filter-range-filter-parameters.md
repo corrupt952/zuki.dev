@@ -3,7 +3,7 @@ title = "filter_parametersがフィルターしてくれる範囲"
 date = "2017-12-06T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/filter-range-filter-parameters/cover.jpg"
+# TODO: cover = "img/2017/12/filter-range-filter-parameters/cover.jpg"
 description = "Railsでは、filter_parametersという設定をすることが出来ます。ググれば具体的にどういう処理をしてくれているのか、他の方が色々書いてくれます。今回は、それらについて、誤解がないように書いておきます。"
 tags = ["Ruby", "Ruby on Rails"]
 +++

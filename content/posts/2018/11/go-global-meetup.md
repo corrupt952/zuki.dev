@@ -3,7 +3,7 @@ title = "GO GLOBALに参加してきた"
 date = "2018-11-30T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/go-global-meetup/cover.jpg"
+cover = "img/2018/11/go-global-meetup/cover.jpg"
 description = "今週の月曜日に[GO GLOBAL meetup](https://go-global.connpass.com/event/108021/)に参加してきました.その時のメモを備忘録代わりに記事として登録しておきます."
 tags = ["イベント/勉強会"]
 +++

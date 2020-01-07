@@ -3,7 +3,7 @@ title = "取得したドメインの名前解決が出来ない"
 date = "2017-12-23T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/name-resolution-of-acquired-domain-can-not-be-done/cover.jpg"
+# TODO: cover = "img/2017/12/name-resolution-of-acquired-domain-can-not-be-done/cover.jpg"
 description = "先日、取得したドメインの名前解決が出来ない問題がありました。"
 tags = ["DNS"]
 +++

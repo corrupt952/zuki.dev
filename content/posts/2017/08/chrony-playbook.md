@@ -3,7 +3,7 @@ title = "Chronyをインストールする時のPlaybook"
 date = "2017-08-29T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/08/chrony-playbook/cover.jpg"
+# TODO: cover = "img/2017/08/chrony-playbook/cover.jpg"
 description = "Chronyをインストールする箇所もPlaybook化。基本的に初期設定のままなので、何もいじらず書けばいい。"
 tags = ["Ansible"]
 +++

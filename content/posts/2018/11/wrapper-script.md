@@ -3,7 +3,7 @@ title = "ラッパースクリプトを作る時に気をつけていること"
 date = "2018-11-02T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/wrapper-script/cover.jpg"
+cover = "img/2018/11/wrapper-script/cover.jpg"
 description = "特定のコマンドをラップースクリプトを作る時に気をつけている時のメモ。"
 tags = ["Shell"]
 +++

@@ -3,7 +3,7 @@ title = "VirtualBox Guest AdditionsをCentOS公式のBoxにインストールす
 date = "2017-08-04T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/08/install-guest-addition-to-centos/cover.jpg"
+# TODO: cover = "img/2017/08/install-guest-addition-to-centos/cover.jpg"
 description = "CentOS公式のBox（Vagrant）だと、Guest Additionsがインストールされていません。これがインストールされてないと、VirtualBoxの共有フォルダーでマウントすることができません。"
 tags = ["VirtualBox", "CentOS"]
 +++

@@ -3,7 +3,7 @@ title = "ブログ用のMarkdown変換ツール"
 date = "2017-12-27T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/markdown-to-html/cover.jpg"
+# TODO: cover = "img/2017/12/markdown-to-html/cover.jpg"
 description = "このブログはBloggerで書いてるんですが、下書きはMarkdownで書いています。となると、HTMLに変換するツールが必要になります。専用のコマンドラインツールを用意しているんですが微妙だったので、ウェブアプリとして作り直しました。"
 tags = ["Ruby"]
 +++

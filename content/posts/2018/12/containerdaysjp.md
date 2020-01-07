@@ -3,7 +3,7 @@ title = "Japan Container Daysに参加してきた"
 date = "2018-12-06T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/12/containerdaysjp/cover.jpg"
+cover = "img/2018/12/containerdaysjp/cover.jpg"
 description = "参加してきた時のメモを残しておきます."
 tags = ["イベント/勉強会", "Docker", "Apache Mesos", "Kubernetes", "Cloud Native"]
 +++

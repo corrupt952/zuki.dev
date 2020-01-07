@@ -3,7 +3,7 @@ title = "自己署名証明書サイトに対してHeadless Chromeでスクリ�
 date = "2018-11-05T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/can-not-take-screenshot-when-try-to-take-screenshot-with-headless-chrome-for-self-signed-certificated-site/cover.jpg"
+cover = "img/2018/11/can-not-take-screenshot-when-try-to-take-screenshot-with-headless-chrome-for-self-signed-certificated-site/cover.jpg"
 description = "11月からT-Potを個人で運用を始めており、日々の攻撃傾向などが表示されるダッシュボードのスクリーンショットを自動で送ってくれる仕組みを構築中です.そこでHeadless Chromeが必要なダッシュボードにアクセスし、スクリーンショットを撮る仕組みを構築中に、自己署名証明書サイトに対してスクリーションショットがうまく撮れなかった悲しい経緯を紹介します."
 tags = ["セキュリティ", "Ruby"]
 +++

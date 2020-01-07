@@ -3,7 +3,7 @@ title = "ElasticIPを複数利用する時の注意"
 date = "2018-01-15T00:00:00Z"
 draft = "false"
 author = "K@zuki."
-cover = "2018/01/precaution-when-using-multiple-elasticip/cover.jpg"
+cover = "img/2018/01/precaution-when-using-multiple-elasticip/cover.jpg"
 description = "今の案件で、複数のElasticIPを利用しようと思った時のメモ。"
 tags = ["AWS"]
 +++

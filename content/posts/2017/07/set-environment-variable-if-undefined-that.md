@@ -3,7 +3,7 @@ title = "bashrcに環境変数が定義されていなければ設定する"
 date = "2017-07-31T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/07/set-environment-variable-if-undefined-that/cover.jpg"
+# TODO: cover = "img/2017/07/set-environment-variable-if-undefined-that/cover.jpg"
 description = ".bashrcに環境変数が定義されていなければ設定するメモ。"
 tags = ["bash"]
 +++

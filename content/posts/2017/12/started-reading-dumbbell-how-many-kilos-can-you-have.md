@@ -3,7 +3,7 @@ title = "ダンベル何キロ持てる？は読み始めました"
 date = "2017-12-22T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2017/12/started-reading-dumbbell-how-many-kilos-can-you-have/cover.jpg"
+cover = "img/2017/12/started-reading-dumbbell-how-many-kilos-can-you-have/cover.jpg"
 description = "3巻まで出ている[ダンベル何キロ持てる？](http://urasunday.com/dumbbell/)を2巻まで呼んだのだが、思ったよりも面白い。"
 tags = ["読書"]
 +++

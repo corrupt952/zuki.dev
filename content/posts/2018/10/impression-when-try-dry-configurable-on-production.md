@@ -3,7 +3,7 @@ title = "dry-configurableを本番運用してみた感想"
 date = "2018-10-29T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/10/impression-when-try-dry-configurable-on-production/cover.jpg"
+cover = "img/2018/10/impression-when-try-dry-configurable-on-production/cover.jpg"
 description = "前職でリリースしてからしばらく経ったので、dry-configurableを使用したアプリケーションを運用してみてという話を書いてみようかと思います。"
 tags = ["Ruby", "Ruby on Rails"]
 +++

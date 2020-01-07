@@ -3,7 +3,7 @@ title = "tmux上のCtrl-a・Ctrl-eが動かない"
 date = "2017-08-21T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/08/not-working-prefix-a-b-on-tmux/cover.jpg"
+# TODO: cover = "img/2017/08/not-working-prefix-a-b-on-tmux/cover.jpg"
 description = "Tmux2.5上でCtrl-a・Ctrl-eが効かなくなりました。shellは、zshを使っています。"
 tags = ["tmux"]
 +++

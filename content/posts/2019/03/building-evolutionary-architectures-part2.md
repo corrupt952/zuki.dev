@@ -3,7 +3,7 @@ title = "進化的アーキテクチャ 後半"
 date = "2019-03-10T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/03/building-evolutionary-architectures-part2/cover.jpg"
+cover = "img/2019/03/building-evolutionary-architectures-part2/cover.jpg"
 description = "[進化的アーキテクチャ 前半](https://www.khasegawa.net/posts/2019/03/building-evolutionary-architectures/)の続き."
 tags = ["読書"]
 +++

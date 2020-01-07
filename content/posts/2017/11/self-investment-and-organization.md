@@ -3,7 +3,7 @@ title = "自己投資と組織"
 date = "2017-11-29T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/11/self-investment-and-organization/cover.jpg"
+# TODO: cover = "img/2017/11/self-investment-and-organization/cover.jpg"
 description = "社会人4年目（実際はもう1,2年長い）になり、後輩社員も多く入ってくるようになりました。また、複数のプロジェクトに携わっていると、自社以外の方と話す機会も必然的に増えてきます。今回は、よく話題になる「業務外で勉強すべきか」について、個人的な意見をまとめておこうと思います。"
 tags = ["雑記"]
 +++

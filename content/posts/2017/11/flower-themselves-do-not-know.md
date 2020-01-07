@@ -3,7 +3,7 @@ title = "花自身は知らないのでしょうね"
 date = "2017-11-30T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2017/11/flower-themselves-do-not-know/cover.jpg"
+cover = "img/2017/11/flower-themselves-do-not-know/cover.jpg"
 description = ""
 tags = ["読書"]
 +++

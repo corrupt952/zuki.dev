@@ -3,7 +3,7 @@ title = "今年の抱負"
 date = "2019-01-24T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/01/resolution/cover.jpg"
+cover = "img/2019/01/resolution/cover.jpg"
 description = "2019年になり既に20日以上経って今更ですが、去年の抱負の振り返りと今年の抱負を振り返ろうと思います."
 tags = ["雑記"]
 +++

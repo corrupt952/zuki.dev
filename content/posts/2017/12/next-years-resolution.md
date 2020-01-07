@@ -3,7 +3,7 @@ title = "来年の抱負"
 date = "2017-12-31T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/next-years-resolution/cover.jpg"
+# TODO: cover = "img/2017/12/next-years-resolution/cover.jpg"
 description = "今日で2017年も終わりです。今年は、自律神経失調症で休職したり、思ったように仕事が出来なかったりと、個人的には辛い1年でした。"
 tags = ["雑記"]
 +++

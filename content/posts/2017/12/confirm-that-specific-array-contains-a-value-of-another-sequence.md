@@ -3,7 +3,7 @@ title = "特定の配列に別の配列の値が入っているか確認する"
 date = "2017-12-24T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/confirm-that-specific-array-contains-a-value-of-another-sequence/cover.jpg"
+# TODO: cover = "img/2017/12/confirm-that-specific-array-contains-a-value-of-another-sequence/cover.jpg"
 description = "最近、Twitterでこんな話をみたような気がしなくもないんだけど、とりあえず仕事でも書く機会があったのでメモ。"
 tags = ["Ruby"]
 +++

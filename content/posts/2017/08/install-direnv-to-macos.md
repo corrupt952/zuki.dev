@@ -3,7 +3,7 @@ title = "Macにdirenvを導入する"
 date = "2017-08-16T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/08/install-direnv-to-macos/cover.jpg"
+# TODO: cover = "img/2017/08/install-direnv-to-macos/cover.jpg"
 description = "仕事では１案件だけ集中して作業することもなく、複数の案件を同時に作業することもあると思います。（私はそう）そういう時にディレクトリごとに、環境変数を切り替えたいっていう時が多くあると思うのですが、[direnv](https://github.com/direnv/direnv)使いましょう。"
 tags = ["MacOS", "direnv"]
 +++

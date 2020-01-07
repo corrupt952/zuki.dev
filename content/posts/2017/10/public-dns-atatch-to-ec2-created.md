@@ -3,7 +3,7 @@ title = "Terraformで作成したEC2にPublic DNSがついた"
 date = "2017-10-03T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2017/10/public-dns-atatch-to-ec2-created/cover.jpg"
+cover = "img/2017/10/public-dns-atatch-to-ec2-created/cover.jpg"
 description = "[前回の記事](/post/2017/09/public-dns-does-not-atatch-to-ec2-created/)で、Public DNSがつかないっていう話をしていたのだが、そこに書いていた通りだった。"
 tags = ["AWS", "Terraform"]
 +++

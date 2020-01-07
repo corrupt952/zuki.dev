@@ -3,7 +3,7 @@ title = "Delayed::Job再起動時にジョブがロックされたままにさ�
 date = "2019-01-30T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/01/dont-let-job-stay-locked-when-restart/cover.jpg"
+cover = "img/2019/01/dont-let-job-stay-locked-when-restart/cover.jpg"
 description = "Delayed::Jobを気軽に再起動させたいために挙動確認した時のメモです."
 tags = ["Ruby on Rails", "Delayed::Job"]
 +++

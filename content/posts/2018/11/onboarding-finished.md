@@ -3,7 +3,7 @@ title = "オンボーディングの終了とこれから"
 date = "2018-11-09T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/onboarding-finished/cover.jpg"
+cover = "img/2018/11/onboarding-finished/cover.jpg"
 description = "転職エントリを書き終える前に、こちらの記事を書き終えてしまいまって、何とも言えない気分に陥っています.[オンボーディングを終えて](https://medium.com/studist-dev/sre-onboarding-67faa61e473)に書いてある通り、私は10月にオンボーディングを受けていました.そのブログで書ききれなかった事を、書いておきます."
 tags = ["雑記"]
 +++

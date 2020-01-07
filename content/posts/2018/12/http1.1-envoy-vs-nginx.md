@@ -3,7 +3,7 @@ title = "Envoy vs Nginx: HTTP/1.1 Reverse Proxy Performance"
 date = "2018-12-13T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/12/http1.1-envoy-vs-nginx/cover.jpg"
+cover = "img/2018/12/http1.1-envoy-vs-nginx/cover.jpg"
 description = "HTTP/1.1のリバースプロキシとして、EnvoyとNginxとの軽めのベンチマークを取りました.  しっかりとしたベンチマークとはいえませんが、少しは参考になる結果かもしれません."
 tags = ["Envoy", "Nginx", "Docker"]
 +++

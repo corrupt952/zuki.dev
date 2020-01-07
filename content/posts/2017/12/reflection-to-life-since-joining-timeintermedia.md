@@ -3,7 +3,7 @@ title = "入社してから今までを振り返って"
 date = "2017-12-26T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/reflection-to-life-since-joining-timeintermedia/cover.jpg"
+# TODO: cover = "img/2017/12/reflection-to-life-since-joining-timeintermedia/cover.jpg"
 description = "私は、今の会社に2014年4月に新卒入社しました。2016年春頃（3年目になる直前ぐらいかな）に、大規模案件の開発リーダーをやることになりました。そして、2017年2月～3月末の約2ヶ月間、休職することになりました。今は復職し、小規模なチームの開発リーダーをやっています。それらを振り返ってみようと思います。"
 tags = []
 +++

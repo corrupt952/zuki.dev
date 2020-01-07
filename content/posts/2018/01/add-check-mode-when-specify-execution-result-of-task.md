@@ -3,7 +3,7 @@ title = "タスクの実行結果をwhenで指定するならcheck_modeつける
 date = "2018-01-26T16:53:24Z"
 draft = "false"
 author = "K@zuki."
-cover = "2018/01/add-check-mode-when-specify-execution-result-of-task/cover.jpg"
+cover = "img/2018/01/add-check-mode-when-specify-execution-result-of-task/cover.jpg"
 description = "Ansibleでコマンドの実行結果をwhenで指定するなら、そのコマンドに`check_mode`をつける。"
 tags = ["Ansible"]
 +++

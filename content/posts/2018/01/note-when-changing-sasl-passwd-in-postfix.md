@@ -3,7 +3,7 @@ title = "Postfixでsasl_passwdを変更するときの作業メモ"
 date = "2018-01-29T07:25:10Z"
 draft = "false"
 author = "K@zuki."
-cover = "2018/01/note-when-changing-sasl-passwd-in-postfix/cover.jpg"
+cover = "img/2018/01/note-when-changing-sasl-passwd-in-postfix/cover.jpg"
 description = "PostfixでSESにリレーしてメールを配信する仕組みを作っている時の作業を忘れがちなため、メモ書きを残す。"
 tags = ["Postfix"]
 +++

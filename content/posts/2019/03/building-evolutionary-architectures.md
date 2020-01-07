@@ -3,7 +3,7 @@ title = "進化的アーキテクチャ 前半"
 date = "2019-03-06T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2019/03/building-evolutionary-architectures/cover.jpg"
+cover = "img/2019/03/building-evolutionary-architectures/cover.jpg"
 description = "会社の福利厚生を利用して購入した[進化的アーキテクチャ](https://www.oreilly.co.jp/books/9784873118567/)を読んでいる."
 tags = ["読書"]
 +++

@@ -3,7 +3,7 @@ title = "tmuxセッション上のzshのPATHがおかしい"
 date = "2018-12-04T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/12/fix-zsh-environment-variables/cover.jpg"
+cover = "img/2018/12/fix-zsh-environment-variables/cover.jpg"
 description = "12月になりましたね.もうすぐAmazonのサイバーマンデーがあるので、カメラ関連でいいものがあるといいなぁと期待しながら待っています.さて、今回はtmuxセッション上のzshのパスがおかしくなり、タブ補完がエラーが出るようになった話と、それを抑制する話です."
 tags = ['tmux', 'zsh']
 +++

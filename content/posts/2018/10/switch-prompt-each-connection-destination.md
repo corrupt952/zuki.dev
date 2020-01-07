@@ -3,7 +3,7 @@ title = "接続先ごとにプロンプトを切り替える"
 date = "2018-10-31T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/10/switch-prompt-each-connection-destination/cover.jpg"
+cover = "img/2018/10/switch-prompt-each-connection-destination/cover.jpg"
 description = "開発（or テスト）、ステージング、本番環境のサーバ内で作業する必要がある場合、シェルでホスト名を表示して環境を見分けていますが、どうしても限界があります。そのため、接続先にごとにプロンプトを切り替えて、環境ごとに色を変更してみようと思います。"
 tags = ["SSH"]
 +++

@@ -3,7 +3,7 @@ title = "InkdropからBoostnoteに乗り換えた"
 date = "2019-09-03T00:00:00+09:00"
 draft = "false"
 author = ""
-cover = "2019/09/inkdrop-to-boostnote/cover.jpg"
+cover = "img/2019/09/inkdrop-to-boostnote/cover.jpg"
 description = "1年半程度はInkdropでブログの下書き・メモ・議事録の下書きをしてきたが、Inkdropである必要がなくなってきたので一旦Inkdropを解約してBoostnoteに乗り換えました."
 tags = ["雑記"]
 +++

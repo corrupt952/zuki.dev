@@ -3,7 +3,7 @@ title = "Macにプリインストールされているrsync"
 date = "2017-12-30T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-# TODO: cover = "2017/12/about-preinstalled-rsync-on-mac/cover.jpg"
+# TODO: cover = "img/2017/12/about-preinstalled-rsync-on-mac/cover.jpg"
 description = "Macにプリインストールされているrsyncを使って、リモートのホストへファイルを同期している時に起きた問題です。"
 tags = ["MacOS", "rsync"]
 +++

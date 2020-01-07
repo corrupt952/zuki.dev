@@ -3,7 +3,7 @@ title = "rbenvのラッパースクリプトを作る"
 date = "2018-11-01T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/11/rbenv-wrapper-script/cover.jpg"
+cover = "img/2018/11/rbenv-wrapper-script/cover.jpg"
 description = "今回は軽めのrbenvラッパースクリプトを作成します。"
 tags = ["Ruby", "Shell"]
 +++

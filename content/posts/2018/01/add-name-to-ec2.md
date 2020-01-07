@@ -3,7 +3,7 @@ title = "EC2にNameをつける"
 date = "2018-01-03T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-cover = "2018/01/add-name-to-ec2/cover.jpg"
+cover = "img/2018/01/add-name-to-ec2/cover.jpg"
 description = "AWSを利用している方なら基本中の基本だと思いますが、EC2の管理画面を見ていると`Name`という列があり、Terraformで作成していると空になっています。これは何故でしょうか？"
 tags = ["AWS", "Terraform"]
 +++
