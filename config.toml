@@ -4,6 +4,9 @@ defaultContentLanguage = "ja"
 paginate               = 5
 theme                  = "hello-friend"
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [taxonomies]
   category = "categories"
   tag      = "tags"
