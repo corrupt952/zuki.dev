@@ -1,37 +1,40 @@
-baseUrl = "https://www.khasegawa.net/"
-languageCode = "ja-jp"
+baseUrl                = "https://www.khasegawa.net/"
+languageCode           = "ja-jp"
 defaultContentLanguage = "ja"
-paginate = 5
-theme = "hello-friend"
+paginate               = 5
+theme                  = "hello-friend"
 
 [taxonomies]
   category = "categories"
-  tag = "tags"
+  tag      = "tags"
 
 [params]
   # dir name of your blog content (default is `content/posts`)
   # contentTypeName = "posts"
   # "light" or "dark"
-  defaultTheme = "light"
+  defaultTheme    = "light"
+  showMenuItems   = 1
+  showReadingTime = false
 
 [languages]
   [languages.ja]
-    title = "khasegawa.net"
-    subtitle = "ゆるりと"
-    readMore = "Read more"
-    writtenBy = "Written by"
-    copyright = "Copyright © 2014-2020 www.khasegawa.net All Rights Reserved."
-    readOtherPosts = "Read other posts"
+    title            = "khasegawa.net"
+    subtitle         = "ゆるりと"
+    writtenBy        = "Written by"
+    copyright        = "Copyright © 2014-2020 www.khasegawa.net All Rights Reserved."
+    newerPosts       = "Newer posts"
+    olderPosts       = "Older posts"
+    readMore         = "Read more"
+    readOtherPosts   = "Read other posts"
+    dateFormatSingle = "2006/01/02"
+    dateFormatList   = "2006/01/02"
 
     [languages.ja.params.logo]
-    logoText = "khasegawa.net"
-    #   or
-    #
-    #   path = "/img/your-example-logo.svg"
-    #   alt = "Your example logo alt text"
+      logoText     = "khasegawa.net"
+      logoHomeLink = "/"
 
     [languages.ja.menu]
       [[languages.ja.menu.main]]
         identifier = "about"
-        name = "About"
-        url = "/about/"
+        name       = "About"
+        url        = "/about/"
