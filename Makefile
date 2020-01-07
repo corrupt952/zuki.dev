@@ -14,8 +14,12 @@ done
 endef
 export COMPRESS_ASSETS
 
+ifndef HUGO_BASE_URL
+override HUGO_BASE_URL = http://localhost/
+endif
+
 run:
-	hugo server -F -D --bind 0.0.0.0 --watch --disableFastRender
+	hugo server -F -D --bind 0.0.0.0 --watch --disableFastRender --baseUrl=$(HUGO_BASE_URL)
 
 build:
 	hugo
