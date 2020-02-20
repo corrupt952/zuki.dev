@@ -3,7 +3,7 @@ title = "tmuxのステータスラインにk8sのvwntextとnamespaceを表示す
 date = "2020-02-05T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
-description = ""
+description = "複数のk8sクラスタに接続する頻度が増えてきたので、現在どのコンテキストへ接続しているのかが分かりやすくtmuxのステータスラインに表示するようにしました."
 tags = ["Kubernetes", "tmux"]
 +++
 
