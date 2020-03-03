@@ -23,7 +23,7 @@ My current toolset includes Ruby & Ruby on Rails, Docker and all the other vario
 <dl class="dl dl-vertical">
   <dt>E-mail:</dt>
   <dd>
-	<a href="mailto:hasegawa@khasegawa.net"><i class="icon fa fa-envelope"></i>hasegawa@khasegawa.net</a>
+	<a href="mailto:k@zuki.dev"><i class="icon fa fa-envelope"></i>k@zuki.dev</a>
   </dd>
 
   <dt>Github:</dt>
