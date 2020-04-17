@@ -17,7 +17,7 @@ verbose=false
 
 while [ "$1" != "" ]; # "$1"が空文字列になるまで繰り返す
 do
-  case "$1"
+  case "$1" in
     # $1が-fまたは--fileなら、filepathに$2を代入する
     # その後、shift 2で引数を2つずらす
     -f|--file)
