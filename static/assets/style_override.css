@@ -49,6 +49,10 @@
   margin: 0;
 }
 
+body {
+  font-weight: normal;
+}
+
 p {
   line-height: 1.6em;
 }
