@@ -68,7 +68,7 @@ workflows:
           cron: "00 16 * * *"
           filters:
             branches:
-              only: [master]
+              only: [main]
     jobs:
       - build
       - deploy:
