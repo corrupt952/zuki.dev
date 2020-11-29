@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+
+
+_postfile_template() {
+  local author="$1"
+  local img_dir_path="$2"
+
+  cat <<EOF
++++
+title = ""
+date = "$(date '+%FT00:00:00+09:00')"
+draft = "false"
+author = "$author"
+# cover = "$img_dir_path/cover.jpg"
+description = ""
+tags = []
++++
+EOF
+}
+
+_postfile_path() {
+  echo "content/posts/$1.md"
+}
+
+# Create post file and image directory
+_create() {
+  local fpath="$(_postfile_path $1)"
+  local img_dir_path="$(echo $fpath | awk -F '.md' '{print $1}' | awk -F 'content/posts/' '{print $2}')"
+  local img_dir_fullpath="static/img/${img_dir_path}"
+
+  [ -d "$(dirname $fpath)" ] || mkdir -p $(dirname $fpath)
+  echo "$(_postfile_template $HUGO_AUTHOR $img_dir_path)" > $fpath
+
+  [ -d $img_dir_fullpath ] || mkdir -p $img_dir_fullpath
+  touch $img_dir_fullpath/.keep
+}
+
+# Delete post file and image directory
+_delete() {
+  local fpath="$(_postfile_path $1)"
+  local img_dir_path="$(echo $fpath | awk -F '.md' '{print $1}' | awk -F 'content/posts/' '{print $2}')"
+  local img_dir_fullpath="static/img/${img_dir_path}"
+
+  [ -f $fpath ] && rm -i $fpath
+  [ -d $img_dir_fullpath ] && rm -ri $img_dir_fullpath
+}
+
+# main
+main() {
+  local subcommand="$1"
+  shift
+
+  case "$subcommand" in
+    create )
+      _create "$@"
+      ;;
+
+    delete )
+      _delete "$@"
+      ;;
+
+    * )
+      logger::warn "Unknown subcommand: $subcommand"
+      ;;
+  esac
+}
+main "$@"
