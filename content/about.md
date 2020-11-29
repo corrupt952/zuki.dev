@@ -1,13 +1,13 @@
 +++
 title = "About"
-date = "2020-02-13T00:00:00+09:00"
+date = "2020-11-30T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
 +++
 
 ## {{< post-header__mark >}} introduce {{< post-header__cursor >}}
 
-I'm a web programmer, SRE living in Tokyo, Japan.  
+I'm a Web programmer, SRE living in Tokyo, Japan.  
 My current toolset includes Ruby & Ruby on Rails, Docker and all the other various frameworks, libraries and technologies related to them.
 
 ## {{< post-header__mark >}} what_i_can_do_is {{< post-header__cursor >}}
