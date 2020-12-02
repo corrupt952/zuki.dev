@@ -11,7 +11,7 @@ tags = ["AWS", "Ruby"]
 re:Inventで[AWS Lambdaがコンテナをサポート](https://aws.amazon.com/jp/blogs/aws/new-for-aws-lambda-container-image-support/)したようなので、  
 aws-lambda-rubyコンテナを使った動作確認をしてみました.
 
-TODO: ここにgistかgithubのリポジトリでも置いておく
+[corrupt952/aws-lambda-container-ruby-sample](https://github.com/corrupt952/aws-lambda-container-ruby-sample)にファイルを置いてきます.
 
 ## TL; DR
 
@@ -107,6 +107,8 @@ docker push xxx.dkr.ecr.ap-northeast-1.amazonaws.com/hasegawa-sandbox-lambda:lat
 
 Lambdaでコンテナがサポートされたころにより、今までよりもランタイムが柔軟になり、  
 利用するハードルやコンテナイメージの作成自体のハードルも低く、とても魅力的に感じました.  
+他にもyumなどのパッケージマネージャ経由でパッケージをインストールして、それらを利用することも可能ですし、  
+非常に可能性を感じました.
 
 とはいえ、実際に使ってみた感想としてはランタイムの柔軟性が増しただけのような気もするので、  
 ユースケースによってはマッチしない可能性はありそうですね.
