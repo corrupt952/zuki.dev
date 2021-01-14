@@ -64,7 +64,7 @@ iPhone SEしかなかったという理由で買った.
 仕事やプライベートで辛い時に出会えて本当に心の支えになりました.
 
 ジャンルとしては「TSラブコメ」になると思います.  
-内容としてもラブコメとして王道ですが、ほんちょぴっと性的な表現が出てくるので読む時は  
+内容としても王道なラブコメですが、ほんちょぴっと性的な表現が出てくるので読む時は  
 **周りをよく確認して**読むことをオススメします.
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=khasegawa-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B00N78V8OY&linkId=b6d69c8320270c0a730e419564266f85"></iframe>
