@@ -62,6 +62,13 @@ main() {
       _delete "$@"
       ;;
 
+    help )
+      cat <<EOS
+Create post
+$ bin/post create 2020/12/test
+EOS
+      ;;
+
     * )
       logger::warn "Unknown subcommand: $subcommand"
       ;;
