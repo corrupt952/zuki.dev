@@ -1,7 +1,7 @@
 +++
 title = "個人事業主としての活動を始めるまでにやったこと"
 date = "2021-01-24T00:00:00+09:00"
-draft = "true"
+draft = "false"
 author = "K@zuki."
 # cover = "2021/01/self-employment/cover.jpg"
 description = ""
