@@ -5,7 +5,7 @@ draft = "false"
 author = "K@zuki."
 # cover = "2021/01/self-employment/cover.jpg"
 description = ""
-tags = ["副業"]
+tags = ["雑記"]
 +++
 
 私が2020年に副業として個人事業主としての活動を始めようとした時にやった作業を振り返ります.  
