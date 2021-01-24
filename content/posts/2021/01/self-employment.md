@@ -4,7 +4,7 @@ date = "2021-01-24T00:00:00+09:00"
 draft = "false"
 author = "K@zuki."
 # cover = "2021/01/self-employment/cover.jpg"
-description = ""
+description = "私が2020年に副業として個人事業主としての活動を始めようとした時にやった作業を振り返ります."
 tags = ["雑記"]
 +++
 
