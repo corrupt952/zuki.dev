@@ -11,6 +11,11 @@ tags = ["雑記"]
 既に1月半ばになってしまったけれど、2020年に買って良かったモノや契約して良かったサービスをまとめました.  
 元々ゲームを快適にプレイする環境を整えていたので、リモートワーク向け製品は少なめです.
 
+- audio-technica ATH-M70x（ヘッドホン）
+- iPhone SE（第2世代）
+- コアラマットレス
+- ボクガール（漫画）
+
 ## 1. audio-technica ATH-M70x（ヘッドホン）
 
 当時利用していたヘッドセットのイヤーパッドがボロボロになってしまい、交換用のイヤーパッド価格が新品の半分ぐらいの値段をしていたため、  
@@ -68,3 +73,25 @@ iPhone SEしかなかったという理由で買った.
 **周りをよく確認して**読むことをオススメします.
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=khasegawa-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B00N78V8OY&linkId=b6d69c8320270c0a730e419564266f85"></iframe>
+
+## 5. Notion(メモ、タスク管理などのWebサービス)
+
+これがないとタスク管理としてTrelloを使っていたが、代替として12月から本格的に使い始めました.  
+かなり自由度が高いため、フォーマットや仕組み作りに時間をかけられる人にはオススメです.  
+
+時間をかけらない人でもテンプレートが出回っていたりするので、それをベースにして色々やってみると面白いかもしれません.
+
+[Notion](https://www.notion.so/product)
+
+## 6. nosh（拓殖
+
+いわゆる宅食サービス.
+正直、割高感は否めないがご飯を用意しなくてよいという点に限っていえば体験が良かったです.  
+Uber Eatsで頼むよりは全然安いよ？
+
+[nosh](https://nosh.jp/)
+
+もし、興味があれば以下の紹介リンクからどうぞ！  
+初回割引されます！
+
+[nosh](https://nosh.jp/c/pbBu6)
