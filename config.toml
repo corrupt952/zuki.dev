@@ -16,7 +16,7 @@ theme                  = "hello-friend"
   # contentTypeName = "posts"
   # "light" or "dark"
   defaultTheme    = "light"
-  showMenuItems   = 1
+  showMenuItems   = 2
   showReadingTime = false
 
 [languages]
@@ -36,6 +36,11 @@ theme                  = "hello-friend"
       logoHomeLink = "/"
 
     [languages.ja.menu]
+      [[languages.ja.menu.main]]
+        identifier = "about"
+        name       = "About"
+        url        = "/about"
+
       [[languages.ja.menu.main]]
         identifier = "blog"
         name       = "Blog"
