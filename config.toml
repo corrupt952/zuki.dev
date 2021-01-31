@@ -22,7 +22,6 @@ theme                  = "hello-friend"
 [languages]
   [languages.ja]
     title            = "khasegawa.net"
-    subtitle         = "ゆるりと"
     writtenBy        = "Written by"
     copyright        = "Copyright © 2014-2020 www.khasegawa.net All Rights Reserved."
     newerPosts       = "Newer posts"
@@ -38,6 +37,6 @@ theme                  = "hello-friend"
 
     [languages.ja.menu]
       [[languages.ja.menu.main]]
-        identifier = "about"
-        name       = "About"
-        url        = "/about/"
+        identifier = "blog"
+        name       = "Blog"
+        url        = "https://khasegawa.hatenablog.com/"

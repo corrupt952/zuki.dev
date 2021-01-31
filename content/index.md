@@ -1,10 +1,3 @@
-+++
-title = "About"
-date = "2020-11-30T00:00:00+09:00"
-draft = "false"
-author = "K@zuki."
-+++
-
 ## {{< post-header__mark >}} introduce {{< post-header__cursor >}}
 
 I'm a Web programmer, SRE living in Tokyo, Japan.  
@@ -12,11 +5,11 @@ My current toolset includes Ruby & Ruby on Rails, Docker and all the other vario
 
 ## {{< post-header__mark >}} what_i_can_do_is {{< post-header__cursor >}}
 
-* lead development of web apps in Ruby
-* development of web apps in Golang, Python, PHP, Javascript and any supersets
-* using different types of datastores(like MySQL, Elasticsearch, Redis, AWS DynamoDB...)
-* build development environment using Kubernetes, Docker, Vagrant
-* provision with Ansible, Terraform, CloudFormation, Serverless Framework
+- lead development of web apps in Ruby
+- development of web apps in Golang, Python, PHP, Javascript and any supersets
+- using different types of datastores(like MySQL, Elasticsearch, Redis, AWS DynamoDB...)
+- build development environment using Kubernetes, Docker, Vagrant
+- provision with Ansible, Terraform, CloudFormation, Serverless Framework
 
 ## {{< post-header__mark >}} contact {{< post-header__cursor >}}
 
@@ -36,3 +29,9 @@ My current toolset includes Ruby & Ruby on Rails, Docker and all the other vario
 	<a href="https://twitter.com/corrupt952"><i class="icon fa fa-twitter"></i> @corrupt952</a>
   </dd>
 </dl>
+
+
+## {{< post-header__mark >}} Links {{< post-header__cursor >}}
+
+- [Blog](https://khasegawa.hatenablog.com/)
+- [MENTA](https://menta.work/user/28621)
