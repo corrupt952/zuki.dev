@@ -36,10 +36,10 @@ theme                  = "hello-friend"
       logoHomeLink = "/"
 
     [languages.ja.menu]
-      # [[languages.ja.menu.main]]
-      #   identifier = "about"
-      #   name       = "About"
-      #   url        = "/about"
+      [[languages.ja.menu.main]]
+        identifier = "about"
+        name       = "About"
+        url        = "/about"
 
       [[languages.ja.menu.main]]
         identifier = "blog"
