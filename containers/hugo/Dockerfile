@@ -1,8 +1,6 @@
-FROM alpine:3.8
-RUN wget -O hugo.tgz https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_0.79.0_Linux-64bit.tar.gz \
-    && tar xzvf hugo.tgz \
-    && mv ./hugo /usr/local/bin/hugo \
-    && apk update \
-    && apk add --no-cache make imagemagick git bash pngquant file jpegoptim \
-    && mkdir /app
+FROM ubuntu:20.04
+RUN apt update \
+    && apt install -y wget git bash make
+RUN wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.81.0/hugo_extended_0.81.0_Linux-64bit.deb \
+    && dpkg -i hugo.deb
 WORKDIR /app

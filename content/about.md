@@ -30,7 +30,6 @@ My current toolset includes Ruby & Ruby on Rails, Docker and all the other vario
   </dd>
 </dl>
 
-
 ## {{< post-header__mark >}} Links {{< post-header__cursor >}}
 
 - [Blog](https://khasegawa.hatenablog.com/)

@@ -2,7 +2,7 @@ baseUrl                = "https://www.khasegawa.net/"
 languageCode           = "ja-jp"
 defaultContentLanguage = "ja"
 paginate               = 5
-theme                  = "hello-friend"
+theme                  = "hugo-coder"
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -12,9 +12,6 @@ theme                  = "hello-friend"
   tag      = "tags"
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
-  # contentTypeName = "posts"
-  # "light" or "dark"
   defaultTheme    = "light"
   showMenuItems   = 2
   showReadingTime = false
@@ -23,7 +20,7 @@ theme                  = "hello-friend"
   [languages.ja]
     title            = "khasegawa.net"
     writtenBy        = "Written by"
-    copyright        = "Copyright © 2014-2020 www.khasegawa.net All Rights Reserved."
+    copyright        = "Copyright © 2014-2021 www.khasegawa.net All Rights Reserved."
     newerPosts       = "Newer posts"
     olderPosts       = "Older posts"
     readMore         = "Read more"
@@ -31,15 +28,53 @@ theme                  = "hello-friend"
     dateFormatSingle = "2006/01/02"
     dateFormatList   = "2006/01/02"
 
-    [languages.ja.params.logo]
-      logoText     = "khasegawa.net"
-      logoHomeLink = "/"
+    [languages.ja.params]
+      author = "K@zuki."
+      info = "Web programmer, SRE"
+      avatarurl = "/img/avatar.jpg"
+
+      favicon_16 = "/img/favicon.png"
+      favicon_32 = "/img/favicon.png"
+
+      hideFooter = false
+      hideCredits = true
+      hideCopyright = false
+      since = 2014
+
+      enableTwemoji = true
+      colorScheme = "auto"
+      hidecolorschemetoggle = false
+
+      [languages.ja.params.logo]
+        logoText     = "khasegawa.net"
+        logoHomeLink = "/"
+
+      [[languages.ja.params.social]]
+        name = "E-Mail"
+        icon = "fa fa-envelope fa-2x"
+        weight = 1
+        url = "mailto:k@zuki.dev"
+      [[languages.ja.params.social]]
+        name = "Twitter"
+        icon = "fa fa-twitter fa-2x"
+        weight = 3
+        url = "https://twitter.com/corrupt952/"
+      [[languages.ja.params.social]]
+        name = "Github"
+        icon = "fa fa-github fa-2x"
+        weight = 1
+        url = "https://github.com/corrupt952/"
+      [[languages.ja.params.social]]
+        name = "MENTA"
+        icon = "fa fa-user fa-2x"
+        weight = 3
+        url = "https://menta.work/user/28621"
 
     [languages.ja.menu]
-      [[languages.ja.menu.main]]
-        identifier = "about"
-        name       = "About"
-        url        = "/about"
+      # [[languages.ja.menu.main]]
+      #   identifier = "about"
+      #   name       = "About"
+      #   url        = "/about"
 
       [[languages.ja.menu.main]]
         identifier = "blog"
