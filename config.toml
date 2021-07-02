@@ -64,11 +64,6 @@ theme                  = "hugo-coder"
         icon = "fa fa-github fa-2x"
         weight = 1
         url = "https://github.com/corrupt952/"
-      [[languages.ja.params.social]]
-        name = "MENTA"
-        icon = "fa fa-user fa-2x"
-        weight = 3
-        url = "https://menta.work/user/28621"
 
     [languages.ja.menu]
       [[languages.ja.menu.main]]

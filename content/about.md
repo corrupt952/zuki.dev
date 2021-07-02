@@ -33,4 +33,3 @@ My current toolset includes Ruby & Ruby on Rails, Docker and all the other vario
 ## {{< post-header__mark >}} Links {{< post-header__cursor >}}
 
 - [Blog](https://khasegawa.hatenablog.com/)
-- [MENTA](https://menta.work/user/28621)
