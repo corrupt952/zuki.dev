@@ -68,10 +68,10 @@ theme                  = "hugo-coder"
     [languages.ja.menu]
       [[languages.ja.menu.main]]
         identifier = "about"
-        name       = "About"
+        name       = "ABOUT"
         url        = "https://www.notion.so/khasegawa/K-zuki-e1d98c87db4d4b278d612ab363db980b"
 
       [[languages.ja.menu.main]]
         identifier = "blog"
-        name       = "Blog"
+        name       = "BLOG"
         url        = "https://khasegawa.hatenablog.com/"
