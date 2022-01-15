@@ -24,7 +24,7 @@ executors:
   deployer:
     working_directory: /app
     docker:
-      - image: node:10
+      - image: node:16
         environment:
           TZ: Asia/Tokyo
 
