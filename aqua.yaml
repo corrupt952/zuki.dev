@@ -10,3 +10,4 @@ registries:
   ref: v3.80.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: gohugoio/hugo/hugo-extended@v0.104.3
+- name: rhysd/actionlint@v1.6.21
