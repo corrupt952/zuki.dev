@@ -1,0 +1,82 @@
+baseUrl                = "https://www.khasegawa.net/"
+languageCode           = "ja-jp"
+defaultContentLanguage = "ja"
+paginate               = 5
+theme                  = "hugo-coder"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+
+[params]
+  defaultTheme    = "light"
+  showMenuItems   = 2
+  showReadingTime = false
+
+[languages]
+  [languages.ja]
+    title            = "zuki.dev"
+    writtenBy        = "Written by"
+    copyright        = "Copyright © 2014-2021 www.khasegawa.net All Rights Reserved."
+    newerPosts       = "Newer posts"
+    olderPosts       = "Older posts"
+    readMore         = "Read more"
+    readOtherPosts   = "Read other posts"
+    dateFormatSingle = "2006/01/02"
+    dateFormatList   = "2006/01/02"
+
+    [languages.ja.params]
+      author = "K@zuki."
+      info = "Web Developer, SRE"
+      avatarurl = "/img/avatar.jpg"
+
+      favicon_16 = "/img/favicon.png"
+      favicon_32 = "/img/favicon.png"
+
+      hideFooter = false
+      hideCredits = true
+      hideCopyright = false
+      since = 2014
+
+      enableTwemoji = true
+      colorScheme = "auto"
+      hidecolorschemetoggle = false
+
+      [languages.ja.params.logo]
+        logoText     = "khasegawa.net"
+        logoHomeLink = "/"
+
+      [[languages.ja.params.social]]
+        name = "E-Mail"
+        icon = "fa fa-envelope fa-2x"
+        weight = 1
+        url = "mailto:k@zuki.dev"
+      [[languages.ja.params.social]]
+        name = "Twitter"
+        icon = "fa fa-twitter fa-2x"
+        weight = 3
+        url = "https://twitter.com/corrupt952/"
+      [[languages.ja.params.social]]
+        name = "Github"
+        icon = "fa fa-github fa-2x"
+        weight = 1
+        url = "https://github.com/corrupt952/"
+
+    [languages.ja.menu]
+      [[languages.ja.menu.main]]
+        identifier = "about"
+        name       = "ABOUT"
+        url        = "https://www.notion.so/khasegawa/K-zuki-e1d98c87db4d4b278d612ab363db980b"
+
+      [[languages.ja.menu.main]]
+        identifier = "work"
+        name       = "WORK"
+        url        = "#"
+
+      [[languages.ja.menu.main]]
+        identifier = "blog"
+        name       = "BLOG"
+        url        = "https://khasegawa.hatenablog.com/"
