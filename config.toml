@@ -1,4 +1,4 @@
-baseUrl                = "https://www.khasegawa.net/"
+baseUrl                = "https://zuki.dev/"
 languageCode           = "ja-jp"
 defaultContentLanguage = "ja"
 paginate               = 5
@@ -20,7 +20,7 @@ theme                  = "hugo-coder"
   [languages.ja]
     title            = "zuki.dev"
     writtenBy        = "Written by"
-    copyright        = "Copyright © 2014-2021 www.khasegawa.net All Rights Reserved."
+    copyright        = "Copyright © 2014-2021 zuki.dev All Rights Reserved."
     newerPosts       = "Newer posts"
     olderPosts       = "Older posts"
     readMore         = "Read more"
