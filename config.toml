@@ -70,12 +70,12 @@ enableRobotsTXT        = true
       [[languages.ja.menu.main]]
         identifier = "about"
         name       = "ABOUT"
-        url        = "https://www.notion.so/khasegawa/K-zuki-e1d98c87db4d4b278d612ab363db980b"
+        url        = "/about"
 
       [[languages.ja.menu.main]]
         identifier = "work"
         name       = "WORK"
-        url        = "#"
+        url        = "/work"
 
       [[languages.ja.menu.main]]
         identifier = "blog"
