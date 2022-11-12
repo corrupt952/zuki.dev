@@ -3,6 +3,7 @@ languageCode           = "ja-jp"
 defaultContentLanguage = "ja"
 paginate               = 5
 theme                  = "hugo-coder"
+enableRobotsTXT        = true
 
 [markup.goldmark.renderer]
   unsafe = true
