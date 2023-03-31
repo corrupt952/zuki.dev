@@ -51,6 +51,8 @@ type MarkdownProps = {
 
 export const Markdown = ({ markdown }: MarkdownProps) => {
   return (
-    <ReactMarkdown options={options} children={markdown} />
+    <ReactMarkdown options={options}>
+      {markdown}
+    </ReactMarkdown>
   )
 }
