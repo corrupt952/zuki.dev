@@ -29,5 +29,13 @@ export const Config = {
         },
       },
     },
-  })
+  }),
+  navigation: {
+    items: [
+      { name: 'about', href: '/about', },
+      { name: 'blog', href: 'https://khasegawa.hatenablog.com/' },
+      { name: 'work', href: '/work' },
+      { name: 'portfolio', href: '/portfolio' },
+    ],
+  },
 }
