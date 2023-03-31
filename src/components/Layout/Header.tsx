@@ -5,6 +5,7 @@ import { Config } from "@/config";
 import { LinkText } from "../Elements";
 
 const NavigationLinkText = styled(LinkText)({
+  color: 'inherit',
   paddingTop: 12,
   paddingBottom: 12,
   paddingLeft: 16,
