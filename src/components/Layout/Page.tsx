@@ -1,4 +1,4 @@
-import { Grid, styled } from "@mui/material"
+import { Box, Grid, styled } from "@mui/material"
 
 const PageGrid = styled(Grid)({
   display: 'flex',
@@ -6,6 +6,7 @@ const PageGrid = styled(Grid)({
   justifyContent: 'center',
   flex: 'auto',
   alignSelf: 'baseline',
+  marginBottom: '3rem',
 })
 
 const PageGridItem = styled(Grid)({
