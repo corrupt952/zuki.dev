@@ -1,53 +1,133 @@
+import { LinkText } from "@/components/Elements";
 import { Markdown } from "@/components/Elements/Markdown";
 import { Page } from "@/components/Layout";
+import { Body, Heading } from "@/components/Typography";
+import {
+  Box,
+  List,
+  ListItem,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 
-const markdown=`
-\`茨谷企画\`（BARATANI KIKAKU）という屋号の\`K@zuki.\`として活動しています。
-会社員としての活動は[About](/about)に記載してあるため、そちらをご覧ください。
+const ContentArea = () => {
+  const menus = [
+    'Support for launching services',
+    'AWS implementation support (including multi-account configuration)',
+    'Infrastrucutre as Code implementation and start-up support',
+    'Consultation and start-up support for container migration',
+    'Troubleshooting support and consultation',
+    'Consultation and support for introduction and upgrade of various middleware and services',
+    'Monitoring implementation support',
+  ];
 
-各種インフラやモニタリングツール、コンテナ関連技術のサポートやサービス開発やお手伝いをしています。
-相談等も受け付けているのでお気軽のお声がけください。
-お仕事の依頼やお誘いなどは、[Twitter](https://twitter.com/corrupt952)や[メール](mailto:k@zuki.dev)にてお願いします。
+  return (
+    <>
+      <Heading>Contents</Heading>
 
-## 業務内容
+      <Typography variant="h6" gutterBottom>
+        Web Service Development and Operation Support
+      </Typography>
+      <Body>
+        We provide assistance and consultation on various tasks related to the
+        development and operation of web services.
+      </Body>
+      <List sx={{ pl: 0, pr: 0 }}>
+        {menus.map((menu) => (
+          <ListItem key={menu} sx={{ pb:0, pt: 0 }}>
+            <Body>* {menu}</Body>
+          </ListItem>
+        ))}
+      </List>
 
-### Webサービスの開発・運用サポート
-
-Webサービスの開発・運用に関わる各種諸作業についてお手伝いや相談を受け付けております。
-
-- サービスの立ち上げ支援
-- AWSの導入支援（マルチアカウント構成含む）
-- Infrastrucutre as Codeの導入や立ち上げ支援
-- コンテナ移行への相談や立ち上げ支援
-- トラブルシューティングのサポートや相談
-- 各種ミドルウェアやサービス導入やアップグレードに関しての相談やサポート
-- モニタリングの導入支援
-
-### 技術的な相談やメンタリング
-
-現在は積極的に実施しておりませんが、必要に応じて実施しています。
-
-メンタリングは、DiscordかSlackのいずれかのプラットフォームでベストエフォートで対応させていただきます。
-
-## 参考価格
-
-必ずこの価格になるわけではありませんが、参考価格は以下になります。
-
-|項目|単位|料金（税込み）|
-|:--|:--|--:|
-|Webサービスの開発・運用サポート（単位時間）|1時間|¥11,000|
-|オンライン相談（初回）|1時間|¥3,300|
-|オンライン相談（2回目以降）|1時間|¥6,600|
-|オフラインでの相談 ※1|1時間|¥11,000|
-|メンタリング ※1|1人/1時間|¥11,000|
-
-※ オフラインでの相談やメンタリングは交通費を別途請求
-`;
+      <Typography variant="h6" gutterBottom>Technical consultation and mentoring</Typography>
+      <Body>
+        We do not actively provide this service at this time, but do so as
+        needed.
+      </Body>
+      <Body>
+        Mentoring will be provided on a best-effort basis on either Discord or
+        Slack platforms.
+      </Body>
+    </>
+  );
+};
 
 export default function Work() {
   return (
     <Page>
-      <Markdown markdown={markdown} />
+      <Box>
+        <Body>Working as K@zuki. under the trade name BARATANI KIKAKU.</Body>
+        <Body>
+          I provide support, service development and assistance for various
+          infrastructures, monitoring tools and container related technologies.
+          I am also available for consultations, so please feel free to contact
+          me.
+        </Body>
+        <Body>
+          Please contact me via{" "}
+          <LinkText href="https://twitter.com/corrupt952">Twitter</LinkText> or{" "}
+          <LinkText href="mailto:k@zuki.dev">E-mail</LinkText> for job requests
+          and invitations.
+        </Body>
+
+        <Box height="3rem" />
+        <ContentArea />
+        <Box height="3rem" />
+
+        <Heading>Pricing</Heading>
+        <Body>The following is the price list for the services I provide.</Body>
+        <Table sx={{ p: 0 }}>
+          <TableHead>
+            <TableRow>
+              <TableCell>Item</TableCell>
+              <TableCell>Unit</TableCell>
+              <TableCell align="right">Price（Included Tax）</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>
+                Support for development and operation of web services
+              </TableCell>
+              <TableCell>1Hour</TableCell>
+              <TableCell align="right">¥11,000</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Online Consultation (First time)</TableCell>
+              <TableCell>1Hour</TableCell>
+              <TableCell align="right">¥3,300</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Online Consultation (2nd or later)</TableCell>
+              <TableCell>1Hour</TableCell>
+              <TableCell align="right">¥6,600</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Offline consultation *1</TableCell>
+              <TableCell>1Hour</TableCell>
+              <TableCell align="right">¥11,000</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Mentoring ※1</TableCell>
+              <TableCell>1Hour</TableCell>
+              <TableCell align="right">¥11,000</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+        <List>
+          <ListItem>
+            <Body>
+              *1 Travel expenses will be charged separately for offline
+              consultation and mentoring.
+            </Body>
+          </ListItem>
+        </List>
+      </Box>
     </Page>
-  )
+  );
 }

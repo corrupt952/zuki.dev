@@ -130,15 +130,20 @@ export const ExperienceArea = () => {
         Since 2013/06 to 2018/09, I was engaged in the development, operation,
         maintenance, and construction of various mission-critical systems and
         web services at Time Intermedia Inc. as well as training team members
-        and supporting PMs. Since 2018/10, at Studist Inc., I have been involved
-        in the launch, operation, maintenance, development support,
-        construction, availability and performance improvement of various
-        services operated by Studist, training and supporting independent
-        development teams, providing tools to streamline operations, reviewing
-        the overall service architecture and decision-making. Since 2019/01, I
-        have been providing development and operational support to other
-        companies as a sole proprietor while concurrently working as a company
-        employee.
+        and supporting PMs.
+      </Body>
+      <Body>
+        Since 2018/10, at Studist Inc., I have been involved in the launch,
+        operation, maintenance, development support, construction, availability
+        and performance improvement of various services operated by Studist,
+        training and supporting independent development teams, providing tools
+        to streamline operations, reviewing the overall service architecture and
+        decision-making.
+      </Body>
+      <Body>
+        Since 2019/01, I have been providing development and operational support
+        to other companies as a sole proprietor while concurrently working as a
+        company employee.
       </Body>
 
       <Box height="1rem" />
