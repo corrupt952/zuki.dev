@@ -144,7 +144,7 @@ export default function Portfolio() {
       <Grid container spacing={2}>
         {projects.map((project) => {
           return (
-            <Grid item xs={12} sm={6} md={4} lg={3}>
+            <Grid item key={project.title} xs={12} sm={6} md={4} lg={3}>
               <Card>
                 <CardActionArea href={project.link}>
                   <CardContent sx={{ height: 150, overflow: 'hidden' }}>
