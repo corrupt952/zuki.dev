@@ -1,8 +1,6 @@
 import { Page } from "@/components/Layout";
 import { Box } from "@mui/material";
-import { ExperienceArea } from "./ExperienceArea";
-import { CertificationArea } from "./CertificationArea";
-import { SkillArea } from "./SkillArea";
+import { ExperienceArea, CertificationArea, SkillArea } from '@/components/Pages/About';
 
 export default function About() {
   return (
