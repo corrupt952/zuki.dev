@@ -9,5 +9,6 @@ Repository for the [zuki.dev](https://zuki.dev)
 ## Run local server
 
 ```bash
+docker compose run --rm -it app npm ci
 docker compose up -d
 ```
