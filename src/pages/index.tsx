@@ -6,6 +6,7 @@ import { AvatarIcon } from '@/components/Elements/Icon';
 import { LinkText } from '@/components/Elements';
 
 const SocialLinkText = styled(LinkText)({
+  color: 'inherit',
   padding: 8,
   paddingLeft: 16,
   paddingRight: 0,

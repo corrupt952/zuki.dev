@@ -4,13 +4,8 @@ import React from "react";
 import { Config } from "@/config";
 import { LinkText } from "../Elements";
 
-const navItems = [
-  { name: 'about', href: '/about', },
-  { name: 'blog', href: 'https://khasegawa.hatenablog.com/' },
-  { name: 'work', href: '/work' },
-]
-
 const NavigationLinkText = styled(LinkText)({
+  color: 'inherit',
   paddingTop: 12,
   paddingBottom: 12,
   paddingLeft: 16,
@@ -63,7 +58,7 @@ const HeaderCentralizeGridItem = styled(Grid)({
 const NavigationLinks = () => {
   return (
     <>
-      {navItems.map((item) => {
+      {Config.navigation.items.map((item) => {
         return (
           <NavigationLinkText href={item.href} key={item.name}>{item.name}</NavigationLinkText>
         )
@@ -89,7 +84,7 @@ const NavigationMenu = () => {
         onClose={() => setOpen(false)}
         sx={{ display: { xs: 'block', md: 'none' } }}
       >
-        {navItems.map((item) => {
+        {Config.navigation.items.map((item) => {
           return (
             <MenuItem component='a' key={item.name} href={item.href}>
               {item.name}

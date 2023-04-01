@@ -1,9 +1,10 @@
+import { Config } from "@/config";
 import { styled } from "@mui/material";
 import Link from "next/link";
 
 const linkOptions = {
   textDecoration: 'none',
-  color: 'inherit',
+  color: Config.theme.palette.secondary.main,
   ':hover': {
     textDecoration: 'underline',
     filter: 'brightness(50%)',
