@@ -33,6 +33,7 @@ const options = {
     h2: { component: (props: JSX.IntrinsicAttributes) => <Typography variant='h4' gutterBottom {...props} />, },
     h3: { component: (props: JSX.IntrinsicAttributes) => <Typography variant='h5' gutterBottom {...props} />, },
     p: { component: (props: JSX.IntrinsicAttributes) => <MarkdownParagraph {...props} />, },
+    span: { component: (props: JSX.IntrinsicAttributes) => <Typography component='span' display='block' {...props} />, },
     a: { component: (props: JSX.IntrinsicAttributes) => <MarkdownLinkText {...props} />, },
     ul: { component: (props: JSX.IntrinsicAttributes) => <MarkdownList {...props} />, },
     li: { component: (props: JSX.IntrinsicAttributes) => <MarkdownListItem><Typography component='span' {...props} /></MarkdownListItem>, },
