@@ -106,7 +106,7 @@ const ExperienceTimeline = styled(Timeline)(({ theme }) => ({
   padding: 0,
   [theme.breakpoints.down("md")]: {
     [`& .${timelineOppositeContentClasses.root}`]: {
-      flex: 0.2,
+      flex: 0.25,
     },
   },
 }));
@@ -165,9 +165,9 @@ export const ExperienceArea = () => {
                 variant="body2"
                 color="textSecondary"
               >
-                {experience.startDate.toLocaleDateString()}
+                {experience.startDate.toLocaleString(undefined, {year: 'numeric', month: 'numeric'})}
                 {" ~ "}
-                {experience.endDate && experience.endDate.toLocaleDateString()}
+                {experience.endDate && experience.endDate.toLocaleString(undefined, {year: 'numeric', month: 'numeric'})}
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineConnector />
