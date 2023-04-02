@@ -22,6 +22,14 @@ const NavigationLinkText = styled(LinkText)({
   },
 });
 
+const NavigationMenuText = styled(LinkText)({
+  color: "inherit",
+  paddingTop: 12,
+  paddingBottom: 12,
+  paddingLeft: 16,
+  paddingRight: 16,
+});
+
 const StyledAppBar = styled(AppBar)({
   backgroundImage: "none",
   boxShadow: "none",
@@ -98,7 +106,11 @@ const NavigationMenu = () => {
       >
         {Config.navigation.items.map((item) => {
           return (
-            <MenuItem component="a" key={item.name} href={item.href}>
+            <MenuItem
+              component={NavigationMenuText}
+              key={item.name}
+              href={item.href}
+            >
               {item.name}
             </MenuItem>
           );
