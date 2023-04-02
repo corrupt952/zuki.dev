@@ -1,5 +1,6 @@
 import { Page } from "@/components/Layout";
 import { Heading } from "@/components/Typography";
+import { DEFAULT_LOCALE, useTranslation } from "@/libs/i18n";
 import {
   Box,
   Card,
@@ -149,10 +150,12 @@ const Archived = () => {
 // TODO: filter tags
 // TODO: image
 export default function Portfolio() {
+  const { t } = useTranslation("pages.portfolio");
+
   return (
     <Page>
       <Box>
-        <Heading>Portfolio</Heading>
+        <Heading>{t("title")}</Heading>
         <Grid container spacing={2}>
           {projects.map((project) => {
             return (
