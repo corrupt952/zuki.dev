@@ -1,10 +1,11 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import { MainLayout } from '@/components/Layout'
-import { Config } from '@/config'
+import { MainLayout } from "@/components/Layout";
+import { Config } from "@/config";
+import { I18nApp } from "@/libs/i18n";
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -17,5 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </MainLayout>
     </>
-  )
+  );
 }
+
+export default I18nApp(App);

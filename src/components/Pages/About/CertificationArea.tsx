@@ -6,45 +6,37 @@ import {
   TableRow,
   TableCell,
 } from "@mui/material";
+import { useTranslation } from "@/libs/i18n";
+import React from "react";
 
 type Certification = {
   name: string;
-  acquiredDate: Date;
+  date: string;
 };
 
-const certifications: Certification[] = [
-  {
-    name: "Fundamental Information Technology Engineer Examination",
-    acquiredDate: new Date(2012, 4, 1),
-  },
-  {
-    name: "Applied Information Technology Engineer Examination",
-    acquiredDate: new Date(2012, 11, 1),
-  },
-  {
-    name: "Information Security Specialist Examination",
-    acquiredDate: new Date(2013, 5, 1),
-  },
-];
-
 export const CertificationArea = () => {
+  const { t } = useTranslation("pages.about.certification");
+  const certifications = t("certifications", {
+    returnObjects: true,
+  }) as Certification[];
+
   return (
     <>
-      <Heading>Certification</Heading>
+      <Heading>{t("title")}</Heading>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell>Acquired Date</TableCell>
+            <TableCell>{t("thead.name")}</TableCell>
+            <TableCell align="right">
+              <span>{t("thead.date")}</span>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {certifications.map((certification) => (
             <TableRow key={certification.name}>
               <TableCell>{certification.name}</TableCell>
-              <TableCell align="right">
-                {certification.acquiredDate.toLocaleDateString()}
-              </TableCell>
+              <TableCell align="right">{certification.date}</TableCell>
             </TableRow>
           ))}
         </TableBody>
