@@ -1,10 +1,10 @@
+import { LinkText } from "@/components/Elements";
 import { Page } from "@/components/Layout";
 import { Heading } from "@/components/Typography";
-import { DEFAULT_LOCALE, useTranslation } from "@/libs/i18n";
+import { useTranslation } from "@/libs/i18n";
 import {
   Box,
   Card,
-  CardActionArea,
   CardActions,
   CardContent,
   Grid,
@@ -161,17 +161,17 @@ export default function Portfolio() {
             return (
               <Grid item key={project.title} xs={12} sm={6} md={4} lg={3}>
                 <Card>
-                  <CardActionArea href={project.link}>
-                    <CardContent sx={{ height: 150, overflow: "hidden" }}>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {project.title} {project.archived && <Archived />}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {project.description}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>{/* TODO: tags */}</CardActions>
+                  <CardContent sx={{ height: 150, overflow: "hidden" }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {project.title} {project.archived && <Archived />}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {project.description}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <LinkText href={project.link}>VIEW</LinkText>
+                  </CardActions>
                 </Card>
               </Grid>
             );
