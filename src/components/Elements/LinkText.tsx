@@ -2,7 +2,7 @@ import { Config } from "@/config";
 import { DEFAULT_LOCALE, I18nContext } from "@/libs/i18n";
 import { styled } from "@mui/material";
 import Link from "next/link";
-import { useContext } from "react";
+import { forwardRef, useContext } from "react";
 
 const linkOptions = {
   textDecoration: "none",
@@ -14,16 +14,27 @@ const linkOptions = {
 };
 
 const StyledInnerLink = styled(Link)(linkOptions);
-const StyledOuterLink = styled("a")(linkOptions);
 
-export const LinkText = (props: any) => {
+export const LinkText = forwardRef((props: any, ref) => {
   const { locale } = useContext(I18nContext);
-  const { href } = props;
+  const { href, ...linkProps } = props;
+  let uri = href;
+  let target = "_self";
+  let rel = "noopener noreferrer";
 
-  if (href?.startsWith("/")) {
-    const path = locale === DEFAULT_LOCALE ? href : `/${locale}${href}`;
-    return <StyledInnerLink {...props} href={path} />;
+  if (uri.startsWith("/")) {
+    uri = locale === DEFAULT_LOCALE ? href : `/${locale}${href}`;
   } else {
-    return <StyledOuterLink {...props} target="_blank" />;
+    target = "_blank";
   }
-};
+
+  return (
+    <StyledInnerLink
+      {...linkProps}
+      href={uri}
+      ref={ref}
+      target={target}
+      rel={rel}
+    />
+  );
+});

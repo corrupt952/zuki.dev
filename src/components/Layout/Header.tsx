@@ -8,7 +8,7 @@ import {
   MenuItem,
   styled,
 } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import { LinkText } from "../Elements";
 
 const NavigationLinkText = styled(LinkText)({
@@ -86,10 +86,12 @@ const NavigationLinks = () => {
 
 const NavigationMenu = () => {
   const [open, setOpen] = React.useState(false);
+  const anchorEl = useRef<HTMLButtonElement>(null);
 
   return (
     <>
       <IconButton
+        ref={anchorEl}
         onClick={() => setOpen(true)}
         sx={{ display: { xs: "block", md: "none" } }}
       >
@@ -97,8 +99,8 @@ const NavigationMenu = () => {
       </IconButton>
       <StyledMenu
         keepMounted
-        open={Boolean(open)}
-        anchorEl={null}
+        open={open}
+        anchorEl={anchorEl.current}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
         onClose={() => setOpen(false)}
@@ -108,8 +110,10 @@ const NavigationMenu = () => {
           return (
             <MenuItem
               component={NavigationMenuText}
+              passHref
               key={item.name}
               href={item.href}
+              onClick={() => setOpen(false)}
             >
               {item.name}
             </MenuItem>
