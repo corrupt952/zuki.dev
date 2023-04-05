@@ -28,6 +28,14 @@ const projects: Project[] = [
     tags: ["Website", "TypeScript"],
   },
   {
+    title: "Password Generator",
+    description:
+      "A password generator that generates a password based on the options you choose.",
+    link: "https://password.zuki.dev/",
+    archived: false,
+    tags: ["Website", "React", "TypeScript"],
+  },
+  {
     title: "picturnize",
     description: "Generate the icons needed to create the service.",
     link: "https://picturnize.zuki.dev",
