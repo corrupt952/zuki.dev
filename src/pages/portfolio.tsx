@@ -31,7 +31,7 @@ const projects: Project[] = [
     title: "Password Generator",
     description:
       "A password generator that generates a password based on the options you choose.",
-    link: "https://password.zuki.dev/",
+    link: "https://passwords.zuki.dev/",
     archived: false,
     tags: ["Website", "React", "TypeScript"],
   },
