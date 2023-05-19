@@ -28,6 +28,13 @@ const projects: Project[] = [
     tags: ["Website", "TypeScript"],
   },
   {
+    title: "home",
+    description: "The repository for the network devices and a kubernetes cluster in my home.",
+    link: "https://github.com/corrupt952/home",
+    archived: false,
+    tags: ["Kubernetes", "Ansible"]
+  },
+  {
     title: "revealer",
     description: "HTTP server that returns the source IP, request headers, request body, and query string.",
     link: "https://github.com/corrupt952/revealer",
