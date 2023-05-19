@@ -28,12 +28,18 @@ const projects: Project[] = [
     tags: ["Website", "TypeScript"],
   },
   {
-    title: "Password Generator",
-    description:
-      "A password generator that generates a password based on the options you choose.",
-    link: "https://passwords.zuki.dev/",
+    title: "revealer",
+    description: "HTTP server that returns the source IP, request headers, request body, and query string.",
+    link: "https://github.com/corrupt952/revealer",
     archived: false,
-    tags: ["Website", "React", "TypeScript"],
+    tags: ["Container", "Go"],
+  },
+  {
+    title: "br1efly",
+    description: "The respository for chrome extension to perform various operations using OpenAI or Azure OpenAI Service.",
+    link: "https://chrome.google.com/webstore/detail/br1efly/hmeejlkdfcfdlhkpioeodolchpcnbnhn",
+    archived: false,
+    tags: ["Chrome Extension", "TypeScript"]
   },
   {
     title: "picturnize",
