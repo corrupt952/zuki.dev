@@ -92,14 +92,6 @@ const projects: Project[] = [
     tags: ["CLI", "Shell"],
   },
   {
-    title: "env-revealer",
-    description:
-      "Container that returns environment variables that can be referenced.",
-    link: "https://github.com/corrupt952/env-revealer",
-    archived: false,
-    tags: ["Container", "Go", "Docker"],
-  },
-  {
     title: "ssm-session",
     description: "A simple wrapper for AWS SSM Session Manager",
     link: "https://github.com/corrupt952/ssm-session",
