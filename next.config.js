@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const i18n = {
-  locales: ['ja', 'en'],
-  defaultLocale: 'en',
+  locales: ["ja", "en"],
+  defaultLocale: "en",
 };
 
 const nextConfig = {
@@ -9,6 +9,6 @@ const nextConfig = {
   publicRuntimeConfig: {
     i18n,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
