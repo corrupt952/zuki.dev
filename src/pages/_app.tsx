@@ -4,7 +4,9 @@ import { I18nApp } from "@/libs/i18n";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Script from "next/script";
+import { useEffect } from "react";
 
 export const GoogleAnalytics = () => {
   return (
@@ -31,6 +33,20 @@ export const GoogleAnalytics = () => {
 };
 
 function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouterChange = (url: string) => {
+      const { gtag } = window as any;
+      gtag("config", Config.analytics.google.id, {
+        page_path: url,
+      });
+    };
+    router.events.on("routeChangeComplete", handleRouterChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouterChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Head>
