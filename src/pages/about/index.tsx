@@ -1,10 +1,8 @@
 import { Page } from "@/components/Layout";
-import {
-  CertificationArea,
-  ExperienceArea,
-  SkillArea,
-} from "@/components/Pages/About";
 import { Box } from "@mui/material";
+import { SkillArea } from "@/pages/about/SkillArea";
+import { ExperienceArea } from "@/pages/about//ExperienceArea";
+import { CertificationArea } from "@/pages/about/CertificationArea";
 
 export default function About() {
   return (

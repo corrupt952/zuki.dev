@@ -38,4 +38,9 @@ export const Config = {
       { name: 'portfolio', href: '/portfolio' },
     ],
   },
+  analytics: {
+    google: {
+      id: 'G-ZJ7C2QM9W7',
+    }
+  }
 }

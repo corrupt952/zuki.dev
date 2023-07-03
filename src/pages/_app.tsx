@@ -4,6 +4,31 @@ import { I18nApp } from "@/libs/i18n";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
+
+export const GoogleAnalytics = () => {
+  return (
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${Config.analytics.google.id}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${Config.analytics.google.id}');
+        `,
+        }}
+      />
+    </>
+  );
+};
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,6 +42,7 @@ function App({ Component, pageProps }: AppProps) {
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>
+      <GoogleAnalytics />
     </>
   );
 }
