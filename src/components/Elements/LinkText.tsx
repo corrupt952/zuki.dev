@@ -16,7 +16,7 @@ const linkOptions = {
 const StyledInnerLink = styled(Link)(linkOptions);
 
 // TODO: anyを何とかする
-export const LinkText = forwardRef<HTMLAnchorElement, any>(function _LinkText(
+export const LinkText = forwardRef<HTMLAnchorElement, any>(function LinkTextRef(
   props,
   ref
 ) {
