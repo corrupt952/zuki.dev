@@ -1,6 +1,6 @@
 import { Config } from "@/config";
 import { DEFAULT_LOCALE, I18nContext } from "@/libs/i18n";
-import { styled, LinkProps } from "@mui/material";
+import { styled } from "@mui/material";
 import Link from "next/link";
 import { forwardRef, useContext } from "react";
 
