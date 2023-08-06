@@ -19,14 +19,17 @@
             "company": "BARATANI KIKAKU - Self employment",
             "body": "As a sole proprietor, I assist various companies in the development and operation of web services. For more information, please check the link.",
             "links": {
-              "BARATANI_KIKAKU": "/work"
+              "BARATANI KIKAKU": "/work"
             }
           },
           {
             "startDate": "2023/03",
             "title": "Head of Product Tech Lead",
             "company": "Studist Corporation.",
-            "body": "Has finally responsibility and decision-making for technical decisions in specific products and for the technical aspects of roadmap realization. Provides recommendations and support for technical decisions that are not limited to a specific product, but that cut across the entire organization."
+            "body": "Has finally responsibility and decision-making for technical decisions in specific products and for the technical aspects of roadmap realization. Provides recommendations and support for technical decisions that are not limited to a specific product, but that cut across the entire organization.",
+            "links": {
+              "Interview(ja)": "https://www.wantedly.com/companies/studist/post_articles/526609"
+            }
           },
           {
             "startDate": "2019/06",
@@ -35,7 +38,7 @@
             "company": "Studist Corporation.",
             "body": "We built and deployed various internal services, including services that have been developed and operated since 2013, using containers from development to production. We switched from EC2 to EKS infrastructure without shutting down the service.",
             "links": {
-              "Studist_Tech": "https://studist.tech/teahcme-biz-containerization-58908cbcf966"
+              "Migration of services to container platform(ja)": "https://studist.tech/teahcme-biz-containerization-58908cbcf966"
             }
           },
           {
