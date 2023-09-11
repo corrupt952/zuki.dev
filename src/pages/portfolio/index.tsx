@@ -63,7 +63,7 @@ const projects: Project[] = [
     description: 'A generate blog outlines from the text.',
     link: 'https://wordy.zuki.dev/',
     tags: ['Website', 'Flutter', 'OpenAI'],
-    archived: false,
+    archived: true,
   },
   {
     title: 'closest',
