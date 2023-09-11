@@ -1,34 +1,28 @@
-import { Heading } from "@/components/Typography";
-import {
-  Table,
-  TableHead,
-  TableBody,
-  TableRow,
-  TableCell,
-} from "@mui/material";
-import { useTranslation } from "@/libs/i18n";
-import React from "react";
+import { Heading } from '@/components/Typography'
+import { Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material'
+import { useTranslation } from '@/libs/i18n'
+import React from 'react'
 
 type Certification = {
-  name: string;
-  date: string;
-};
+  name: string
+  date: string
+}
 
 export const CertificationArea = () => {
-  const { t } = useTranslation("pages.about.certification");
-  const certifications = t("certifications", {
+  const { t } = useTranslation('pages.about.certification')
+  const certifications = t('certifications', {
     returnObjects: true,
-  }) as Certification[];
+  }) as Certification[]
 
   return (
     <>
-      <Heading>{t("title")}</Heading>
+      <Heading>{t('title')}</Heading>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>{t("thead.name")}</TableCell>
+            <TableCell>{t('thead.name')}</TableCell>
             <TableCell align="right">
-              <span>{t("thead.date")}</span>
+              <span>{t('thead.date')}</span>
             </TableCell>
           </TableRow>
         </TableHead>
@@ -42,5 +36,5 @@ export const CertificationArea = () => {
         </TableBody>
       </Table>
     </>
-  );
-};
+  )
+}

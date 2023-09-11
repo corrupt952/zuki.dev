@@ -1,9 +1,9 @@
-import { Grid, styled, Typography } from '@mui/material';
-import MailIcon from '@mui/icons-material/Mail';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import { AvatarIcon } from '@/components/Elements/Icon';
-import { LinkText } from '@/components/Elements';
+import { Grid, styled, Typography } from '@mui/material'
+import MailIcon from '@mui/icons-material/Mail'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import { AvatarIcon } from '@/components/Elements/Icon'
+import { LinkText } from '@/components/Elements'
 
 const SocialLinkText = styled(LinkText)({
   color: 'inherit',
@@ -29,15 +29,27 @@ const HomeCentralizeGrid = styled(Grid)({
 
 export default function Home() {
   const links = [
-    { name: 'mail', href: 'mailto:k@zuki.dev', icon: <MailIcon sx={{ fontSize: '3rem' }} /> },
-    { name: 'github', href: 'https://github.com/corrupt952', icon: <GitHubIcon /> },
-    { name: 'twitter', href: 'https://twitter.com/corrupt952', icon: <TwitterIcon /> },
+    {
+      name: 'mail',
+      href: 'mailto:k@zuki.dev',
+      icon: <MailIcon sx={{ fontSize: '3rem' }} />,
+    },
+    {
+      name: 'github',
+      href: 'https://github.com/corrupt952',
+      icon: <GitHubIcon />,
+    },
+    {
+      name: 'twitter',
+      href: 'https://twitter.com/corrupt952',
+      icon: <TwitterIcon />,
+    },
   ]
 
   return (
     <HomeCentralizeGrid container spacing={2}>
       <Grid item>
-        <AvatarIcon width='12rem' />
+        <AvatarIcon width="12rem" />
       </Grid>
       <Grid item>
         <Typography variant="h4" noWrap>
@@ -50,7 +62,9 @@ export default function Home() {
       <Grid item>
         {links.map((link) => {
           return (
-            <SocialLinkText href={link.href} key={link.name}>{link.icon}</SocialLinkText>
+            <SocialLinkText href={link.href} key={link.name}>
+              {link.icon}
+            </SocialLinkText>
           )
         })}
       </Grid>

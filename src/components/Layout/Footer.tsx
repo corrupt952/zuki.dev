@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from "@mui/material"
+import { Box, styled, Typography } from '@mui/material'
 
 const StyledFooter = styled('footer')({
   flex: 'none',

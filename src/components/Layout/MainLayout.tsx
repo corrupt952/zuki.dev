@@ -1,4 +1,4 @@
-import { Config } from "@/config";
+import { Config } from '@/config'
 import {
   Box,
   CssBaseline,
@@ -8,26 +8,26 @@ import {
   StyledEngineProvider,
   SvgIcon,
   ThemeProvider,
-} from "@mui/material";
-import React, { useContext } from "react";
-import { Content } from "./Content";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-import { I18nContext, LOCALES } from "@/libs/i18n";
-import LanguageIcon from "@mui/icons-material/Language";
+} from '@mui/material'
+import React, { useContext } from 'react'
+import { Content } from './Content'
+import { Footer } from './Footer'
+import { Header } from './Header'
+import { I18nContext, LOCALES } from '@/libs/i18n'
+import LanguageIcon from '@mui/icons-material/Language'
 
 const LanguageSelect = () => {
-  const { locale, setLocale } = useContext(I18nContext);
+  const { locale, setLocale } = useContext(I18nContext)
   const handleChange = (event: SelectChangeEvent) => {
-    setLocale(event.target.value);
-  };
+    setLocale(event.target.value)
+  }
 
   return (
     <Box
       sx={{
-        position: "fixed",
-        bottom: "1rem",
-        right: "0.5rem",
+        position: 'fixed',
+        bottom: '1rem',
+        right: '0.5rem',
       }}
     >
       <Select
@@ -35,7 +35,7 @@ const LanguageSelect = () => {
         size="small"
         onChange={handleChange}
         renderValue={(value: string) => (
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <SvgIcon sx={{ mr: 1 }} fontSize="small">
               <LanguageIcon />
             </SvgIcon>
@@ -50,8 +50,8 @@ const LanguageSelect = () => {
         ))}
       </Select>
     </Box>
-  );
-};
+  )
+}
 
 export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -64,5 +64,5 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <LanguageSelect />
       </ThemeProvider>
     </StyledEngineProvider>
-  );
-};
+  )
+}

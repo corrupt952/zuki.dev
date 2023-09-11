@@ -1,14 +1,15 @@
-import { Typography } from "@mui/material";
+import { Typography } from '@mui/material'
 
-export const Body = ({ children, ...props }: { children: React.ReactNode, props?: any }) => {
+export const Body = ({
+  children,
+  ...props
+}: {
+  children: React.ReactNode
+  props?: any
+}) => {
   return (
-    <Typography
-      variant="body1"
-      color="textSecondary"
-      gutterBottom
-      {...props}
-    >
+    <Typography variant="body1" color="textSecondary" gutterBottom {...props}>
       {children}
     </Typography>
-  );
-};
+  )
+}

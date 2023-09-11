@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { styled } from '@mui/material'
 
 const StyledContent = styled('main')({
   display: 'flex',
@@ -10,9 +10,5 @@ const StyledContent = styled('main')({
 })
 
 export const Content = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <StyledContent>
-      {children}
-    </StyledContent>
-  )
+  return <StyledContent>{children}</StyledContent>
 }

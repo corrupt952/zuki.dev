@@ -1,10 +1,10 @@
-import { alpha, createTheme } from "@mui/material";
+import { alpha, createTheme } from '@mui/material'
 
 export const Config = {
-  title: "zuki.dev",
+  title: 'zuki.dev',
   theme: createTheme({
     palette: {
-      mode: "dark",
+      mode: 'dark',
       primary: {
         main: '#0066ff',
       },
@@ -32,7 +32,7 @@ export const Config = {
   }),
   navigation: {
     items: [
-      { name: 'about', href: '/about', },
+      { name: 'about', href: '/about' },
       { name: 'blog', href: 'https://khasegawa.hatenablog.com/' },
       { name: 'work', href: '/work' },
       { name: 'portfolio', href: '/portfolio' },
@@ -41,6 +41,6 @@ export const Config = {
   analytics: {
     google: {
       id: 'G-ZJ7C2QM9W7',
-    }
-  }
+    },
+  },
 }

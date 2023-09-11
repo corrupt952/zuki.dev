@@ -1,6 +1,17 @@
-import { List, ListItem, styled, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
-import { LinkText } from "./LinkText"
-import ReactMarkdown from "markdown-to-jsx";
+import {
+  List,
+  ListItem,
+  styled,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from '@mui/material'
+import { LinkText } from './LinkText'
+import ReactMarkdown from 'markdown-to-jsx'
 
 const MarkdownLinkText = styled(LinkText)(({ theme }) => ({
   color: theme.palette.secondary.main,
@@ -24,25 +35,73 @@ const MarkdownTable = styled(Table)({
   marginBottom: 24,
 })
 
-const MarkdownParagraph = function(props: JSX.IntrinsicAttributes) {
-  return <Typography paragraph gutterBottom whiteSpace='break-spaces' {...props} />
+const MarkdownParagraph = function (props: JSX.IntrinsicAttributes) {
+  return (
+    <Typography paragraph gutterBottom whiteSpace="break-spaces" {...props} />
+  )
 }
 
 const options = {
   overrides: {
-    h2: { component: (props: JSX.IntrinsicAttributes) => <Typography variant='h4' gutterBottom {...props} />, },
-    h3: { component: (props: JSX.IntrinsicAttributes) => <Typography variant='h5' gutterBottom {...props} />, },
-    p: { component: (props: JSX.IntrinsicAttributes) => <MarkdownParagraph {...props} />, },
-    span: { component: (props: JSX.IntrinsicAttributes) => <Typography component='span' display='block' {...props} />, },
-    a: { component: (props: JSX.IntrinsicAttributes) => <MarkdownLinkText {...props} />, },
-    ul: { component: (props: JSX.IntrinsicAttributes) => <MarkdownList {...props} />, },
-    li: { component: (props: JSX.IntrinsicAttributes) => <MarkdownListItem><Typography component='span' {...props} /></MarkdownListItem>, },
-    table: { component: (props: JSX.IntrinsicAttributes) => <TableContainer><MarkdownTable aria-label="simple table" {...props} /></TableContainer>, },
-    thead: { component: (props: JSX.IntrinsicAttributes) => <TableHead {...props} />, },
-    tbody: { component: (props: JSX.IntrinsicAttributes) => <TableBody {...props} />, },
-    tr: { component: (props: JSX.IntrinsicAttributes) => <TableRow {...props} />, },
-    th: { component: (props: JSX.IntrinsicAttributes) => <TableCell {...props} />, },
-    td: { component: (props: JSX.IntrinsicAttributes) => <TableCell {...props} />, },
+    h2: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <Typography variant="h4" gutterBottom {...props} />
+      ),
+    },
+    h3: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <Typography variant="h5" gutterBottom {...props} />
+      ),
+    },
+    p: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <MarkdownParagraph {...props} />
+      ),
+    },
+    span: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <Typography component="span" display="block" {...props} />
+      ),
+    },
+    a: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <MarkdownLinkText {...props} />
+      ),
+    },
+    ul: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <MarkdownList {...props} />
+      ),
+    },
+    li: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <MarkdownListItem>
+          <Typography component="span" {...props} />
+        </MarkdownListItem>
+      ),
+    },
+    table: {
+      component: (props: JSX.IntrinsicAttributes) => (
+        <TableContainer>
+          <MarkdownTable aria-label="simple table" {...props} />
+        </TableContainer>
+      ),
+    },
+    thead: {
+      component: (props: JSX.IntrinsicAttributes) => <TableHead {...props} />,
+    },
+    tbody: {
+      component: (props: JSX.IntrinsicAttributes) => <TableBody {...props} />,
+    },
+    tr: {
+      component: (props: JSX.IntrinsicAttributes) => <TableRow {...props} />,
+    },
+    th: {
+      component: (props: JSX.IntrinsicAttributes) => <TableCell {...props} />,
+    },
+    td: {
+      component: (props: JSX.IntrinsicAttributes) => <TableCell {...props} />,
+    },
   },
 }
 
@@ -51,9 +110,5 @@ type MarkdownProps = {
 }
 
 export const Markdown = ({ markdown }: MarkdownProps) => {
-  return (
-    <ReactMarkdown options={options}>
-      {markdown}
-    </ReactMarkdown>
-  )
+  return <ReactMarkdown options={options}>{markdown}</ReactMarkdown>
 }

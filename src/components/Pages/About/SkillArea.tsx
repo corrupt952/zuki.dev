@@ -1,21 +1,21 @@
-import { Body, Heading } from "@/components/Typography";
-import { Grid, Typography } from "@mui/material";
-import { useTranslation } from "@/libs/i18n";
+import { Body, Heading } from '@/components/Typography'
+import { Grid, Typography } from '@mui/material'
+import { useTranslation } from '@/libs/i18n'
 
 const skills = {
-  Language: ["Ruby", "Go", "Python", "JavaScript"],
-  "CI/CD": ["GitHub Actions", "CircleCI", "Argo CD"],
-  Monitoring: ["Elastic Stack", "NewRelic", "Datadog"],
-  "Cloud Infrastructure": ["AWS", "GCP"],
-  Tools: ["Ansible", "Terraform", "Docker", "Kubernetes"],
-};
+  Language: ['Ruby', 'Go', 'Python', 'JavaScript'],
+  'CI/CD': ['GitHub Actions', 'CircleCI', 'Argo CD'],
+  Monitoring: ['Elastic Stack', 'NewRelic', 'Datadog'],
+  'Cloud Infrastructure': ['AWS', 'GCP'],
+  Tools: ['Ansible', 'Terraform', 'Docker', 'Kubernetes'],
+}
 
 export const SkillArea = () => {
-  const { t } = useTranslation("pages.about.skills");
+  const { t } = useTranslation('pages.about.skills')
 
   return (
     <>
-      <Heading>{t("title")}</Heading>
+      <Heading>{t('title')}</Heading>
       <Grid container spacing={2} textAlign="center">
         {Object.entries(skills).map(([category, skills]) => {
           return (
@@ -25,9 +25,9 @@ export const SkillArea = () => {
                 <Body key={skill}>{skill}</Body>
               ))}
             </Grid>
-          );
+          )
         })}
       </Grid>
     </>
-  );
-};
+  )
+}

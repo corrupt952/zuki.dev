@@ -1,9 +1,9 @@
-import { styled } from "@mui/material";
-import { Html, Head, Main, NextScript } from "next/document";
+import { styled } from '@mui/material'
+import { Html, Head, Main, NextScript } from 'next/document'
 
-const Body = styled("body")({
-  overflowY: "scroll",
-});
+const Body = styled('body')({
+  overflowY: 'scroll',
+})
 
 export default function Document() {
   return (
@@ -14,5 +14,5 @@ export default function Document() {
         <NextScript />
       </Body>
     </Html>
-  );
+  )
 }
