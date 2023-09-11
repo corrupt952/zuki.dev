@@ -11,7 +11,7 @@ const NavigationLinkText = styled(LinkText)({
   paddingLeft: 16,
   paddingRight: 0,
   ':first-child': {
-    paddingLeft: 8,
+    paddingLeft: 0,
   },
 })
 
@@ -29,6 +29,8 @@ const StyledAppBar = styled(AppBar)({
   textTransform: 'uppercase',
   fontWeight: 'bold',
   padding: 0,
+  paddingLeft: 24,
+  paddingRight: 24,
   margin: 0,
 })
 

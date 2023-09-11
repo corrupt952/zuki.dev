@@ -5,7 +5,7 @@ const StyledContent = styled('main')({
   alignItems: 'center',
   justifyContent: 'center',
   flex: 'auto',
-  padding: '8px',
+  padding: '24px',
   marginTop: '88px',
 })
 
