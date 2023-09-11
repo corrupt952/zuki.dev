@@ -4,11 +4,14 @@ Repository for the [zuki.dev](https://zuki.dev)
 
 ## Requirements
 
-- docker
+- asdf
 
-## Run local server
+## Setup
 
-```bash
-docker compose run --rm -it app npm ci
-docker compose up -d
-```
+1. Install Node.js via asdf: `asdf install`
+1. Install packages: `npm i`
+
+## Run
+
+1. Run server: `npm run dev`
+1. Open [localhost:3000](http://localhost:3000)
