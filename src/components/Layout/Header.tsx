@@ -10,7 +10,7 @@ const NavigationLinkText = styled(LinkText)({
   paddingBottom: 12,
   paddingLeft: 16,
   paddingRight: 0,
-  ':first-child': {
+  ':first-of-type': {
     paddingLeft: 0,
   },
 })
