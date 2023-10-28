@@ -5,6 +5,7 @@ const i18n = {
 }
 
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   publicRuntimeConfig: {
     i18n,
