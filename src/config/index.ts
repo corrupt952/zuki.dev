@@ -34,7 +34,7 @@ export const Config = {
     items: [
       { name: 'about', href: '/about' },
       { name: 'blog', href: 'https://khasegawa.hatenablog.com/' },
-      { name: 'work', href: '/work' },
+      { name: 'work', href: 'https://baratani.jp' },
       { name: 'portfolio', href: '/portfolio' },
     ],
   },
