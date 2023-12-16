@@ -8,6 +8,7 @@ Repository for the [zuki.dev](https://zuki.dev)
 
 ## Setup
 
+1. Add plugin for Node.js: `asdf plugin add nodejs`
 1. Install Node.js via asdf: `asdf install`
 1. Install packages: `npm i`
 
