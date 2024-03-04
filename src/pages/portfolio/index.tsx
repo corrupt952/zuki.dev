@@ -45,8 +45,9 @@ const projects: Project[] = [
   },
   {
     title: 'Bookil',
-    description: 'Soon',
-    link: '#',
+    description:
+      'Bookil is an application to make PDF reading management easier',
+    link: 'https://apps.apple.com/lt/app/bookil/id6475175265',
     archived: false,
     tags: ['iOS', 'Swift'],
   },
