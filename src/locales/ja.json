@@ -166,6 +166,20 @@
             "※1 オフラインでの相談・メタリングの場合は、別途交通費を請求します"
           ]
         }
+      },
+      "inquiry": {
+        "title": "お問い合わせ",
+        "descriptions": [
+          "仕事の依頼やお誘いなどは、[Twitter](https://twitter.com/corrupt952)や[E-mail](mailto:k@zuki.dev)でご連絡ください。",
+          "※ Googleフォームのため送信後ページ遷移するので、ご注意ください。"
+        ],
+        "form": {
+          "name": "お名前",
+          "email": "メールアドレス",
+          "subject": "件名",
+          "content": "お問い合わせ内容",
+          "submit": "送信"
+        }
       }
     },
     "portfolio": {

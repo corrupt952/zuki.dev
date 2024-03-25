@@ -168,6 +168,20 @@
             "*1 Travel expenses will be charged separately for offline consultation and mentoring."
           ]
         }
+      },
+      "inquiry": {
+        "title": "Inquiry",
+        "descriptions": [
+          "Please contact me via [Twitter](https://twitter.com/corrupt952) or [E-mail](mailto:k@zuki.dev) for job requests and invitations.",
+          "※ Submit to be redirected to Google Form."
+        ],
+        "form": {
+          "name": "Name",
+          "email": "E-mail",
+          "subject": "Subject",
+          "content": "Message",
+          "submit": "Submit"
+        }
       }
     },
     "portfolio": {
