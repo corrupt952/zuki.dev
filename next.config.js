@@ -5,11 +5,14 @@ const i18n = {
 }
 
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
   publicRuntimeConfig: {
     i18n,
   },
+}
+
+if (process.env.NODE_ENV === 'production') {
+  nextConfig.output = 'export'
 }
 
 module.exports = nextConfig
