@@ -5,8 +5,6 @@ import { useTranslation } from '@/libs/i18n'
 import {
   Box,
   Button,
-  FormControl,
-  Input,
   List,
   ListItem,
   Table,
@@ -17,7 +15,6 @@ import {
   TextField,
   Typography,
 } from '@mui/material'
-import Link from 'next/link'
 
 const ContentArea = () => {
   const { t } = useTranslation('pages.work.contents')
@@ -105,8 +102,6 @@ const PricingArea = () => {
 
 const InquiryArea = () => {
   const { t } = useTranslation('pages.work.inquiry')
-
-  console.log(t('title'))
 
   return (
     <>
