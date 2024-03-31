@@ -1,12 +1,7 @@
-import {
-  Box,
-  List,
-  ListItem,
-  Typography,
-  styled,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material'
+import { LinkText } from '@/components/Elements'
+import { Body, Heading } from '@/components/Typography'
+import { useTranslation } from '@/libs/i18n'
+import LaunchIcon from '@mui/icons-material/Launch'
 import {
   Timeline,
   TimelineConnector,
@@ -18,10 +13,15 @@ import {
   timelineContentClasses,
   timelineOppositeContentClasses,
 } from '@mui/lab'
-import { LinkText } from '@/components/Elements'
-import { Body, Heading } from '@/components/Typography'
-import LaunchIcon from '@mui/icons-material/Launch'
-import { useTranslation } from '@/libs/i18n'
+import {
+  Box,
+  List,
+  ListItem,
+  Typography,
+  styled,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 
 type Experience = {
   startDate: string
@@ -67,7 +67,7 @@ export const ExperienceArea = () => {
         <Body key={description}>{description}</Body>
       ))}
 
-      <Box height="1rem" />
+      <Box height="2rem" />
 
       <ExperienceTimeline position={matches ? 'right' : 'alternate'}>
         {experiences.map((experience) => {

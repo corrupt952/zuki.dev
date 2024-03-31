@@ -5,6 +5,36 @@
       "skills": {
         "title": "Skills"
       },
+      "affilication": {
+        "title": "Affilication",
+        "thead": {
+          "name": "Name",
+          "date": "Period",
+          "role": "Role"
+        },
+        "affilications": [
+          {
+            "name": "Studist Corporation.",
+            "date": "2018/10 ~",
+            "role": "SRE・Product Tech Lead・R&D"
+          },
+          {
+            "name": "茨谷企画(BARATANI KIKAKU) - Self employment",
+            "date": "2019/01 ~",
+            "role": ""
+          },
+          {
+            "name": "Labee LLC",
+            "date": "2024/04 ~",
+            "role": "CEO"
+          },
+          {
+            "name": "Time Intermedia Inc.",
+            "date": "2013/06 ~ 2018/09",
+            "role": "Tech Lead・Engineer・PM Support"
+          }
+        ]
+      },
       "experience": {
         "title": "Work Experience",
         "descriptions": [

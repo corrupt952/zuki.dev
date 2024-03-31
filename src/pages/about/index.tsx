@@ -4,6 +4,7 @@ import {
   SkillArea,
   ExperienceArea,
   CertificationArea,
+  AffilicationArea,
 } from '@/components/Pages/About'
 
 export default function About() {
@@ -12,6 +13,8 @@ export default function About() {
       <Box>
         <SkillArea />
         <Box height="3rem" />
+        <AffilicationArea />
+        <Box height="4rem" />
         <ExperienceArea />
         <Box height="3rem" />
         <CertificationArea />

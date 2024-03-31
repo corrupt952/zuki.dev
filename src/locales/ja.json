@@ -5,6 +5,36 @@
       "skills": {
         "title": "スキル"
       },
+      "affilication": {
+        "title": "所属",
+        "thead": {
+          "name": "所属",
+          "date": "期間",
+          "role": "役割"
+        },
+        "affilications": [
+          {
+            "name": "株式会社スタディスト",
+            "date": "2018/10 ~",
+            "role": "SRE・プロダクト技術責任者・R&D"
+          },
+          {
+            "name": "茨谷企画（個人事業主）",
+            "date": "2019/01 ~",
+            "role": ""
+          },
+          {
+            "name": "ラビー合同会社",
+            "date": "2024/04 ~",
+            "role": "代表"
+          },
+          {
+            "name": "株式会社タイムインターメディア",
+            "date": "2013/06 ~ 2018/09",
+            "role": "テックリード・エンジニア・PM支援"
+          }
+        ]
+      },
       "experience": {
         "title": "経歴",
         "descriptions": [
