@@ -1,3 +1,7 @@
 {
-  "editor.formatOnSave": true
+  // Editor
+  "editor.formatOnSave": true,
+
+  // Code Spell Checker
+  "cSpell.words": ["studist", "findy"]
 }
