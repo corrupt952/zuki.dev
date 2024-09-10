@@ -54,9 +54,20 @@
           },
           {
             "startDate": "2023/03",
+            "endDate": "2024/05",
+            "title": "LLM/AI関連の新機能開発、専門チーム立ち上げサポート",
+            "company": "株式会社スタディスト",
+            "body": "LLM/AI関連の組織的な新機能開発でのPMから開発を行いました。また、LLM/AI専門チームが立ち上がるまでのサポートを行いました。",
+            "links": {
+              "AWS Startup ブログ": "https://aws.amazon.com/jp/blogs/startup/tech-interview-studist-2024/",
+              "Findy Tools": "https://findy-tools.io/products/amazon-bedrock/14/141"
+            }
+          },
+          {
+            "startDate": "2023/03",
             "title": "プロダクト技術責任者",
             "company": "株式会社スタディスト",
-            "body": "特定の製品における技術的な決定や、ロードマップ実現のための技術的な側面について、最終的な責任と意思決定を持つ。特定の製品に限定されず、組織全体を横断する技術的な決定に対して、提案やサポートを行う。",
+            "body": "特定の事業における技術的な決定や、ロードマップ実現のための技術的な側面について、最終的な責任と意思決定を持つ。特定の製品に限定されず、組織全体を横断する技術的な決定に対して、提案やサポートを行う。",
             "links": {
               "インタビュー": "https://www.wantedly.com/companies/studist/post_articles/526609"
             }

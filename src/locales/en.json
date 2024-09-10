@@ -54,6 +54,17 @@
           },
           {
             "startDate": "2023/03",
+            "endDate": "2024/05",
+            "title": "Support for new feature development and establishment of specialized teams for LLM/AI",
+            "company": "Studist Corporation.",
+            "body": "Involved in development from PM to development in organizational new feature development for LLM/AI. Also supported the establishment of a specialized team for LLM/AI until it was established.",
+            "links": {
+              "AWS Startup Blog(ja)": "https://aws.amazon.com/jp/blogs/startup/tech-interview-studist-2024/",
+              "Findy Tools(ja)": "https://findy-tools.io/products/amazon-bedrock/14/141"
+            }
+          },
+          {
+            "startDate": "2023/03",
             "title": "Head of Product Tech Lead",
             "company": "Studist Corporation.",
             "body": "Has finally responsibility and decision-making for technical decisions in specific products and for the technical aspects of roadmap realization. Provides recommendations and support for technical decisions that are not limited to a specific product, but that cut across the entire organization.",
