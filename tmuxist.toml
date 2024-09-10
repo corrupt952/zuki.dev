@@ -1,0 +1,13 @@
+name = "zuki.dev"
+root = "."
+attach = true
+
+[[windows]]
+[[windows.panes]]
+command = """
+npm i;
+npm run dev
+"""
+
+[[windows]]
+[[windows.panes]]
