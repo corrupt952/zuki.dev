@@ -23,6 +23,16 @@ importers:
       '@mui/material':
         specifier: ^6.0.0
         version: 6.2.1(@emotion/react@11.14.0(@types/react@18.3.18)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@18.3.18)(react@18.3.1))(@types/react@18.3.18)(react@18.3.1))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next:
+        specifier: 14.2.21
+        version: 14.2.21(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
       '@types/node':
         specifier: 22.10.2
         version: 22.10.2
@@ -41,28 +51,18 @@ importers:
       markdown-to-jsx:
         specifier: ^7.2.0
         version: 7.7.2(react@18.3.1)
-      next:
-        specifier: 14.2.21
-        version: 14.2.21(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-sitemap:
         specifier: ^4.1.3
         version: 4.2.3(next@14.2.21(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: 18.3.1
-        version: 18.3.1(react@18.3.1)
+      prettier:
+        specifier: ^3.0.3
+        version: 3.4.2
       sharp:
         specifier: ^0.33.0
         version: 0.33.5
       typescript:
         specifier: 5.7.2
         version: 5.7.2
-    devDependencies:
-      prettier:
-        specifier: ^3.0.3
-        version: 3.4.2
 
 packages:
 

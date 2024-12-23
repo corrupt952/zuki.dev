@@ -16,20 +16,20 @@
     "@mui/icons-material": "^6.0.0",
     "@mui/lab": "^5.0.0-alpha.124",
     "@mui/material": "^6.0.0",
+    "next": "14.2.21",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0",
+    "typescript": "5.7.2",
+    "prettier": "^3.0.3",
+    "markdown-to-jsx": "^7.2.0",
+    "next-sitemap": "^4.1.3",
     "@types/node": "22.10.2",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "eslint": "8.57.1",
-    "eslint-config-next": "^14.2.6",
-    "markdown-to-jsx": "^7.2.0",
-    "next": "14.2.21",
-    "next-sitemap": "^4.1.3",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "sharp": "^0.33.0",
-    "typescript": "5.7.2"
-  },
-  "devDependencies": {
-    "prettier": "^3.0.3"
+    "eslint-config-next": "^14.2.6"
   }
 }
