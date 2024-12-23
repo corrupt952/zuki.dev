@@ -12,6 +12,7 @@ import {
 } from '@mui/material'
 import { LinkText } from './LinkText'
 import ReactMarkdown from 'markdown-to-jsx'
+import { JSX } from 'react'
 
 const MarkdownLinkText = styled(LinkText)(({ theme }) => ({
   color: theme.palette.secondary.main,
