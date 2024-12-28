@@ -5,14 +5,14 @@
       "skills": {
         "title": "Skills"
       },
-      "affilication": {
-        "title": "Affilication",
+      "affiliation": {
+        "title": "affiliation",
         "thead": {
           "name": "Name",
           "date": "Period",
           "role": "Role"
         },
-        "affilications": [
+        "affiliations": [
           {
             "name": "Studist Corporation.",
             "date": "2018/10 ~",

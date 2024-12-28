@@ -1,7 +1,7 @@
-import { LinkText } from '@/components/Elements'
-import { Body, Heading } from '@/components/Typography'
-import { useTranslation } from '@/libs/i18n'
-import LaunchIcon from '@mui/icons-material/Launch'
+import LinkText from '@/components/Elements/LinkText';
+import { Body, Heading } from '@/components/Typography';
+import { useTranslation } from '@/libs/i18n';
+import LaunchIcon from '@mui/icons-material/Launch';
 import {
   Timeline,
   TimelineConnector,
@@ -12,7 +12,7 @@ import {
   TimelineSeparator,
   timelineContentClasses,
   timelineOppositeContentClasses,
-} from '@mui/lab'
+} from '@mui/lab';
 import {
   Box,
   List,
@@ -21,16 +21,16 @@ import {
   styled,
   useMediaQuery,
   useTheme,
-} from '@mui/material'
+} from '@mui/material';
 
 type Experience = {
-  startDate: string
-  endDate?: string
-  title: string
-  company: string
-  body: string
-  links: { [key: string]: string }
-}
+  startDate: string;
+  endDate?: string;
+  title: string;
+  company: string;
+  body: string;
+  links: { [key: string]: string };
+};
 
 const ExperienceTimeline = styled(Timeline)(({ theme }) => ({
   padding: 0,
@@ -39,7 +39,7 @@ const ExperienceTimeline = styled(Timeline)(({ theme }) => ({
       flex: 0.25,
     },
   },
-}))
+}));
 
 const ExperienceTimelineItem = styled(TimelineItem)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
@@ -47,18 +47,18 @@ const ExperienceTimelineItem = styled(TimelineItem)(({ theme }) => ({
       boxShadow: '-2px 0 0 0 tan',
     },
   },
-}))
+}));
 
 export const ExperienceArea = () => {
-  const { t } = useTranslation('pages.about.experience')
-  const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.down('md'))
+  const { t } = useTranslation('pages.about.experience');
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
   const descriptions = t('descriptions', {
     returnObjects: true,
-  }) as string[]
+  }) as string[];
   const experiences = t('experiences', {
     returnObjects: true,
-  }) as Experience[]
+  }) as Experience[];
 
   return (
     <>
@@ -125,7 +125,7 @@ export const ExperienceArea = () => {
                           variant="caption"
                           color="textSecondary"
                         >
-                          <LinkText href={link}>
+                          <LinkText href={link} className="text-primary-600">
                             {text}
                             <LaunchIcon fontSize="inherit" />
                           </LinkText>
@@ -135,9 +135,9 @@ export const ExperienceArea = () => {
                 </List>
               </TimelineContent>
             </ExperienceTimelineItem>
-          )
+          );
         })}
       </ExperienceTimeline>
     </>
-  )
-}
+  );
+};

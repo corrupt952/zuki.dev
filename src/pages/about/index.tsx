@@ -1,24 +1,23 @@
-import { Page } from '@/components/Layout'
-import { Box } from '@mui/material'
+import { Page } from '@/components/Layout';
 import {
   SkillArea,
   ExperienceArea,
   CertificationArea,
-  AffilicationArea,
-} from '@/components/Pages/About'
+  AffiliationArea,
+} from '@/components/Pages/About';
 
 export default function About() {
   return (
     <Page>
-      <Box>
+      <div>
         <SkillArea />
-        <Box height="3rem" />
-        <AffilicationArea />
-        <Box height="4rem" />
+        <div className="h-12" />
+        <AffiliationArea />
+        <div className="h-16" />
         <ExperienceArea />
-        <Box height="3rem" />
+        <div className="h-12" />
         <CertificationArea />
-      </Box>
+      </div>
     </Page>
-  )
+  );
 }

@@ -1,13 +1,7 @@
 import { Markdown } from '@/components/Elements/Markdown';
 import { Page } from '@/components/Layout';
-import { Body } from '@/components/Typography';
+import { Body, Heading } from '@/components/Typography';
 import { useTranslation } from '@/libs/i18n';
-
-const SectionHeader = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="text-3xl mb-4 text-center brightness-200 uppercase">
-    {children}
-  </h2>
-);
 
 const BodyHeader = ({ children }: { children: React.ReactNode }) => (
   <h3 className="text-2xl mb-2 brightness-200">{children}</h3>
@@ -19,7 +13,7 @@ function ContentArea() {
 
   return (
     <>
-      <SectionHeader>{t('title')}</SectionHeader>
+      <Heading>{t('title')}</Heading>
       <BodyHeader>{t('support.title')}</BodyHeader>
       {t('support.descriptions', { returnObjects: true }).map(
         (desc: string) => (
@@ -53,7 +47,7 @@ function PricingArea() {
 
   return (
     <>
-      <SectionHeader>{t('title')}</SectionHeader>
+      <Heading>{t('title')}</Heading>
       {t('descriptions', { returnObjects: true }).map((desc: string) => (
         <p className="mb-2" key={desc}>
           <Markdown markdown={desc} />
@@ -114,7 +108,7 @@ function InquiryArea() {
 
   return (
     <>
-      <SectionHeader>{t('title')}</SectionHeader>
+      <Heading>{t('title')}</Heading>
       {t('descriptions', { returnObjects: true }).map((desc: string) => (
         <p className="mb-2" key={desc}>
           <Markdown markdown={desc} />

@@ -5,14 +5,14 @@
       "skills": {
         "title": "スキル"
       },
-      "affilication": {
+      "affiliation": {
         "title": "所属",
         "thead": {
           "name": "所属",
           "date": "期間",
           "role": "役割"
         },
-        "affilications": [
+        "affiliations": [
           {
             "name": "株式会社スタディスト",
             "date": "2018/10 ~",
