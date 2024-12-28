@@ -9,18 +9,14 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@mui/material'
-import { LinkText } from './LinkText'
-import ReactMarkdown from 'markdown-to-jsx'
-import { JSX } from 'react'
-
-const MarkdownLinkText = styled(LinkText)(({ theme }) => ({
-  color: theme.palette.secondary.main,
-}))
+} from '@mui/material';
+import LinkText from './LinkText';
+import ReactMarkdown from 'markdown-to-jsx';
+import { JSX } from 'react';
 
 const MarkdownList = styled(List)({
   listStyleType: 'circle',
-})
+});
 
 const MarkdownListItem = styled(ListItem)({
   marginLeft: 16,
@@ -29,18 +25,18 @@ const MarkdownListItem = styled(ListItem)({
   paddingLeft: 8,
   listStyle: 'circle',
   display: 'list-item',
-})
+});
 
 const MarkdownTable = styled(Table)({
   width: '100%',
   marginBottom: 24,
-})
+});
 
 const MarkdownParagraph = function (props: JSX.IntrinsicAttributes) {
   return (
     <Typography paragraph gutterBottom whiteSpace="break-spaces" {...props} />
-  )
-}
+  );
+};
 
 const options = {
   overrides: {
@@ -66,7 +62,10 @@ const options = {
     },
     a: {
       component: (props: JSX.IntrinsicAttributes) => (
-        <MarkdownLinkText {...props} />
+        <LinkText
+          {...props}
+          className="text-primary-500 hover:text-primary-600"
+        />
       ),
     },
     ul: {
@@ -104,12 +103,12 @@ const options = {
       component: (props: JSX.IntrinsicAttributes) => <TableCell {...props} />,
     },
   },
-}
+};
 
 type MarkdownProps = {
-  markdown: string
-}
+  markdown: string;
+};
 
 export const Markdown = ({ markdown }: MarkdownProps) => {
-  return <ReactMarkdown options={options}>{markdown}</ReactMarkdown>
-}
+  return <ReactMarkdown options={options}>{markdown}</ReactMarkdown>;
+};

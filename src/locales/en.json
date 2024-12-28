@@ -154,13 +154,13 @@
             "We provide assistance and consultation on various tasks related to the development and operation of web services."
           ],
           "menus": [
-            "* Support for launching services",
-            "* AWS implementation support (including multi-account configuration)",
-            "* Infrastrucutre as Code implementation and start-up support",
-            "* Consultation and start-up support for container migration",
-            "* Troubleshooting support and consultation",
-            "* Consultation and support for introduction and upgrade of various middleware and services",
-            "* Monitoring implementation support"
+            "Support for launching services",
+            "AWS implementation support (including multi-account configuration)",
+            "Infrastrucutre as Code implementation and start-up support",
+            "Consultation and start-up support for container migration",
+            "Troubleshooting support and consultation",
+            "Consultation and support for introduction and upgrade of various middleware and services",
+            "Monitoring implementation support"
           ]
         },
         "consultation": {

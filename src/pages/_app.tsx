@@ -1,12 +1,12 @@
-import { MainLayout } from '@/components/Layout'
-import { Config } from '@/config'
-import { I18nApp } from '@/libs/i18n'
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import Script from 'next/script'
-import { useEffect } from 'react'
+import { MainLayout } from '@/components/Layout';
+import { Config } from '@/config';
+import { I18nApp } from '@/libs/i18n';
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { useEffect } from 'react';
 
 export const GoogleAnalytics = () => {
   return (
@@ -29,23 +29,23 @@ export const GoogleAnalytics = () => {
         }}
       />
     </>
-  )
-}
+  );
+};
 
 function App({ Component, pageProps }: AppProps) {
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     const handleRouterChange = (url: string) => {
-      const { gtag } = window as any
+      const { gtag } = window as any;
       gtag('config', Config.analytics.google.id, {
         page_path: url,
-      })
-    }
-    router.events.on('routeChangeComplete', handleRouterChange)
+      });
+    };
+    router.events.on('routeChangeComplete', handleRouterChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouterChange)
-    }
-  }, [router.events])
+      router.events.off('routeChangeComplete', handleRouterChange);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -55,12 +55,14 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <div className="text-foreground bg-background">
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
+      </div>
       <GoogleAnalytics />
     </>
-  )
+  );
 }
 
-export default I18nApp(App)
+export default I18nApp(App);

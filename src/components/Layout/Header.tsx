@@ -1,27 +1,15 @@
-import { Config } from '@/config'
-import MenuIcon from '@mui/icons-material/Menu'
-import { AppBar, Grid, IconButton, Menu, MenuItem, styled } from '@mui/material'
-import React, { useRef } from 'react'
-import { LinkText } from '../Elements'
-
-const NavigationLinkText = styled(LinkText)({
-  color: 'inherit',
-  paddingTop: 12,
-  paddingBottom: 12,
-  paddingLeft: 16,
-  paddingRight: 0,
-  ':first-of-type': {
-    paddingLeft: 0,
-  },
-})
-
-const NavigationMenuText = styled(LinkText)({
-  color: 'inherit',
-  paddingTop: 12,
-  paddingBottom: 12,
-  paddingLeft: 16,
-  paddingRight: 16,
-})
+import { Config } from '@/config';
+import MenuIcon from '@mui/icons-material/Menu';
+import {
+  AppBar,
+  Grid,
+  IconButton,
+  Menu,
+  MenuItem,
+  styled,
+} from '@mui/material';
+import React, { useRef } from 'react';
+import LinkText from '../Elements/LinkText';
 
 const StyledAppBar = styled(AppBar)({
   backgroundImage: 'none',
@@ -32,12 +20,12 @@ const StyledAppBar = styled(AppBar)({
   paddingLeft: 24,
   paddingRight: 24,
   margin: 0,
-})
+});
 
 const StyledToolbar = styled(Grid)({
   padding: 0,
   margin: 0,
-})
+});
 
 const StyledMenu = styled(Menu)({
   backgroundImage: 'none',
@@ -47,7 +35,7 @@ const StyledMenu = styled(Menu)({
   fontWeight: 'bold',
   padding: 0,
   margin: 0,
-})
+});
 
 const HeaderCentralizeGrid = styled(Grid)({
   margin: 0,
@@ -58,30 +46,34 @@ const HeaderCentralizeGrid = styled(Grid)({
   textAlign: 'center',
   alignItems: 'stretch',
   justifyContent: 'center',
-})
+});
 
 const HeaderCentralizeGridItem = styled(Grid)({
   margin: 0,
   padding: 0,
-})
+});
 
 const NavigationLinks = () => {
   return (
     <>
       {Config.navigation.items.map((item) => {
         return (
-          <NavigationLinkText href={item.href} key={item.name}>
+          <LinkText
+            href={item.href}
+            key={item.name}
+            className="text-foreground px-4 py-3 pr-0 first-of-type:pl-0 hover:text-gray-400"
+          >
             {item.name}
-          </NavigationLinkText>
-        )
+          </LinkText>
+        );
       })}
     </>
-  )
-}
+  );
+};
 
 const NavigationMenu = () => {
-  const [open, setOpen] = React.useState(false)
-  const anchorEl = useRef<HTMLButtonElement>(null)
+  const [open, setOpen] = React.useState(false);
+  const anchorEl = useRef<HTMLButtonElement>(null);
 
   return (
     <>
@@ -104,20 +96,21 @@ const NavigationMenu = () => {
         {Config.navigation.items.map((item) => {
           return (
             <MenuItem
-              component={NavigationMenuText}
+              component={LinkText}
               passHref
               key={item.name}
               href={item.href}
+              className="text-foreground px-4 py-3 hover:text-gray-400"
               onClick={() => setOpen(false)}
             >
               {item.name}
             </MenuItem>
-          )
+          );
         })}
       </StyledMenu>
     </>
-  )
-}
+  );
+};
 
 export const Header = () => {
   return (
@@ -127,7 +120,12 @@ export const Header = () => {
           <HeaderCentralizeGridItem item xs={12} md={8}>
             <Grid container justifyContent={'space-between'}>
               <Grid item sx={{ display: 'flex' }}>
-                <NavigationLinkText href="/">{Config.title}</NavigationLinkText>
+                <LinkText
+                  href="/"
+                  className="text-foreground py-3 hover:text-gray-400"
+                >
+                  {Config.title}
+                </LinkText>
               </Grid>
               <Grid item sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <NavigationLinks />
@@ -140,5 +138,5 @@ export const Header = () => {
         </HeaderCentralizeGrid>
       </StyledToolbar>
     </StyledAppBar>
-  )
-}
+  );
+};

@@ -1,9 +1,9 @@
-import { Grid, styled, Typography } from '@mui/material'
-import MailIcon from '@mui/icons-material/Mail'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import { AvatarIcon } from '@/components/Elements/Icon'
-import { LinkText } from '@/components/Elements'
+import { Grid, styled, Typography } from '@mui/material';
+import MailIcon from '@mui/icons-material/Mail';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { AvatarIcon } from '@/components/Elements/Icon';
+import LinkText from '@/components/Elements/LinkText';
 
 const SocialLinkText = styled(LinkText)({
   color: 'inherit',
@@ -16,7 +16,7 @@ const SocialLinkText = styled(LinkText)({
   '> svg': {
     fontSize: '2rem',
   },
-})
+});
 
 const HomeCentralizeGrid = styled(Grid)({
   display: 'flex',
@@ -25,7 +25,7 @@ const HomeCentralizeGrid = styled(Grid)({
   textAlign: 'center',
   alignItems: 'center',
   justifyContent: 'center',
-})
+});
 
 export default function Home() {
   const links = [
@@ -44,7 +44,7 @@ export default function Home() {
       href: 'https://twitter.com/corrupt952',
       icon: <TwitterIcon />,
     },
-  ]
+  ];
 
   return (
     <HomeCentralizeGrid container spacing={2}>
@@ -65,9 +65,9 @@ export default function Home() {
             <SocialLinkText href={link.href} key={link.name}>
               {link.icon}
             </SocialLinkText>
-          )
+          );
         })}
       </Grid>
     </HomeCentralizeGrid>
-  )
+  );
 }
