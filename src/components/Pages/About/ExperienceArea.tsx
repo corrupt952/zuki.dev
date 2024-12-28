@@ -1,27 +1,7 @@
 import LinkText from '@/components/Elements/LinkText';
 import { Body, Heading } from '@/components/Typography';
 import { useTranslation } from '@/libs/i18n';
-import LaunchIcon from '@mui/icons-material/Launch';
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-  timelineContentClasses,
-  timelineOppositeContentClasses,
-} from '@mui/lab';
-import {
-  Box,
-  List,
-  ListItem,
-  Typography,
-  styled,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { ExternalLink } from 'lucide-react';
 
 type Experience = {
   startDate: string;
@@ -32,27 +12,8 @@ type Experience = {
   links: { [key: string]: string };
 };
 
-const ExperienceTimeline = styled(Timeline)(({ theme }) => ({
-  padding: 0,
-  [theme.breakpoints.down('md')]: {
-    [`& .${timelineOppositeContentClasses.root}`]: {
-      flex: 0.25,
-    },
-  },
-}));
-
-const ExperienceTimelineItem = styled(TimelineItem)(({ theme }) => ({
-  [theme.breakpoints.up('md')]: {
-    [`:nth-of-type(even) .${timelineContentClasses.root}`]: {
-      boxShadow: '-2px 0 0 0 tan',
-    },
-  },
-}));
-
 export const ExperienceArea = () => {
   const { t } = useTranslation('pages.about.experience');
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
   const descriptions = t('descriptions', {
     returnObjects: true,
   }) as string[];
@@ -67,77 +28,71 @@ export const ExperienceArea = () => {
         <Body key={description}>{description}</Body>
       ))}
 
-      <Box height="2rem" />
+      <div className="h-8" />
 
-      <ExperienceTimeline position={matches ? 'right' : 'alternate'}>
-        {experiences.map((experience) => {
-          return (
-            <ExperienceTimelineItem
-              key={experience.title}
-              sx={{
-                ':nth-of-type(even) .MuiTimelineContent-root': {
-                  textAlign: 'left',
-                },
-              }}
+      <div className="relative">
+        {experiences.map((experience, index) => {
+          const isEven = index % 2 === 0;
+          const ExperienceContent = () => (
+            <div className="space-y-2">
+              <h6 className="text-lg font-semibold uppercase m-0 brightness-150">
+                {experience.title}
+              </h6>
+              <p className="m-0">{experience.company}</p>
+              <p className="whitespace-pre-wrap text-orange-200">
+                {experience.body}
+              </p>
+              <ul className="p-0 list-none">
+                {experience.links &&
+                  Object.entries(experience.links).map(([text, link]) => (
+                    <li key={link} className="p-0">
+                      <LinkText href={link} className="text-primary-600">
+                        {text}
+                        <ExternalLink className="inline w-4 h-4" />
+                      </LinkText>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          );
+
+          const DateContent = ({ isEven }: { isEven: boolean }) => (
+            <div
+              className={`whitespace-pre-wrap flex items-center h-full ${isEven ? 'justify-end' : ''}`}
             >
-              <TimelineOppositeContent
-                sx={{ m: 'auto 0', whiteSpace: 'break-spaces' }}
-                align="right"
-                variant="body2"
-                color="textSecondary"
-              >
-                {experience.startDate}
-                {' ~ '}
-                {experience.endDate && experience.endDate}
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineConnector />
-                <TimelineDot />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    p: 0,
-                    textTransform: 'uppercase',
-                  }}
-                  gutterBottom
-                >
-                  {experience.title}
-                </Typography>
-                <Typography variant="body1" color="textSecondary" gutterBottom>
-                  {experience.company}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="tan"
-                  whiteSpace="break-spaces"
-                >
-                  {experience.body}
-                </Typography>
-                <List sx={{ p: 0 }}>
-                  {experience.links &&
-                    Object.entries(experience.links).map(([text, link]) => (
-                      <ListItem key={link} sx={{ p: 0 }}>
-                        <Typography
-                          key={link}
-                          variant="caption"
-                          color="textSecondary"
-                        >
-                          <LinkText href={link} className="text-primary-600">
-                            {text}
-                            <LaunchIcon fontSize="inherit" />
-                          </LinkText>
-                        </Typography>
-                      </ListItem>
-                    ))}
-                </List>
-              </TimelineContent>
-            </ExperienceTimelineItem>
+              {experience.startDate}
+              {' ~ '}
+              {experience.endDate && experience.endDate}
+            </div>
+          );
+
+          return (
+            <div key={experience.title} className="flex gap-4 mb-8">
+              <div className={`flex-1 ${isEven ? 'text-right' : ''}`}>
+                {isEven ? (
+                  <DateContent isEven={isEven} />
+                ) : (
+                  <ExperienceContent />
+                )}
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="w-0.5 h-full bg-gray-300" />
+                <div className="w-3 h-6 rounded-full bg-gray-300 m-4" />
+                <div className="w-0.5 h-full bg-gray-300" />
+              </div>
+
+              <div className={`flex-1 ${!isEven ? 'text-right' : ''}`}>
+                {isEven ? (
+                  <ExperienceContent />
+                ) : (
+                  <DateContent isEven={isEven} />
+                )}
+              </div>
+            </div>
           );
         })}
-      </ExperienceTimeline>
+      </div>
     </>
   );
 };

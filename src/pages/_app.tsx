@@ -55,7 +55,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text-foreground bg-background">
+      <div className="text-foreground bg-background min-h-screen flex flex-col flex-1">
         <MainLayout>
           <Component {...pageProps} />
         </MainLayout>

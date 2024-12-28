@@ -1,73 +1,48 @@
-import { Grid, styled, Typography } from '@mui/material';
-import MailIcon from '@mui/icons-material/Mail';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { Mail, Github, Twitter } from 'lucide-react';
 import { AvatarIcon } from '@/components/Elements/Icon';
 import LinkText from '@/components/Elements/LinkText';
-
-const SocialLinkText = styled(LinkText)({
-  color: 'inherit',
-  padding: 8,
-  paddingLeft: 16,
-  paddingRight: 0,
-  ':last-child': {
-    paddingRight: 16,
-  },
-  '> svg': {
-    fontSize: '2rem',
-  },
-});
-
-const HomeCentralizeGrid = styled(Grid)({
-  display: 'flex',
-  flex: 'auto',
-  flexDirection: 'column',
-  textAlign: 'center',
-  alignItems: 'center',
-  justifyContent: 'center',
-});
 
 export default function Home() {
   const links = [
     {
       name: 'mail',
       href: 'mailto:k@zuki.dev',
-      icon: <MailIcon sx={{ fontSize: '3rem' }} />,
+      icon: <Mail className="w-8 h-8" />,
     },
     {
       name: 'github',
       href: 'https://github.com/corrupt952',
-      icon: <GitHubIcon />,
+      icon: <Github className="w-8 h-8" />,
     },
     {
       name: 'twitter',
       href: 'https://twitter.com/corrupt952',
-      icon: <TwitterIcon />,
+      icon: <Twitter className="w-8 h-8" />,
     },
   ];
 
   return (
-    <HomeCentralizeGrid container spacing={2}>
-      <Grid item>
+    <div className="container flex flex-col items-center justify-center flex-auto text-center gap-4">
+      <div>
         <AvatarIcon width="12rem" />
-      </Grid>
-      <Grid item>
-        <Typography variant="h4" noWrap>
-          K@zuki.
-        </Typography>
-        <Typography variant="h5" noWrap>
-          Web Developer, SRE
-        </Typography>
-      </Grid>
-      <Grid item>
+      </div>
+      <div>
+        <h1 className="text-2xl font-medium truncate">K@zuki.</h1>
+        <h2 className="text-xl font-medium truncate">Web Developer, SRE</h2>
+      </div>
+      <div>
         {links.map((link) => {
           return (
-            <SocialLinkText href={link.href} key={link.name}>
+            <LinkText
+              href={link.href}
+              key={link.name}
+              className="inline-block px-4 py-2 last:pr-4 text-inherit hover:opacity-80"
+            >
               {link.icon}
-            </SocialLinkText>
+            </LinkText>
           );
         })}
-      </Grid>
-    </HomeCentralizeGrid>
+      </div>
+    </div>
   );
 }

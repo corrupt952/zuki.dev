@@ -1,5 +1,3 @@
-import { Typography } from '@mui/material'
-
 export const Body = ({
   children,
   ...props
@@ -8,8 +6,8 @@ export const Body = ({
   props?: any
 }) => {
   return (
-    <Typography variant="body1" color="textSecondary" gutterBottom {...props}>
+    <p className="text-gray-400 mb-4" {...props}>
       {children}
-    </Typography>
+    </p>
   )
 }

@@ -1,25 +1,7 @@
-import { Box, Grid, styled } from '@mui/material'
-
-const PageGrid = styled(Grid)({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flex: 'auto',
-  alignSelf: 'baseline',
-  marginBottom: '3rem',
-})
-
-const PageGridItem = styled(Grid)({
-  display: 'flex',
-  alignItems: 'center',
-})
-
 export const Page = ({ children }: { children: React.ReactNode }) => {
   return (
-    <PageGrid container>
-      <PageGridItem item xs={12} md={8}>
-        {children}
-      </PageGridItem>
-    </PageGrid>
-  )
-}
+    <div className="flex justify-center items-center flex-auto self-baseline mb-12">
+      <div className="w-full md:w-3/4">{children}</div>
+    </div>
+  );
+};

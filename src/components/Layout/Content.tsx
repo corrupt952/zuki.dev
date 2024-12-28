@@ -1,14 +1,7 @@
-import { styled } from '@mui/material'
-
-const StyledContent = styled('main')({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flex: 'auto',
-  padding: '24px',
-  marginTop: '88px',
-})
-
 export const Content = ({ children }: { children: React.ReactNode }) => {
-  return <StyledContent>{children}</StyledContent>
-}
+  return (
+    <div className="flex justify-center items-center flex-auto p-6 mt-11">
+      {children}
+    </div>
+  );
+};

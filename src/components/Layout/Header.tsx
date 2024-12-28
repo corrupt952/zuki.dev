@@ -1,57 +1,7 @@
 import { Config } from '@/config';
-import MenuIcon from '@mui/icons-material/Menu';
-import {
-  AppBar,
-  Grid,
-  IconButton,
-  Menu,
-  MenuItem,
-  styled,
-} from '@mui/material';
+import { Menu } from 'lucide-react';
 import React, { useRef } from 'react';
 import LinkText from '../Elements/LinkText';
-
-const StyledAppBar = styled(AppBar)({
-  backgroundImage: 'none',
-  boxShadow: 'none',
-  textTransform: 'uppercase',
-  fontWeight: 'bold',
-  padding: 0,
-  paddingLeft: 24,
-  paddingRight: 24,
-  margin: 0,
-});
-
-const StyledToolbar = styled(Grid)({
-  padding: 0,
-  margin: 0,
-});
-
-const StyledMenu = styled(Menu)({
-  backgroundImage: 'none',
-  boxShadow: 'none',
-  display: 'flex',
-  textTransform: 'uppercase',
-  fontWeight: 'bold',
-  padding: 0,
-  margin: 0,
-});
-
-const HeaderCentralizeGrid = styled(Grid)({
-  margin: 0,
-  padding: 0,
-  display: 'flex',
-  flex: 'auto',
-  flexDirection: 'row',
-  textAlign: 'center',
-  alignItems: 'stretch',
-  justifyContent: 'center',
-});
-
-const HeaderCentralizeGridItem = styled(Grid)({
-  margin: 0,
-  padding: 0,
-});
 
 const NavigationLinks = () => {
   return (
@@ -77,66 +27,58 @@ const NavigationMenu = () => {
 
   return (
     <>
-      <IconButton
+      <button
         ref={anchorEl}
         onClick={() => setOpen(true)}
-        sx={{ display: { xs: 'block', md: 'none' } }}
+        className="block md:hidden p-2"
       >
-        <MenuIcon />
-      </IconButton>
-      <StyledMenu
-        keepMounted
-        open={open}
-        anchorEl={anchorEl.current}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        onClose={() => setOpen(false)}
-        sx={{ display: { xs: 'block', md: 'none' } }}
-      >
-        {Config.navigation.items.map((item) => {
-          return (
-            <MenuItem
-              component={LinkText}
-              passHref
-              key={item.name}
-              href={item.href}
-              className="text-foreground px-4 py-3 hover:text-gray-400"
-              onClick={() => setOpen(false)}
-            >
-              {item.name}
-            </MenuItem>
-          );
-        })}
-      </StyledMenu>
+        <Menu className="w-6 h-6" />
+      </button>
+      {open && (
+        <div className="absolute top-full right-0 bg-background md:hidden">
+          {Config.navigation.items.map((item) => {
+            return (
+              <LinkText
+                key={item.name}
+                href={item.href}
+                className="block text-foreground px-4 py-3 hover:text-gray-400 uppercase font-bold"
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </LinkText>
+            );
+          })}
+        </div>
+      )}
     </>
   );
 };
 
 export const Header = () => {
   return (
-    <StyledAppBar>
-      <StyledToolbar>
-        <HeaderCentralizeGrid container>
-          <HeaderCentralizeGridItem item xs={12} md={8}>
-            <Grid container justifyContent={'space-between'}>
-              <Grid item sx={{ display: 'flex' }}>
+    <header className="bg-transparent shadow-none uppercase font-bold px-6">
+      <div className="p-0 m-0">
+        <div className="flex justify-center">
+          <div className="w-full md:w-2/3">
+            <div className="flex justify-between">
+              <div className="flex">
                 <LinkText
                   href="/"
                   className="text-foreground py-3 hover:text-gray-400"
                 >
                   {Config.title}
                 </LinkText>
-              </Grid>
-              <Grid item sx={{ display: { xs: 'none', md: 'flex' } }}>
+              </div>
+              <div className="hidden md:flex">
                 <NavigationLinks />
-              </Grid>
-              <Grid item sx={{ display: { xs: 'flex', md: 'none' } }}>
+              </div>
+              <div className="flex md:hidden">
                 <NavigationMenu />
-              </Grid>
-            </Grid>
-          </HeaderCentralizeGridItem>
-        </HeaderCentralizeGrid>
-      </StyledToolbar>
-    </StyledAppBar>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
