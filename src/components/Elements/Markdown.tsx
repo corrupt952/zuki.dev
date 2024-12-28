@@ -13,6 +13,7 @@ import {
 import LinkText from './LinkText';
 import ReactMarkdown from 'markdown-to-jsx';
 import { JSX } from 'react';
+import { Heading } from '../Typography';
 
 const MarkdownList = styled(List)({
   listStyleType: 'circle',
