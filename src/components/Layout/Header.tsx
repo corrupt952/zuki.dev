@@ -1,144 +1,95 @@
-import { Config } from '@/config'
-import MenuIcon from '@mui/icons-material/Menu'
-import { AppBar, Grid, IconButton, Menu, MenuItem, styled } from '@mui/material'
-import React, { useRef } from 'react'
-import { LinkText } from '../Elements'
-
-const NavigationLinkText = styled(LinkText)({
-  color: 'inherit',
-  paddingTop: 12,
-  paddingBottom: 12,
-  paddingLeft: 16,
-  paddingRight: 0,
-  ':first-of-type': {
-    paddingLeft: 0,
-  },
-})
-
-const NavigationMenuText = styled(LinkText)({
-  color: 'inherit',
-  paddingTop: 12,
-  paddingBottom: 12,
-  paddingLeft: 16,
-  paddingRight: 16,
-})
-
-const StyledAppBar = styled(AppBar)({
-  backgroundImage: 'none',
-  boxShadow: 'none',
-  textTransform: 'uppercase',
-  fontWeight: 'bold',
-  padding: 0,
-  paddingLeft: 24,
-  paddingRight: 24,
-  margin: 0,
-})
-
-const StyledToolbar = styled(Grid)({
-  padding: 0,
-  margin: 0,
-})
-
-const StyledMenu = styled(Menu)({
-  backgroundImage: 'none',
-  boxShadow: 'none',
-  display: 'flex',
-  textTransform: 'uppercase',
-  fontWeight: 'bold',
-  padding: 0,
-  margin: 0,
-})
-
-const HeaderCentralizeGrid = styled(Grid)({
-  margin: 0,
-  padding: 0,
-  display: 'flex',
-  flex: 'auto',
-  flexDirection: 'row',
-  textAlign: 'center',
-  alignItems: 'stretch',
-  justifyContent: 'center',
-})
-
-const HeaderCentralizeGridItem = styled(Grid)({
-  margin: 0,
-  padding: 0,
-})
+import { Config } from '@/config';
+import { Menu } from 'lucide-react';
+import React, { useRef } from 'react';
+import LinkText from '../Elements/LinkText';
 
 const NavigationLinks = () => {
   return (
     <>
       {Config.navigation.items.map((item) => {
         return (
-          <NavigationLinkText href={item.href} key={item.name}>
+          <LinkText
+            href={item.href}
+            key={item.name}
+            className="px-4 pr-0 first-of-type:pl-0 hover:brightness-50"
+          >
             {item.name}
-          </NavigationLinkText>
-        )
+          </LinkText>
+        );
       })}
     </>
-  )
-}
+  );
+};
 
 const NavigationMenu = () => {
-  const [open, setOpen] = React.useState(false)
-  const anchorEl = useRef<HTMLButtonElement>(null)
+  const [open, setOpen] = React.useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
-      <IconButton
-        ref={anchorEl}
-        onClick={() => setOpen(true)}
-        sx={{ display: { xs: 'block', md: 'none' } }}
+      <button
+        ref={buttonRef}
+        onClick={() => setOpen(!open)}
+        className="block md:hidden"
       >
-        <MenuIcon />
-      </IconButton>
-      <StyledMenu
-        keepMounted
-        open={open}
-        anchorEl={anchorEl.current}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        onClose={() => setOpen(false)}
-        sx={{ display: { xs: 'block', md: 'none' } }}
-      >
-        {Config.navigation.items.map((item) => {
-          return (
-            <MenuItem
-              component={NavigationMenuText}
-              passHref
-              key={item.name}
-              href={item.href}
-              onClick={() => setOpen(false)}
-            >
-              {item.name}
-            </MenuItem>
-          )
-        })}
-      </StyledMenu>
+        <Menu className="w-6 h-6" />
+      </button>
+      {open && (
+        <div
+          ref={menuRef}
+          className="absolute right-4 bg-background brightness-150 py-2"
+        >
+          {Config.navigation.items.map((item) => {
+            return (
+              <LinkText
+                key={item.name}
+                href={item.href}
+                className="block px-4 uppercase hover:brightness-50 py-2"
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </LinkText>
+            );
+          })}
+        </div>
+      )}
     </>
-  )
-}
+  );
+};
 
 export const Header = () => {
   return (
-    <StyledAppBar>
-      <StyledToolbar>
-        <HeaderCentralizeGrid container>
-          <HeaderCentralizeGridItem item xs={12} md={8}>
-            <Grid container justifyContent={'space-between'}>
-              <Grid item sx={{ display: 'flex' }}>
-                <NavigationLinkText href="/">{Config.title}</NavigationLinkText>
-              </Grid>
-              <Grid item sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <NavigationLinks />
-              </Grid>
-              <Grid item sx={{ display: { xs: 'flex', md: 'none' } }}>
-                <NavigationMenu />
-              </Grid>
-            </Grid>
-          </HeaderCentralizeGridItem>
-        </HeaderCentralizeGrid>
-      </StyledToolbar>
-    </StyledAppBar>
-  )
-}
+    <header className="w-auto md:w-3/5 mx-4 md:mx-auto">
+      <div className="flex justify-between py-3 text-white uppercase font-normal">
+        <LinkText href="/" className="hover:brightness-50">
+          {Config.title}
+        </LinkText>
+        <div className="hidden md:flex">
+          <NavigationLinks />
+        </div>
+        <div className="flex md:hidden">
+          <NavigationMenu />
+        </div>
+      </div>
+    </header>
+  );
+};

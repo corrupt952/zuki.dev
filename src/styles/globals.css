@@ -1,20 +1,48 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+  * Variables
+  */
+:root {
+  /* Colors */
+  --background-color: #212121;
+  --foreground-color: #bdbdbd;
+
+  --primary-color-50: #fffee7;
+  --primary-color-100: #fffec1;
+  --primary-color-200: #fff986;
+  --primary-color-300: #ffed41;
+  --primary-color-400: #ffdc0d;
+  --primary-color-500: #ffcd01; /* Base */
+  --primary-color-600: #d19600;
+  --primary-color-700: #a66b02;
+  --primary-color-800: #89530a;
+  --primary-color-900: #74440f;
+  --primary-color-950: #442304;
+  --secondary-color-50: #e8f5ff;
+  --secondary-color-100: #d5ecff;
+  --secondary-color-200: #b3dbff;
+  --secondary-color-300: #85c0ff;
+  --secondary-color-400: #5697ff;
+  --secondary-color-500: #2f6eff; /* Base */
+  --secondary-color-600: #0c3eff;
+  --secondary-color-700: #0133ff;
+  --secondary-color-800: #0630cd;
+  --secondary-color-900: #10329f;
+  --secondary-color-950: #0a1b5c;
+}
+
+/**
+  * Global styles
+  */
+body {
   font-family: -apple-system, helvetica, arial, sans-serif;
 }
 
-html,
-body {
-  max-width: 100svw;
-  overflow-x: hidden;
-}
-
 #__next {
-  min-width: 100svw;
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }

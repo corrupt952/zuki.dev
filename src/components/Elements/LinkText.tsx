@@ -1,43 +1,26 @@
-import { Config } from '@/config'
-import { DEFAULT_LOCALE, I18nContext } from '@/libs/i18n'
-import { styled } from '@mui/material'
-import Link from 'next/link'
-import { forwardRef, useContext } from 'react'
+import { DEFAULT_LOCALE, I18nContext } from '@/libs/i18n';
+import Link, { LinkProps } from 'next/link';
+import React, { useContext } from 'react';
 
-const linkOptions = {
-  textDecoration: 'none',
-  color: Config.theme.palette.secondary.main,
-  ':hover': {
-    textDecoration: 'underline',
-    filter: 'brightness(50%)',
-  },
+type LinkTextProps = LinkProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export default function LinkText({ children, ...props }: LinkTextProps) {
+  const { locale } = useContext(I18nContext);
+  let uri = props.href || '';
+  if (uri.startsWith('/')) {
+    uri = locale === DEFAULT_LOCALE ? uri : `/${locale}${uri}`;
+  }
+  const isExternal = props.href?.startsWith('http');
+
+  return (
+    <Link
+      {...props}
+      href={uri}
+      className={`text-decoration-none hover:underline ${props.className}`}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      target={isExternal ? '_blank' : undefined}
+    >
+      {children}
+    </Link>
+  );
 }
-
-const StyledInnerLink = styled(Link)(linkOptions)
-
-// TODO: anyを何とかする
-export const LinkText = forwardRef<HTMLAnchorElement, any>(
-  function LinkTextRef(props, ref) {
-    const { locale } = useContext(I18nContext)
-    const { href, ...linkProps } = props
-    let uri = href || '/'
-    let target = '_self'
-    let rel = 'noopener noreferrer'
-
-    if (uri.startsWith('/')) {
-      uri = locale === DEFAULT_LOCALE ? uri : `/${locale}${uri}`
-    } else {
-      target = '_blank'
-    }
-
-    return (
-      <StyledInnerLink
-        {...linkProps}
-        href={uri}
-        ref={ref}
-        target={target}
-        rel={rel}
-      />
-    )
-  },
-)

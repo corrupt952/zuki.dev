@@ -5,14 +5,14 @@
       "skills": {
         "title": "Skills"
       },
-      "affilication": {
-        "title": "Affilication",
+      "affiliation": {
+        "title": "affiliation",
         "thead": {
           "name": "Name",
           "date": "Period",
           "role": "Role"
         },
-        "affilications": [
+        "affiliations": [
           {
             "name": "Studist Corporation.",
             "date": "2018/10 ~",
@@ -154,13 +154,13 @@
             "We provide assistance and consultation on various tasks related to the development and operation of web services."
           ],
           "menus": [
-            "* Support for launching services",
-            "* AWS implementation support (including multi-account configuration)",
-            "* Infrastrucutre as Code implementation and start-up support",
-            "* Consultation and start-up support for container migration",
-            "* Troubleshooting support and consultation",
-            "* Consultation and support for introduction and upgrade of various middleware and services",
-            "* Monitoring implementation support"
+            "Support for launching services",
+            "AWS implementation support (including multi-account configuration)",
+            "Infrastrucutre as Code implementation and start-up support",
+            "Consultation and start-up support for container migration",
+            "Troubleshooting support and consultation",
+            "Consultation and support for introduction and upgrade of various middleware and services",
+            "Monitoring implementation support"
           ]
         },
         "consultation": {
@@ -182,27 +182,27 @@
             {
               "name": "Support for development and operation of web services",
               "unit": "1Hour",
-              "price": "￥10,000"
+              "price": "￥15,000"
             },
             {
               "name": "Online Consultation(First time)",
               "unit": "1Hour",
-              "price": "￥3,000"
+              "price": "￥5,000"
             },
             {
               "name": "Online Consultation(2nd or later)",
               "unit": "1Hour",
-              "price": "￥6,000"
+              "price": "￥10,000"
             },
             {
               "name": "Offline Consultation",
               "unit": "1Hour",
-              "price": "￥10,000"
+              "price": "￥15,000"
             },
             {
               "name": "Mentoring *1",
               "unit": "1Hour",
-              "price": "￥10,000"
+              "price": "￥15,000"
             }
           ],
           "notes": [

@@ -1,21 +1,12 @@
-import { Typography } from '@mui/material'
-
 export const Heading = ({
   children,
   ...props
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) => {
   return (
-    <Typography
-      variant="h4"
-      align="center"
-      color="textPrimary"
-      textTransform="uppercase"
-      gutterBottom
-      {...props}
-    >
+    <h2 className="text-4xl mb-4 text-center uppercase text-white" {...props}>
       {children}
-    </Typography>
-  )
-}
+    </h2>
+  );
+};

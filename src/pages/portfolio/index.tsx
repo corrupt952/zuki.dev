@@ -1,23 +1,14 @@
-import { LinkText } from '@/components/Elements'
-import { Page } from '@/components/Layout'
-import { Heading } from '@/components/Typography'
-import { useTranslation } from '@/libs/i18n'
-import {
-  Box,
-  Card,
-  CardActions,
-  CardContent,
-  Grid,
-  Typography,
-} from '@mui/material'
+import LinkText from '@/components/Elements/LinkText';
+import { Heading } from '@/components/Typography/Heading';
+import { useTranslation } from '@/libs/i18n';
 
 type Project = {
-  title: string
-  description: string
-  link: string
-  archived: boolean
-  tags: string[]
-}
+  title: string;
+  description: string;
+  link: string;
+  archived: boolean;
+  tags: string[];
+};
 
 const projects: Project[] = [
   {
@@ -36,6 +27,14 @@ const projects: Project[] = [
     tags: ['Kubernetes', 'Ansible'],
   },
   {
+    title: 'Snack Time',
+    description:
+      'A minimalist floating timer that stays with you anywhere on your webpage. Perfect for quick breaks and time management.',
+    link: 'https://chromewebstore.google.com/detail/snack-time/okaijbdacnkekgchlligfkjccijcghfn',
+    archived: false,
+    tags: ['Chrome Extension', 'TypeScript'],
+  },
+  {
     title: 'revealer',
     description:
       'HTTP server that returns the source IP, request headers, request body, and query string.',
@@ -48,7 +47,7 @@ const projects: Project[] = [
     description:
       'The respository for chrome extension to perform various operations using OpenAI or Azure OpenAI Service.',
     link: 'https://chrome.google.com/webstore/detail/br1efly/hmeejlkdfcfdlhkpioeodolchpcnbnhn',
-    archived: false,
+    archived: true,
     tags: ['Chrome Extension', 'TypeScript'],
   },
   {
@@ -56,7 +55,7 @@ const projects: Project[] = [
     description: 'Generate the icons needed to create the service.',
     link: 'https://picturnize.zuki.dev',
     tags: ['Website', 'React', 'TypeScript'],
-    archived: false,
+    archived: true,
   },
   {
     title: 'WordySquirrel',
@@ -91,14 +90,14 @@ const projects: Project[] = [
     title: 'kz',
     description: 'A simple kusotmize version manager.',
     link: 'https://github.com/corrupt952/kz',
-    archived: false,
+    archived: true,
     tags: ['CLI', 'Shell'],
   },
   {
     title: 'ssm-session',
     description: 'A simple wrapper for AWS SSM Session Manager',
     link: 'https://github.com/corrupt952/ssm-session',
-    archived: false,
+    archived: true,
     tags: ['CLI', 'Shell', 'AWS'],
   },
   {
@@ -152,48 +151,46 @@ const projects: Project[] = [
     tags: ['CLI', 'Python', 'ESXi', 'Xen'],
     archived: true,
   },
-]
+];
 
 const Archived = () => {
+  return <span className="text-red-500 text-sm ml-2">(archived)</span>;
+};
+
+function ProjectCard({ project }: { project: Project }) {
   return (
-    <Typography variant="caption" color="red">
-      (archived)
-    </Typography>
-  )
+    <div
+      className="grid grid-rows-[auto,1fr,auto] h-[220px] rounded-sm p-4 overflow-hidden"
+      style={{
+        backgroundColor: '#2c2c2c',
+      }}
+    >
+      <h2 className="text-2xl mb-1 text-white break-all">
+        {project.title}
+        {project.archived && <Archived />}
+      </h2>
+      <p className="text-sm mb-2 overflow-auto">{project.description}</p>
+      <LinkText
+        href={project.link}
+        className="text-primary-500 hover:text-primary-600"
+      >
+        VIEW
+      </LinkText>
+    </div>
+  );
 }
 
-// TODO: tags
-// TODO: filter tags
-// TODO: image
 export default function Portfolio() {
-  const { t } = useTranslation('pages.portfolio')
+  const { t } = useTranslation('pages.portfolio');
 
   return (
-    <Page>
-      <Box>
-        <Heading>{t('title')}</Heading>
-        <Grid container spacing={2}>
-          {projects.map((project) => {
-            return (
-              <Grid item key={project.title} xs={12} sm={6} md={4} lg={3}>
-                <Card>
-                  <CardContent sx={{ height: 150, overflow: 'hidden' }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {project.title} {project.archived && <Archived />}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <LinkText href={project.link}>VIEW</LinkText>
-                  </CardActions>
-                </Card>
-              </Grid>
-            )
-          })}
-        </Grid>
-      </Box>
-    </Page>
-  )
+    <>
+      <Heading>{t('title')}</Heading>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </div>
+    </>
+  );
 }

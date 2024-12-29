@@ -1,40 +1,37 @@
-import { Heading } from '@/components/Typography'
-import { Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material'
-import { useTranslation } from '@/libs/i18n'
-import React from 'react'
+import { Heading } from '@/components/Typography/Heading';
+import { useTranslation } from '@/libs/i18n';
+import React from 'react';
 
 type Certification = {
-  name: string
-  date: string
-}
+  name: string;
+  date: string;
+};
 
 export const CertificationArea = () => {
-  const { t } = useTranslation('pages.about.certification')
+  const { t } = useTranslation('pages.about.certification');
   const certifications = t('certifications', {
     returnObjects: true,
-  }) as Certification[]
+  }) as Certification[];
 
   return (
     <>
       <Heading>{t('title')}</Heading>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>{t('thead.name')}</TableCell>
-            <TableCell align="right">
-              <span>{t('thead.date')}</span>
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
+      <table className="w-full table-auto border-collapse">
+        <thead>
+          <tr className="border-b border-gray-600">
+            <th className="px-4 py-2 text-left">{t('thead.name')}</th>
+            <th className="px-4 py-2 text-right">{t('thead.date')}</th>
+          </tr>
+        </thead>
+        <tbody>
           {certifications.map((certification) => (
-            <TableRow key={certification.name}>
-              <TableCell>{certification.name}</TableCell>
-              <TableCell align="right">{certification.date}</TableCell>
-            </TableRow>
+            <tr key={certification.name} className="border-b border-gray-600">
+              <td className="px-4 py-2">{certification.name}</td>
+              <td className="px-4 py-2 text-right">{certification.date}</td>
+            </tr>
           ))}
-        </TableBody>
-      </Table>
+        </tbody>
+      </table>
     </>
-  )
-}
+  );
+};
