@@ -1,6 +1,8 @@
-import { MainLayout } from '@/components/Layout';
-import { Config } from '@/config';
+import { LanguageSelect } from '@/components/Elements/LanguageSelect';
+import { Footer } from '@/components/Layout/Footer';
+import { Header } from '@/components/Layout/Header';
 import { I18nApp } from '@/libs/i18n';
+import { Config } from '@/config';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -55,11 +57,12 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text-foreground bg-background min-h-screen flex flex-col flex-1">
-        <MainLayout>
-          <Component {...pageProps} />
-        </MainLayout>
-      </div>
+      <Header />
+      <main className="w-auto md:w-3/5 mx-4 md:mx-auto my-12">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+      <LanguageSelect />
       <GoogleAnalytics />
     </>
   );

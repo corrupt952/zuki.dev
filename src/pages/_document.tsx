@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="ja">
       <Head />
-      <body className="overflow-y-scroll">
+      <body className="min-h-screen overflow-y-scroll text-foreground bg-background text-base md:text-lg">
         <Main />
         <NextScript />
       </body>

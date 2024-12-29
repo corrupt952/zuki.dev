@@ -1,6 +1,6 @@
 import { Markdown } from '@/components/Elements/Markdown';
-import { Page } from '@/components/Layout';
-import { Body, Heading } from '@/components/Typography';
+import { Heading } from '@/components/Typography/Heading';
+import { Body } from '@/components/Typography/Body';
 import { useTranslation } from '@/libs/i18n';
 
 const BodyHeader = ({ children }: { children: React.ReactNode }) => (
@@ -147,21 +147,19 @@ export default function Work() {
   const { t } = useTranslation('pages.work');
 
   return (
-    <Page>
-      <div>
-        {t('descriptions', { returnObjects: true }).map((desc: string) => (
-          <p className="mb-2" key={desc}>
-            <Markdown markdown={desc} />
-          </p>
-        ))}
+    <>
+      {t('descriptions', { returnObjects: true }).map((desc: string) => (
+        <p className="mb-2" key={desc}>
+          <Markdown markdown={desc} />
+        </p>
+      ))}
 
-        <div className="h-12" />
-        <ContentArea />
-        <div className="h-12" />
-        <PricingArea />
-        <div className="h-12" />
-        <InquiryArea />
-      </div>
-    </Page>
+      <div className="h-12" />
+      <ContentArea />
+      <div className="h-12" />
+      <PricingArea />
+      <div className="h-12" />
+      <InquiryArea />
+    </>
   );
 }

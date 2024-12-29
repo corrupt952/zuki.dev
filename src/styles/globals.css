@@ -40,3 +40,9 @@
 body {
   font-family: -apple-system, helvetica, arial, sans-serif;
 }
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,6 +1,5 @@
 import LinkText from '@/components/Elements/LinkText';
-import { Page } from '@/components/Layout';
-import { Heading } from '@/components/Typography';
+import { Heading } from '@/components/Typography/Heading';
 import { useTranslation } from '@/libs/i18n';
 
 type Project = {
@@ -185,15 +184,13 @@ export default function Portfolio() {
   const { t } = useTranslation('pages.portfolio');
 
   return (
-    <Page>
-      <div>
-        <Heading>{t('title')}</Heading>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
+    <>
+      <Heading>{t('title')}</Heading>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
       </div>
-    </Page>
+    </>
   );
 }

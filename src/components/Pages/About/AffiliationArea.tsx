@@ -1,4 +1,4 @@
-import { Heading } from '@/components/Typography';
+import { Heading } from '@/components/Typography/Heading';
 import { useTranslation } from '@/libs/i18n';
 
 type Affiliation = {

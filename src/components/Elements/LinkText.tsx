@@ -15,6 +15,7 @@ export default function LinkText({ children, ...props }: LinkTextProps) {
   return (
     <Link
       {...props}
+      href={uri}
       className={`text-decoration-none hover:underline ${props.className}`}
       rel={isExternal ? 'noopener noreferrer' : undefined}
       target={isExternal ? '_blank' : undefined}
