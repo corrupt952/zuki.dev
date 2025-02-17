@@ -38,7 +38,7 @@ importers:
         version: 15.1.7(eslint@9.20.1(jiti@1.21.7))(typescript@5.7.3)
       markdown-to-jsx:
         specifier: ^7.7.2
-        version: 7.7.3(react@18.3.1)
+        version: 7.7.4(react@18.3.1)
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@14.2.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -1172,8 +1172,8 @@ packages:
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  markdown-to-jsx@7.7.3:
-    resolution: {integrity: sha512-o35IhJDFP6Fv60zPy+hbvZSQMmgvSGdK5j8NRZ7FeZMY+Bgqw+dSg7SC1ZEzC26++CiOUCqkbq96/c3j/FfTEQ==}
+  markdown-to-jsx@7.7.4:
+    resolution: {integrity: sha512-1bSfXyBKi+EYS3YY+e0Csuxf8oZ3decdfhOav/Z7Wrk89tjudyL5FOmwZQUoy0/qVXGUl+6Q3s2SWtpDEWITfQ==}
     engines: {node: '>= 10'}
     peerDependencies:
       react: '>= 0.14.0'
@@ -2999,7 +2999,7 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  markdown-to-jsx@7.7.3(react@18.3.1):
+  markdown-to-jsx@7.7.4(react@18.3.1):
     dependencies:
       react: 18.3.1
 
