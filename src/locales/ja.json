@@ -2,6 +2,11 @@
   "pages": {
     "about": {
       "title": "説明",
+      "meta": {
+        "title": "説明 | K@zuki.",
+        "description": "K@zuki.について - スキル、経歴、資格、所属",
+        "keywords": "K@zuki, 説明, スキル, 経歴, 資格, 所属"
+      },
       "skills": {
         "title": "スキル"
       },
@@ -146,6 +151,11 @@
         "各種インフラ、監視ツール、コンテナ関連技術などのサポート、サービス開発、支援を行っています。ご相談もお受けしておりますので、お気軽にお問い合わせください。",
         "仕事の依頼やお誘いなどは、[Twitter](https://twitter.com/corrupt952)や[E-mail](mailto:k@zuki.dev)でご連絡ください。"
       ],
+      "meta": {
+        "title": "業務内容 | K@zuki.",
+        "description": "K@zuki.の業務内容 - Webサービスの開発・運用支援、技術コンサルティング",
+        "keywords": "K@zuki, 業務内容, Webサービス, 開発, 運用, 技術コンサルティング, SRE, AWS"
+      },
       "contents": {
         "title": "業務内容",
         "support": {
@@ -246,6 +256,11 @@
     },
     "portfolio": {
       "title": "ポートフォリオ",
+      "meta": {
+        "title": "ポートフォリオ | K@zuki.",
+        "description": "K@zuki.のポートフォリオ - 個人プロジェクトと貢献のコレクション",
+        "keywords": "K@zuki, ポートフォリオ, プロジェクト, GitHub, オープンソース"
+      },
       "projects": []
     }
   }

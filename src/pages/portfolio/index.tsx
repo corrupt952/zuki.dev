@@ -1,6 +1,7 @@
 import LinkText from '@/components/Elements/LinkText';
 import { Heading } from '@/components/Typography/Heading';
 import { useTranslation } from '@/libs/i18n';
+import Head from 'next/head';
 
 type Project = {
   title: string;
@@ -185,6 +186,11 @@ export default function Portfolio() {
 
   return (
     <>
+      <Head>
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
+        <meta name="keywords" content={t('meta.keywords')} />
+      </Head>
       <Heading>{t('title')}</Heading>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {projects.map((project) => (

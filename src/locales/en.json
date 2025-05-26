@@ -2,6 +2,11 @@
   "pages": {
     "about": {
       "title": "About",
+      "meta": {
+        "title": "About | K@zuki.",
+        "description": "About K@zuki. - Skills, Experience, Certifications, and Affiliations",
+        "keywords": "K@zuki, About, Skills, Experience, Certifications, Affiliations"
+      },
       "skills": {
         "title": "Skills"
       },
@@ -146,6 +151,11 @@
         "I provide support, service development and assistance for various infrastructures, monitoring tools and container related technologies. I am also available for consultations, so please feel free to contact me.",
         "Please contact me via [Twitter](https://twitter.com/corrupt952) or [E-mail](mailto:k@zuki.dev) for job requests and invitations."
       ],
+      "meta": {
+        "title": "Work | K@zuki.",
+        "description": "K@zuki.'s Work - Web Service Development, Operations Support, and Technical Consultation",
+        "keywords": "K@zuki, Work, Web Service, Development, Operations, Technical Consultation, SRE, AWS"
+      },
       "contents": {
         "title": "Contents",
         "support": {
@@ -246,6 +256,11 @@
     },
     "portfolio": {
       "title": "Portfolio",
+      "meta": {
+        "title": "Portfolio | K@zuki.",
+        "description": "K@zuki.'s Portfolio - A collection of personal projects and contributions",
+        "keywords": "K@zuki, Portfolio, Projects, GitHub, Open Source"
+      },
       "projects": []
     }
   }
