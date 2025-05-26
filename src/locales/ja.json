@@ -4,8 +4,8 @@
       "title": "説明",
       "meta": {
         "title": "説明 | K@zuki.",
-        "description": "K@zuki.について - スキル、経歴、資格、所属",
-        "keywords": "K@zuki, 説明, スキル, 経歴, 資格, 所属"
+        "description": "K@zuki.について - スキル、経歴、所属",
+        "keywords": "K@zuki, 説明, スキル, 経歴, 所属"
       },
       "skills": {
         "title": "スキル"
@@ -120,27 +120,6 @@
             "title": "中古商品のECサービスの開発・運用",
             "company": "株式会社タイムインターメディア",
             "body": "当時、学生アルバイトとしてほぼフルタイムで開発に携わっていました。当時、開発で使われていたツールや概念について学びました。Spring Frameworkやサービスパフォーマンス、Git、Mercurialなどの技術も初めて知りました。"
-          }
-        ]
-      },
-      "certification": {
-        "title": "資格一覧",
-        "thead": {
-          "name": "資格名",
-          "date": "取得日"
-        },
-        "certifications": [
-          {
-            "name": "基本情報技術者試験",
-            "date": "2012/04"
-          },
-          {
-            "name": "応用情報技術者試験",
-            "date": "2012/11"
-          },
-          {
-            "name": "情報セキュリティスペシャリスト試験",
-            "date": "2013/05"
           }
         ]
       }

@@ -1,7 +1,6 @@
 import {
   SkillArea,
   ExperienceArea,
-  CertificationArea,
   AffiliationArea,
 } from '@/components/Pages/About';
 import { useTranslation } from '@/libs/i18n';
@@ -22,8 +21,6 @@ export default function About() {
       <AffiliationArea />
       <div className="h-16" />
       <ExperienceArea />
-      <div className="h-12" />
-      <CertificationArea />
     </>
   );
 }

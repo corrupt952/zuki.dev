@@ -4,8 +4,8 @@
       "title": "About",
       "meta": {
         "title": "About | K@zuki.",
-        "description": "About K@zuki. - Skills, Experience, Certifications, and Affiliations",
-        "keywords": "K@zuki, About, Skills, Experience, Certifications, Affiliations"
+        "description": "About K@zuki. - Skills, Experience, and Affiliations",
+        "keywords": "K@zuki, About, Skills, Experience, Affiliations"
       },
       "skills": {
         "title": "Skills"
@@ -120,27 +120,6 @@
             "title": "Development of secondhand goods e-commerce service",
             "company": "TIMEINTERMEDIA, Inc.",
             "body": "At the time, I was working almost full-time in development as a part-time student worker. I learned about the tools and concepts used in development at the time. I also learned about Spring Framework, service performance, Git, Mercurial, and other technologies for the first time."
-          }
-        ]
-      },
-      "certification": {
-        "title": "Certifications",
-        "thead": {
-          "name": "Name",
-          "date": "Acquired Date"
-        },
-        "certifications": [
-          {
-            "name": "Fundamental Information Technology Engineer Examination",
-            "date": "2012/04"
-          },
-          {
-            "name": "Applied Information Technology Engineer Examination",
-            "date": "2012/11"
-          },
-          {
-            "name": "Information Security Specialist Examination",
-            "date": "2013/05"
           }
         ]
       }
