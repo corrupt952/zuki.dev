@@ -174,39 +174,58 @@
       "pricing": {
         "title": "Pricing",
         "descriptions": [
-          "The following is the price list for the services I provide."
+          "The following is the price list for the services I provide.",
+          "I provide support leveraging my experience as a company-wide technical lead, SRE・Product Tech Lead, AWS Certified Solutions Architect, container technology, and LLM/AI expertise.",
+          "I specialize in technical strategy development, organizational development, and engineering management support."
         ],
         "menus": {
           "headers": ["Menu", "Unit", "Price（Not included tax）"],
           "rows": [
             {
-              "name": "Support for development and operation of web services",
+              "name": "Technical Strategy & Organizational Development Support",
+              "unit": "1Hour",
+              "price": "￥35,000"
+            },
+            {
+              "name": "Development & Operations Support (SRE・Architect)",
+              "unit": "1Hour",
+              "price": "￥30,000"
+            },
+            {
+              "name": "Development & Operations Support (Engineer)",
+              "unit": "1Hour",
+              "price": "￥25,000"
+            },
+            {
+              "name": "LLM/AI Development Support",
+              "unit": "1Hour",
+              "price": "￥35,000"
+            },
+            {
+              "name": "Online Consultation (First time)",
               "unit": "1Hour",
               "price": "￥15,000"
             },
             {
-              "name": "Online Consultation(First time)",
+              "name": "Online Consultation (2nd or later)",
               "unit": "1Hour",
-              "price": "￥5,000"
+              "price": "￥20,000"
             },
             {
-              "name": "Online Consultation(2nd or later)",
+              "name": "Offline Consultation *1",
               "unit": "1Hour",
-              "price": "￥10,000"
-            },
-            {
-              "name": "Offline Consultation",
-              "unit": "1Hour",
-              "price": "￥15,000"
+              "price": "￥30,000"
             },
             {
               "name": "Mentoring *1",
               "unit": "1Hour",
-              "price": "￥15,000"
+              "price": "￥30,000"
             }
           ],
           "notes": [
-            "*1 Travel expenses will be charged separately for offline consultation and mentoring."
+            "*1 Travel expenses will be charged separately for offline consultation and mentoring.",
+            "*2 Long-term contracts are subject to separate consultation.",
+            "*3 Technical Strategy & Organizational Development Support requires a minimum of 4 hours."
           ]
         }
       },
