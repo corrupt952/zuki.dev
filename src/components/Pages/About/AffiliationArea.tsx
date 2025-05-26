@@ -28,7 +28,12 @@ export const AffiliationArea = () => {
         <tbody>
           {affiliations.map((affiliation) => (
             <tr key={affiliation.name} className="border-b border-gray-600">
-              <td className="px-4 py-2">{affiliation.name}</td>
+              <td className="px-4 py-2">
+                {affiliation.date.endsWith('~') && (
+                  <span className="mr-2">🔵</span>
+                )}
+                {affiliation.name}
+              </td>
               <td className="px-4 py-2">{affiliation.role}</td>
               <td className="px-4 py-2">{affiliation.date}</td>
             </tr>
