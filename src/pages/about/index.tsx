@@ -16,11 +16,11 @@ export default function About() {
         <meta name="description" content={t('meta.description')} />
         <meta name="keywords" content={t('meta.keywords')} />
       </Head>
-      <SkillArea />
-      <div className="h-12" />
-      <AffiliationArea />
-      <div className="h-16" />
       <ExperienceArea />
+      <div className="h-16" />
+      <AffiliationArea />
+      <div className="h-12" />
+      <SkillArea />
     </>
   );
 }
