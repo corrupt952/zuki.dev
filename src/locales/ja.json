@@ -244,7 +244,141 @@
         "description": "K@zuki.のポートフォリオ - 個人プロジェクトと貢献のコレクション",
         "keywords": "K@zuki, ポートフォリオ, プロジェクト, GitHub, オープンソース"
       },
-      "projects": []
+      "projects": [
+        {
+          "title": "zuki.dev",
+          "description": "このウェブサイト",
+          "link": "https://github.com/corrupt952/zuki.dev",
+          "archived": false,
+          "tags": ["Website", "TypeScript"]
+        },
+        {
+          "title": "home",
+          "description": "自宅のネットワーク機器とKubernetesクラスタのリポジトリ",
+          "link": "https://github.com/corrupt952/home",
+          "archived": false,
+          "tags": ["Kubernetes", "Ansible"]
+        },
+        {
+          "title": "Snack Time",
+          "description": "ウェブページのどこにでも表示できるミニマリストなフローティングタイマー。クイックブレイクや時間管理に最適です。",
+          "link": "https://chromewebstore.google.com/detail/snack-time/okaijbdacnkekgchlligfkjccijcghfn",
+          "archived": false,
+          "tags": ["Chrome Extension", "TypeScript"]
+        },
+        {
+          "title": "revealer",
+          "description": "送信元IP、リクエストヘッダー、リクエストボディ、クエリ文字列を返すHTTPサーバー",
+          "link": "https://github.com/corrupt952/revealer",
+          "archived": false,
+          "tags": ["Container", "Go"]
+        },
+        {
+          "title": "br1efly",
+          "description": "OpenAIまたはAzure OpenAI Serviceを使用して様々な操作を実行するChrome拡張機能のリポジトリ",
+          "link": "https://chrome.google.com/webstore/detail/br1efly/hmeejlkdfcfdlhkpioeodolchpcnbnhn",
+          "archived": true,
+          "tags": ["Chrome Extension", "TypeScript"]
+        },
+        {
+          "title": "picturnize",
+          "description": "サービス作成に必要なアイコンを生成",
+          "link": "https://picturnize.zuki.dev",
+          "tags": ["Website", "React", "TypeScript"],
+          "archived": true
+        },
+        {
+          "title": "WordySquirrel",
+          "description": "テキストからブログのアウトラインを生成",
+          "link": "https://wordy.zuki.dev/",
+          "tags": ["Website", "Flutter", "OpenAI"],
+          "archived": true
+        },
+        {
+          "title": "closest",
+          "description": "現在のディレクトリまたは親ディレクトリから特定のファイルを検索し、最も近いパスを返すコマンド",
+          "link": "https://github.com/corrupt952/closest",
+          "archived": false,
+          "tags": ["Plugin", "Sketch", "JavaScript"]
+        },
+        {
+          "title": "Retry command",
+          "description": "アクションステップが失敗した場合にリトライします",
+          "link": "https://github.com/marketplace/actions/retry-command",
+          "archived": false,
+          "tags": ["Plugin", "GitHub Actions", "Shell"]
+        },
+        {
+          "title": "tmuxist",
+          "description": "tmuxブートストラップスクリプト",
+          "link": "https://github.com/corrupt952/tmuxist",
+          "archived": false,
+          "tags": ["CLI", "Go", "Shell", "tmux"]
+        },
+        {
+          "title": "kz",
+          "description": "シンプルなkustomizeバージョンマネージャー",
+          "link": "https://github.com/corrupt952/kz",
+          "archived": true,
+          "tags": ["CLI", "Shell"]
+        },
+        {
+          "title": "ssm-session",
+          "description": "AWS SSM Session Managerのシンプルなラッパー",
+          "link": "https://github.com/corrupt952/ssm-session",
+          "archived": true,
+          "tags": ["CLI", "Shell", "AWS"]
+        },
+        {
+          "title": "md2html",
+          "description": "マークダウンをHTMLに変換",
+          "link": "https://github.com/corrupt952/md2html",
+          "archived": true,
+          "tags": ["Website", "Ruby"]
+        },
+        {
+          "title": "Slacker",
+          "description": "BitBucketからSlackにイベントを通知",
+          "link": "https://github.com/corrupt952/slacker",
+          "archived": true,
+          "tags": ["Plugin", "BitBucket", "Java"]
+        },
+        {
+          "title": "lily",
+          "description": "オンラインRubyインタプリタ",
+          "link": "https://github.com/corrupt952/lily",
+          "archived": true,
+          "tags": ["Website", "Ruby"]
+        },
+        {
+          "title": "SketchBundle",
+          "description": "すべてのマシンでSketch 3が同じプラグインを実行することを保証",
+          "link": "https://github.com/corrupt952/SketchBundle",
+          "archived": true,
+          "tags": ["CLI", "Go"]
+        },
+        {
+          "title": "postoss",
+          "description": "Ruby on Railsで書かれたシンプルなブログシステム",
+          "link": "https://github.com/corrupt952/postoss",
+          "archived": true,
+          "tags": ["Gem", "Ruby"]
+        },
+        {
+          "title": "pjtree",
+          "description": "JSONからディレクトリとファイルを作成。ディレクトリ階層をJSONに変換",
+          "link": "https://github.com/corrupt952/pjtree",
+          "archived": true,
+          "tags": ["CLI", "Python"]
+        },
+        {
+          "title": "pyxenter",
+          "description": "コマンドラインからESXiとXenサーバーを制御",
+          "link": "https://github.com/corrupt952/pyxenter",
+          "tags": ["CLI", "Python", "ESXi", "Xen"],
+          "archived": true
+        }
+      ]
     }
   }
 }
