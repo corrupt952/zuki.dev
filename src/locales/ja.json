@@ -297,7 +297,12 @@
           "link": "https://chrome.google.com/webstore/detail/br1efly/hmeejlkdfcfdlhkpioeodolchpcnbnhn",
           "archived": true,
           "tags": ["Chrome Extension", "TypeScript"],
-          "technologies": ["TypeScript", "OpenAI API", "Azure OpenAI", "Chrome Extension API"],
+          "technologies": [
+            "TypeScript",
+            "OpenAI API",
+            "Azure OpenAI",
+            "Chrome Extension API"
+          ],
           "images": []
         },
         {
@@ -307,7 +312,12 @@
           "detailDescription": "アプリケーションやウェブサービス向けのアイコン生成ツール。様々なサイズやフォーマットのアイコンを一括生成し、デベロッパーの作業効率化をサポート。Reactで構築。アーカイブ済み。",
           "link": "https://picturnize.zuki.dev",
           "tags": ["Website", "React", "TypeScript"],
-          "technologies": ["React", "TypeScript", "Canvas API", "Image Processing"],
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Canvas API",
+            "Image Processing"
+          ],
           "archived": true,
           "images": []
         },

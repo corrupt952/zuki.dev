@@ -297,7 +297,12 @@
           "link": "https://chrome.google.com/webstore/detail/br1efly/hmeejlkdfcfdlhkpioeodolchpcnbnhn",
           "archived": true,
           "tags": ["Chrome Extension", "TypeScript"],
-          "technologies": ["TypeScript", "OpenAI API", "Azure OpenAI", "Chrome Extension API"],
+          "technologies": [
+            "TypeScript",
+            "OpenAI API",
+            "Azure OpenAI",
+            "Chrome Extension API"
+          ],
           "images": []
         },
         {
@@ -307,7 +312,12 @@
           "detailDescription": "Icon generation tool for applications and web services. Batch generates icons in various sizes and formats to streamline developer workflow. Built with React for intuitive user experience. Archived project.",
           "link": "https://picturnize.zuki.dev",
           "tags": ["Website", "React", "TypeScript"],
-          "technologies": ["React", "TypeScript", "Canvas API", "Image Processing"],
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Canvas API",
+            "Image Processing"
+          ],
           "archived": true,
           "images": []
         },

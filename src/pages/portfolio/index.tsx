@@ -16,15 +16,16 @@ type Project = {
 };
 
 const Archived = () => {
-  return <span className="bg-red-800 text-red-100 text-xs px-2 py-0.5 rounded ml-2">Archived</span>;
+  return (
+    <span className="bg-red-800 text-red-100 text-xs px-2 py-0.5 rounded ml-2">
+      Archived
+    </span>
+  );
 };
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link
-      href={`/portfolio/${project.slug}`}
-      className="block"
-    >
+    <Link href={`/portfolio/${project.slug}`} className="block">
       <div
         className="grid grid-rows-[auto,1fr] h-[160px] rounded-lg p-6 overflow-hidden hover:scale-105 hover:shadow-lg transition-all duration-200"
         style={{
@@ -43,13 +44,11 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function Portfolio() {
   const { t, locale } = useTranslation('pages.portfolio');
-  
-  
+
   const projectsData = t('projects', {
     returnObjects: true,
   });
-  
-  
+
   const projects = projectsData as Project[] | null;
 
   // Handle the case where projects might not be loaded yet
