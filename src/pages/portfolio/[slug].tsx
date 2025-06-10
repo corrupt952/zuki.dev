@@ -146,7 +146,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const enProjects = enLocale.default.pages.portfolio.projects as Project[];
   const jaProjects = jaLocale.default.pages.portfolio.projects as Project[];
 
-  const paths = [];
+  const paths: { params: { slug: string } }[] = [];
   const slugSet = new Set<string>();
 
   // Collect all unique slugs from both locales

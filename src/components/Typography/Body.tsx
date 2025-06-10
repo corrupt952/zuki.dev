@@ -1,12 +1,13 @@
 export const Body = ({
   children,
+  className,
   ...props
 }: {
   children: React.ReactNode;
-  props?: any;
-}) => {
+  className?: string;
+} & React.HTMLAttributes<HTMLParagraphElement>) => {
   return (
-    <p className="text-gray-400 mb-4" {...props}>
+    <p className={`text-gray-400 mb-4 ${className || ''}`} {...props}>
       {children}
     </p>
   );
