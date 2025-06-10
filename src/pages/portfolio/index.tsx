@@ -5,10 +5,14 @@ import Link from 'next/link';
 
 type Project = {
   title: string;
+  slug: string;
   description: string;
+  detailDescription: string;
   link: string;
   archived: boolean;
   tags: string[];
+  technologies: string[];
+  images: string[];
 };
 
 const Archived = () => {
@@ -18,10 +22,8 @@ const Archived = () => {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
-      href={project.link}
+      href={`/portfolio/${project.slug}`}
       className="block"
-      target="_blank"
-      rel="noopener noreferrer"
     >
       <div
         className="grid grid-rows-[auto,1fr] h-[160px] rounded-lg p-6 overflow-hidden hover:scale-105 hover:shadow-lg transition-all duration-200"
@@ -40,10 +42,28 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function Portfolio() {
-  const { t } = useTranslation('pages.portfolio');
-  const projects = t('projects', {
+  const { t, locale } = useTranslation('pages.portfolio');
+  
+  
+  const projectsData = t('projects', {
     returnObjects: true,
-  }) as Project[];
+  });
+  
+  
+  const projects = projectsData as Project[] | null;
+
+  // Handle the case where projects might not be loaded yet
+  if (!projects || !Array.isArray(projects)) {
+    return (
+      <>
+        <Head>
+          <title>Portfolio | K@zuki.</title>
+        </Head>
+        <Heading>Portfolio</Heading>
+        <div>Loading projects...</div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -54,8 +74,8 @@ export default function Portfolio() {
       </Head>
       <Heading>{t('title')}</Heading>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects && projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+        {projects.map((project) => (
+          <ProjectCard key={project.slug || project.title} project={project} />
         ))}
       </div>
     </>

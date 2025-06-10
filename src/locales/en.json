@@ -247,138 +247,220 @@
       "projects": [
         {
           "title": "zuki.dev",
+          "slug": "zuki-dev",
           "description": "this website",
+          "detailDescription": "A personal portfolio website built with Next.js and TypeScript. Features internationalization, static site generation, and responsive design. Modern UI design using Tailwind CSS.",
           "link": "https://github.com/corrupt952/zuki.dev",
           "archived": false,
-          "tags": ["Website", "TypeScript"]
+          "tags": ["Website", "TypeScript"],
+          "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "i18n"],
+          "images": []
         },
         {
           "title": "home",
+          "slug": "home",
           "description": "The repository for the network devices and a kubernetes cluster in my home.",
+          "detailDescription": "Infrastructure as Code repository for managing home environment. Includes Kubernetes cluster configuration management, network device settings, and automation using Ansible. Implements GitOps practices for reliable infrastructure management.",
           "link": "https://github.com/corrupt952/home",
           "archived": false,
-          "tags": ["Kubernetes", "Ansible"]
+          "tags": ["Kubernetes", "Ansible"],
+          "technologies": ["Kubernetes", "Ansible", "Docker", "Helm", "GitOps"],
+          "images": []
         },
         {
           "title": "Snack Time",
+          "slug": "snack-time",
           "description": "A minimalist floating timer that stays with you anywhere on your webpage. Perfect for quick breaks and time management.",
+          "detailDescription": "A productivity-focused Chrome extension featuring a floating timer overlay on websites. Supports Pomodoro technique and time management with a minimal design that doesn't interfere with browsing focus. Clean and distraction-free interface.",
           "link": "https://chromewebstore.google.com/detail/snack-time/okaijbdacnkekgchlligfkjccijcghfn",
           "archived": false,
-          "tags": ["Chrome Extension", "TypeScript"]
+          "tags": ["Chrome Extension", "TypeScript"],
+          "technologies": ["TypeScript", "Chrome Extension API", "HTML/CSS"],
+          "images": []
         },
         {
           "title": "revealer",
+          "slug": "revealer",
           "description": "HTTP server that returns the source IP, request headers, request body, and query string.",
+          "detailDescription": "A debugging and testing HTTP server that provides detailed request information. Useful for API development verification and network troubleshooting. Lightweight and containerized for easy deployment in various environments.",
           "link": "https://github.com/corrupt952/revealer",
           "archived": false,
-          "tags": ["Container", "Go"]
+          "tags": ["Container", "Go"],
+          "technologies": ["Go", "HTTP Server", "Docker", "JSON"],
+          "images": []
         },
         {
           "title": "br1efly",
+          "slug": "br1efly",
           "description": "The respository for chrome extension to perform various operations using OpenAI or Azure OpenAI Service.",
+          "detailDescription": "AI-powered Chrome extension that enables text operations on web pages. Select text to perform translation, summarization, explanation, and other AI operations. Supports both OpenAI and Azure OpenAI services. Archived project.",
           "link": "https://chrome.google.com/webstore/detail/br1efly/hmeejlkdfcfdlhkpioeodolchpcnbnhn",
           "archived": true,
-          "tags": ["Chrome Extension", "TypeScript"]
+          "tags": ["Chrome Extension", "TypeScript"],
+          "technologies": ["TypeScript", "OpenAI API", "Azure OpenAI", "Chrome Extension API"],
+          "images": []
         },
         {
           "title": "picturnize",
+          "slug": "picturnize",
           "description": "Generate the icons needed to create the service.",
+          "detailDescription": "Icon generation tool for applications and web services. Batch generates icons in various sizes and formats to streamline developer workflow. Built with React for intuitive user experience. Archived project.",
           "link": "https://picturnize.zuki.dev",
           "tags": ["Website", "React", "TypeScript"],
-          "archived": true
+          "technologies": ["React", "TypeScript", "Canvas API", "Image Processing"],
+          "archived": true,
+          "images": []
         },
         {
           "title": "WordySquirrel",
+          "slug": "wordy-squirrel",
           "description": "A generate blog outlines from the text.",
+          "detailDescription": "AI-powered tool for automatically generating blog post outlines from text input. Web application built with Flutter. Archived project.",
           "link": "https://wordy.zuki.dev/",
           "tags": ["Website", "Flutter", "OpenAI"],
-          "archived": true
+          "technologies": ["Flutter", "Dart", "OpenAI API"],
+          "archived": true,
+          "images": []
         },
         {
           "title": "closest",
+          "slug": "closest",
           "description": "The command that searches the current directory or parent directories for a specific file and returns the closest path.",
+          "detailDescription": "Command-line tool that searches upward through directory tree to find the nearest location of a specified file. Useful for finding configuration files and project roots.",
           "link": "https://github.com/corrupt952/closest",
           "archived": false,
-          "tags": ["Plugin", "Sketch", "JavaScript"]
+          "tags": ["Plugin", "Sketch", "JavaScript"],
+          "technologies": ["JavaScript", "Node.js", "CLI"],
+          "images": []
         },
         {
           "title": "Retry command",
+          "slug": "retry-command",
           "description": "Retries an Action step if it fails.",
+          "detailDescription": "GitHub Action that automatically retries failed steps in workflows. Improves CI/CD pipeline reliability by handling transient failures.",
           "link": "https://github.com/marketplace/actions/retry-command",
           "archived": false,
-          "tags": ["Plugin", "GitHub Actions", "Shell"]
+          "tags": ["Plugin", "GitHub Actions", "Shell"],
+          "technologies": ["Shell Script", "GitHub Actions", "YAML"],
+          "images": []
         },
         {
           "title": "tmuxist",
+          "slug": "tmuxist",
           "description": "A tmux bootstrap script.",
+          "detailDescription": "Tool for automatically building tmux sessions from configuration files. Supports rapid development environment setup and session management.",
           "link": "https://github.com/corrupt952/tmuxist",
           "archived": false,
-          "tags": ["CLI", "Go", "Shell", "tmux"]
+          "tags": ["CLI", "Go", "Shell", "tmux"],
+          "technologies": ["Go", "Shell Script", "tmux"],
+          "images": []
         },
         {
           "title": "kz",
+          "slug": "kz",
           "description": "A simple kusotmize version manager.",
+          "detailDescription": "Tool for easily managing and switching between multiple versions of kustomize. Streamlines Kubernetes manifest management workflow. Archived project.",
           "link": "https://github.com/corrupt952/kz",
           "archived": true,
-          "tags": ["CLI", "Shell"]
+          "tags": ["CLI", "Shell"],
+          "technologies": ["Shell Script", "Kustomize"],
+          "images": []
         },
         {
           "title": "ssm-session",
+          "slug": "ssm-session",
           "description": "A simple wrapper for AWS SSM Session Manager",
+          "detailDescription": "Wrapper script that improves the usability of AWS Systems Manager Session Manager. Simplifies secure connections to EC2 instances. Archived project.",
           "link": "https://github.com/corrupt952/ssm-session",
           "archived": true,
-          "tags": ["CLI", "Shell", "AWS"]
+          "tags": ["CLI", "Shell", "AWS"],
+          "technologies": ["Shell Script", "AWS SSM", "AWS CLI"],
+          "images": []
         },
         {
           "title": "md2html",
+          "slug": "md2html",
           "description": "Convert markdown to html.",
+          "detailDescription": "Tool for converting Markdown files to HTML. Useful for simple document generation and blog post conversion. Archived project.",
           "link": "https://github.com/corrupt952/md2html",
           "archived": true,
-          "tags": ["Website", "Ruby"]
+          "tags": ["Website", "Ruby"],
+          "technologies": ["Ruby", "Markdown", "HTML"],
+          "images": []
         },
         {
           "title": "Slacker",
+          "slug": "slacker",
           "description": "Notify events from BitBucket to Slack.",
+          "detailDescription": "Plugin for notifying BitBucket events (pull requests, commits, etc.) to Slack. Improves development team communication. Archived project.",
           "link": "https://github.com/corrupt952/slacker",
           "archived": true,
-          "tags": ["Plugin", "BitBucket", "Java"]
+          "tags": ["Plugin", "BitBucket", "Java"],
+          "technologies": ["Java", "BitBucket API", "Slack API"],
+          "images": []
         },
         {
           "title": "lily",
+          "slug": "lily",
           "description": "Online Ruby interpreter.",
+          "detailDescription": "Online interpreter for executing Ruby code in the browser. Useful for educational purposes and testing code snippets. Archived project.",
           "link": "https://github.com/corrupt952/lily",
           "archived": true,
-          "tags": ["Website", "Ruby"]
+          "tags": ["Website", "Ruby"],
+          "technologies": ["Ruby", "Web Framework", "JavaScript"],
+          "images": []
         },
         {
           "title": "SketchBundle",
+          "slug": "sketch-bundle",
           "description": "SketchBundle makes sure Sketch 3 run the same plugins on every machine.",
+          "detailDescription": "Tool for managing and synchronizing Sketch plugins. Ensures design environment consistency across teams. Archived project.",
           "link": "https://github.com/corrupt952/SketchBundle",
           "archived": true,
-          "tags": ["CLI", "Go"]
+          "tags": ["CLI", "Go"],
+          "technologies": ["Go", "Sketch", "Plugin Management"],
+          "images": []
         },
         {
           "title": "postoss",
+          "slug": "postoss",
           "description": "A simple blog system written in Ruby on Rails.",
+          "detailDescription": "Simple blog system built with Ruby on Rails. Implements basic CRUD functionality and content management. Archived project.",
           "link": "https://github.com/corrupt952/postoss",
           "archived": true,
-          "tags": ["Gem", "Ruby"]
+          "tags": ["Gem", "Ruby"],
+          "technologies": ["Ruby on Rails", "PostgreSQL", "HTML/CSS"],
+          "images": []
         },
         {
           "title": "pjtree",
+          "slug": "pjtree",
           "description": "Make any directory and files by json. Make directory hierarchy to json.",
+          "detailDescription": "Tool for defining project structures in JSON format and automatically generating directories and files. Useful for managing project templates. Archived project.",
           "link": "https://github.com/corrupt952/pjtree",
           "archived": true,
-          "tags": ["CLI", "Python"]
+          "tags": ["CLI", "Python"],
+          "technologies": ["Python", "JSON", "File System"],
+          "images": []
         },
         {
           "title": "pyxenter",
+          "slug": "pyxenter",
           "description": "Control your ESXi and Xen servers from the command line.",
+          "detailDescription": "Tool for managing ESXi and XenServer virtual machines from the command line. Supports virtualization environment automation and efficient operations. Archived project.",
           "link": "https://github.com/corrupt952/pyxenter",
           "tags": ["CLI", "Python", "ESXi", "Xen"],
-          "archived": true
+          "technologies": ["Python", "VMware API", "Xen API"],
+          "archived": true,
+          "images": []
         }
-      ]
+      ],
+      "detail": {
+        "backToPortfolio": "← Back to Portfolio",
+        "technologies": "Technologies",
+        "tags": "Tags",
+        "viewProject": "View Project"
+      }
     }
   }
 }

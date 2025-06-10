@@ -5,7 +5,6 @@ import { GlobeIcon } from 'lucide-react';
 export const LanguageSelect = () => {
   const { locale, setLocale } = useContext(I18nContext);
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(`locale: ${event.target.value}`);
     setLocale(event.target.value);
   };
 
