@@ -252,7 +252,7 @@
           "detailDescription": "Next.jsとTypeScriptで構築された個人ポートフォリオサイト。国際化対応、静的サイト生成、レスポンシブデザインを実装。Tailwind CSSを使用したモダンなUIデザイン。",
           "link": "https://github.com/corrupt952/zuki.dev",
           "archived": false,
-          "tags": ["Website", "TypeScript"],
+          "tags": ["Website"],
           "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "i18n"],
           "images": []
         },
@@ -263,7 +263,7 @@
           "detailDescription": "自宅環境のインフラをCode as Infrastructureで管理するリポジトリ。Kubernetesクラスタの構成管理、ネットワーク機器の設定、Ansibleを使った自動化を実装。",
           "link": "https://github.com/corrupt952/home",
           "archived": false,
-          "tags": ["Kubernetes", "Ansible"],
+          "tags": ["Other"],
           "technologies": ["Kubernetes", "Ansible", "Docker", "Helm", "GitOps"],
           "images": []
         },
@@ -274,7 +274,7 @@
           "detailDescription": "生産性向上のためのChrome拡張機能。ウェブサイト上でフローティング表示されるタイマーで、ポモドーロテクニックや時間管理をサポート。ミニマルなデザインで集中を妨げない。",
           "link": "https://chromewebstore.google.com/detail/snack-time/okaijbdacnkekgchlligfkjccijcghfn",
           "archived": false,
-          "tags": ["Chrome Extension", "TypeScript"],
+          "tags": ["Extension"],
           "technologies": ["TypeScript", "Chrome Extension API", "HTML/CSS"],
           "images": []
         },
@@ -285,7 +285,7 @@
           "detailDescription": "デバッグやテスト用途のHTTPサーバー。リクエスト情報を詳細に表示し、API開発時の動作確認やネットワークのトラブルシューティングに活用。軽量でコンテナ化対応。",
           "link": "https://github.com/corrupt952/revealer",
           "archived": false,
-          "tags": ["Container", "Go"],
+          "tags": ["Website"],
           "technologies": ["Go", "HTTP Server", "Docker", "JSON"],
           "images": []
         },
@@ -296,7 +296,7 @@
           "detailDescription": "AIパワーを活用したChrome拡張機能。ウェブページ上のテキストを選択して翻訳、要約、解説などの操作をAIで実行。OpenAIとAzure OpenAI両方に対応。アーカイブ済み。",
           "link": "https://chrome.google.com/webstore/detail/br1efly/hmeejlkdfcfdlhkpioeodolchpcnbnhn",
           "archived": true,
-          "tags": ["Chrome Extension", "TypeScript"],
+          "tags": ["Extension"],
           "technologies": [
             "TypeScript",
             "OpenAI API",
@@ -311,7 +311,7 @@
           "description": "サービス作成に必要なアイコンを生成",
           "detailDescription": "アプリケーションやウェブサービス向けのアイコン生成ツール。様々なサイズやフォーマットのアイコンを一括生成し、デベロッパーの作業効率化をサポート。Reactで構築。アーカイブ済み。",
           "link": "https://picturnize.zuki.dev",
-          "tags": ["Website", "React", "TypeScript"],
+          "tags": ["Website"],
           "technologies": [
             "React",
             "TypeScript",
@@ -327,7 +327,7 @@
           "description": "テキストからブログのアウトラインを生成",
           "detailDescription": "AIを活用してテキストからブログ記事のアウトラインを自動生成するツール。Flutterで構築されたウェブアプリケーション。アーカイブ済み。",
           "link": "https://wordy.zuki.dev/",
-          "tags": ["Website", "Flutter", "OpenAI"],
+          "tags": ["Website"],
           "technologies": ["Flutter", "Dart", "OpenAI API"],
           "archived": true,
           "images": []
@@ -339,7 +339,7 @@
           "detailDescription": "ディレクトリツリーを上方向に検索して、指定したファイルの最も近い場所を見つけるコマンドラインツール。設定ファイルやプロジェクトルートの検出に便利。",
           "link": "https://github.com/corrupt952/closest",
           "archived": false,
-          "tags": ["Plugin", "Sketch", "JavaScript"],
+          "tags": ["CLI"],
           "technologies": ["JavaScript", "Node.js", "CLI"],
           "images": []
         },
@@ -350,7 +350,7 @@
           "detailDescription": "GitHub Actionsワークフローで失敗したステップを自動的にリトライするアクション。CI/CDパイプラインの信頼性向上に貢献。",
           "link": "https://github.com/marketplace/actions/retry-command",
           "archived": false,
-          "tags": ["Plugin", "GitHub Actions", "Shell"],
+          "tags": ["Extension"],
           "technologies": ["Shell Script", "GitHub Actions", "YAML"],
           "images": []
         },
@@ -361,7 +361,7 @@
           "detailDescription": "tmuxセッションを設定ファイルから自動的に構築するツール。開発環境の迅速な立ち上げとセッション管理を支援。",
           "link": "https://github.com/corrupt952/tmuxist",
           "archived": false,
-          "tags": ["CLI", "Go", "Shell", "tmux"],
+          "tags": ["CLI"],
           "technologies": ["Go", "Shell Script", "tmux"],
           "images": []
         },
@@ -372,7 +372,7 @@
           "detailDescription": "複数バージョンのkustomizeを簡単に管理・切り替えできるツール。Kubernetesマニフェスト管理の効率化をサポート。アーカイブ済み。",
           "link": "https://github.com/corrupt952/kz",
           "archived": true,
-          "tags": ["CLI", "Shell"],
+          "tags": ["CLI"],
           "technologies": ["Shell Script", "Kustomize"],
           "images": []
         },
@@ -383,7 +383,7 @@
           "detailDescription": "AWS Systems Manager Session Managerの使い勝手を向上させるラッパースクリプト。EC2インスタンスへの安全な接続を簡素化。アーカイブ済み。",
           "link": "https://github.com/corrupt952/ssm-session",
           "archived": true,
-          "tags": ["CLI", "Shell", "AWS"],
+          "tags": ["CLI"],
           "technologies": ["Shell Script", "AWS SSM", "AWS CLI"],
           "images": []
         },
@@ -394,7 +394,7 @@
           "detailDescription": "MarkdownファイルをHTMLに変換するツール。シンプルなドキュメント生成やブログ記事の変換に活用。アーカイブ済み。",
           "link": "https://github.com/corrupt952/md2html",
           "archived": true,
-          "tags": ["Website", "Ruby"],
+          "tags": ["CLI", "Ruby"],
           "technologies": ["Ruby", "Markdown", "HTML"],
           "images": []
         },
@@ -405,7 +405,7 @@
           "detailDescription": "BitBucketのイベント（プルリクエスト、コミットなど）をSlackに通知するプラグイン。開発チームのコミュニケーション向上に貢献。アーカイブ済み。",
           "link": "https://github.com/corrupt952/slacker",
           "archived": true,
-          "tags": ["Plugin", "BitBucket", "Java"],
+          "tags": ["Extension"],
           "technologies": ["Java", "BitBucket API", "Slack API"],
           "images": []
         },
@@ -416,7 +416,7 @@
           "detailDescription": "ブラウザ上でRubyコードを実行できるオンラインインタプリタ。教育目的やコードスニペットのテストに活用。アーカイブ済み。",
           "link": "https://github.com/corrupt952/lily",
           "archived": true,
-          "tags": ["Website", "Ruby"],
+          "tags": ["Website"],
           "technologies": ["Ruby", "Web Framework", "JavaScript"],
           "images": []
         },
@@ -427,7 +427,7 @@
           "detailDescription": "Sketchプラグインの管理と同期を行うツール。チーム間でデザイン環境の統一性を保証。アーカイブ済み。",
           "link": "https://github.com/corrupt952/SketchBundle",
           "archived": true,
-          "tags": ["CLI", "Go"],
+          "tags": ["CLI"],
           "technologies": ["Go", "Sketch", "Plugin Management"],
           "images": []
         },
@@ -438,7 +438,7 @@
           "detailDescription": "Ruby on Railsで構築されたシンプルなブログシステム。基本的なCRUD機能とコンテンツ管理を実装。アーカイブ済み。",
           "link": "https://github.com/corrupt952/postoss",
           "archived": true,
-          "tags": ["Gem", "Ruby"],
+          "tags": ["Other"],
           "technologies": ["Ruby on Rails", "PostgreSQL", "HTML/CSS"],
           "images": []
         },
@@ -449,7 +449,7 @@
           "detailDescription": "JSON形式でプロジェクト構造を定義し、自動的にディレクトリとファイルを生成するツール。プロジェクトテンプレートの管理に活用。アーカイブ済み。",
           "link": "https://github.com/corrupt952/pjtree",
           "archived": true,
-          "tags": ["CLI", "Python"],
+          "tags": ["CLI"],
           "technologies": ["Python", "JSON", "File System"],
           "images": []
         },
@@ -459,7 +459,7 @@
           "description": "コマンドラインからESXiとXenサーバーを制御",
           "detailDescription": "ESXiとXenServerの仮想マシンをコマンドラインから管理するツール。仮想化環境の自動化と効率的な運用をサポート。アーカイブ済み。",
           "link": "https://github.com/corrupt952/pyxenter",
-          "tags": ["CLI", "Python", "ESXi", "Xen"],
+          "tags": ["CLI"],
           "technologies": ["Python", "VMware API", "Xen API"],
           "archived": true,
           "images": []
