@@ -463,6 +463,17 @@
           "technologies": ["Python", "VMware API", "Xen API"],
           "archived": true,
           "images": []
+        },
+        {
+          "title": "Chimr",
+          "slug": "chimr",
+          "description": "見逃しようがないフルスクリーンミーティング通知を提供するMCP対応macOSアプリ",
+          "detailDescription": "Chimrは、重要なミーティングを見逃さないようにするためのmacOSアプリケーションです。様々なカレンダープラットフォーム（iCloud、Google、Outlook、Exchange）からの今後のミーティングに対して、目立つフルスクリーン通知を提供し、ワンクリックでミーティングに参加できます。MCP（Model Context Protocol）に対応しており、Claude Desktopなどの MCPクライアントと連携可能です。現在macOS 14.0（Sonoma）以降でベータ版として提供中。",
+          "link": "https://chimr.zuki.dev",
+          "tags": ["App"],
+          "technologies": ["macOS", "Swift", "Calendar Integration", "Notifications", "MCP"],
+          "archived": false,
+          "images": []
         }
       ],
       "detail": {

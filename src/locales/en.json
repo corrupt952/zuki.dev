@@ -463,6 +463,17 @@
           "technologies": ["Python", "VMware API", "Xen API"],
           "archived": true,
           "images": []
+        },
+        {
+          "title": "Chimr",
+          "slug": "chimr",
+          "description": "A macOS app that provides impossible-to-miss fullscreen meeting notifications with MCP support.",
+          "detailDescription": "Chimr is a macOS application designed to help users never miss important meetings. It provides prominent fullscreen notifications for upcoming meetings across various calendar platforms (iCloud, Google, Outlook, Exchange) with one-click meeting join functionality. The app supports MCP (Model Context Protocol), allowing integration with MCP clients like Claude Desktop. Currently in beta for macOS 14.0 (Sonoma) and later.",
+          "link": "https://chimr.zuki.dev",
+          "tags": ["App"],
+          "technologies": ["macOS", "Swift", "Calendar Integration", "Notifications", "MCP"],
+          "archived": false,
+          "images": []
         }
       ],
       "detail": {
