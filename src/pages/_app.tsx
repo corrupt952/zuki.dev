@@ -1,4 +1,4 @@
-import { LanguageSelect } from '@/components/Elements/LanguageSelect';
+import { FixedButtons } from '@/components/Elements/FixedButtons';
 import { Footer } from '@/components/Layout/Footer';
 import { Header } from '@/components/Layout/Header';
 import { I18nApp } from '@/libs/i18n';
@@ -62,7 +62,7 @@ function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
       <Footer />
-      <LanguageSelect />
+      <FixedButtons />
       <GoogleAnalytics />
     </>
   );
