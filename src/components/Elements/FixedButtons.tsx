@@ -2,6 +2,7 @@ import { GlobeIcon } from 'lucide-react';
 import { useContext, useState, useRef, useEffect } from 'react';
 import { I18nContext, LOCALES } from '@/libs/i18n';
 import Image from 'next/image';
+import kofiSymbol from '@/assets/images/kofi_symbol.png';
 
 export const FixedButtons = () => {
   const { locale, setLocale } = useContext(I18nContext);
@@ -77,7 +78,7 @@ export const FixedButtons = () => {
           onClick={handleClick}
         >
           <Image 
-            src="/kofi_symbol.png" 
+            src={kofiSymbol} 
             alt="Ko-fi" 
             width={20} 
             height={20}
