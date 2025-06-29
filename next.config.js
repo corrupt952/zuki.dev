@@ -9,6 +9,9 @@ const nextConfig = {
   publicRuntimeConfig: {
     i18n,
   },
+  images: {
+    unoptimized: true,
+  },
 }
 
 if (process.env.NODE_ENV === 'production') {
