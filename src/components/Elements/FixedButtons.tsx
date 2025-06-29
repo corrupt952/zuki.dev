@@ -1,6 +1,7 @@
-import { Coffee, GlobeIcon } from 'lucide-react';
+import { GlobeIcon } from 'lucide-react';
 import { useContext, useState, useRef, useEffect } from 'react';
 import { I18nContext, LOCALES } from '@/libs/i18n';
+import Image from 'next/image';
 
 export const FixedButtons = () => {
   const { locale, setLocale } = useContext(I18nContext);
@@ -75,7 +76,13 @@ export const FixedButtons = () => {
           onTouchEnd={handleTouchEnd}
           onClick={handleClick}
         >
-          <Coffee className="w-5 h-5" />
+          <Image 
+            src="/kofi_symbol.png" 
+            alt="Ko-fi" 
+            width={20} 
+            height={20}
+            className="w-5 h-5"
+          />
         </a>
       </div>
       
