@@ -58,7 +58,14 @@
             }
           },
           {
+            "startDate": "2025/09",
+            "title": "VP of Technology",
+            "company": "Studist Corporation.",
+            "body": "As VP of Technology, serves as the final decision maker for all technical matters across the company, overseeing technical strategy, architecture decisions, and engineering practices at the company level."
+          },
+          {
             "startDate": "2025/03",
+            "endDate": "2025/08",
             "title": "Head of Product Tech Lead & Company-wide Technical Lead",
             "company": "Studist Corporation.",
             "body": "In addition to the role of Product Tech Lead, I have taken on the responsibility of being the final decision maker for all technical matters across the company. This includes overseeing technical strategy, architecture decisions, and engineering practices at the company level."
