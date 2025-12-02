@@ -1,42 +1,47 @@
 import { AppProps } from 'next/app';
-import getConfig from 'next/config';
 import React from 'react';
+import enMessages from '@/locales/en.json';
+import jaMessages from '@/locales/ja.json';
 
-type Dict = {
-  [key: string]: string | string[] | Dict | Dict[] | null;
+export const LOCALES = ['ja', 'en'] as const;
+export const DEFAULT_LOCALE = 'en';
+
+const messages = {
+  en: enMessages,
+  ja: jaMessages,
 };
 
-const publicRuntimeConfig = getConfig().publicRuntimeConfig;
-const i18n = publicRuntimeConfig.i18n;
-export const DEFAULT_LOCALE = i18n.defaultLocale;
-export const LOCALES = i18n.locales;
-const messages: Dict = {};
-LOCALES.forEach((locale: string) => {
-  // eslint-disable-next-line global-require, import/no-dynamic-require
-  messages[locale] = require(`@/locales/${locale}.json`);
-});
+type Locale = keyof typeof messages;
 
-const isDict = (dict: unknown) => {
-  return (
-    dict &&
-    typeof dict === 'object' &&
-    dict !== null &&
-    typeof (dict as Dict).length === 'undefined'
-  );
+const isLocale = (value: string): value is Locale => {
+  return value in messages;
+};
+
+const getMessages = (locale: string) => {
+  if (isLocale(locale)) {
+    return messages[locale];
+  }
+  return messages[DEFAULT_LOCALE];
+};
+
+const isRecord = (value: unknown): value is Record<string, unknown> => {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
 };
 
 export const I18nContext = React.createContext({
   locale: DEFAULT_LOCALE,
-  setLocale: (locale: string) => {},
+  setLocale: (_locale: string) => {},
 });
+
 export const I18nApp = <Props extends AppProps>(
   WrappedComponent: React.ComponentType<Props>,
 ) => {
   const With = (props: Props) => {
     const { router } = props;
     let uriLocale: string | null = router.asPath.split('/')[1];
-    if (LOCALES.indexOf(uriLocale) === -1) uriLocale = null;
-    let initialLocale = uriLocale || router.locale || DEFAULT_LOCALE;
+    if (!LOCALES.includes(uriLocale as (typeof LOCALES)[number]))
+      uriLocale = null;
+    const initialLocale = uriLocale || router.locale || DEFAULT_LOCALE;
     const [locale, setLocale] = React.useState<string>(initialLocale);
 
     const setLocaleWithRouter = (locale: string) => {
@@ -68,7 +73,7 @@ export const I18nApp = <Props extends AppProps>(
 
 export const GetStaticPaths = async () => {
   return {
-    paths: LOCALES.map((locale: string) => ({
+    paths: LOCALES.map((locale) => ({
       params: { locale },
     })),
     fallback: true,
@@ -87,36 +92,31 @@ export const GetStaticProps = async ({
   };
 };
 
-type i18nProps = {
-  returnObjects?: boolean;
-};
-
-export const useTranslation = (namespace?: string, option?: i18nProps) => {
+export const useTranslation = (namespace?: string) => {
   const { locale, setLocale } = React.useContext(I18nContext);
 
-  return {
-    locale,
-    setLocale,
-    t: (key: string, option?: i18nProps) => {
-      const k = !namespace ? key : `${namespace}.${key}`;
-      const message = k.split('.').reduce((dict: any, k: string) => {
-        if (!dict) {
-          console.warn(`[i18n] ${k} is not found in ${locale}.json`);
-          return false;
-        }
-        if (!isDict(dict)) return dict;
+  function t(key: string): string;
+  function t<T>(key: string, option: { returnObjects: true }): T;
+  function t(
+    key: string,
+    option?: { returnObjects?: boolean },
+  ): string | unknown {
+    const k = !namespace ? key : `${namespace}.${key}`;
+    const message = k.split('.').reduce<unknown>((current, key) => {
+      if (!isRecord(current)) {
+        console.warn(`[i18n] ${key} is not found in ${locale}.json`);
+        return undefined;
+      }
+      if (!(key in current)) {
+        console.warn(`[i18n] ${key} is not found in ${locale}.json`);
+        return undefined;
+      }
+      return current[key];
+    }, getMessages(locale));
 
-        if (!(k in (dict as Dict))) {
-          console.warn(`[i18n] ${k} is not found in ${locale}.json`);
-          return false;
-        }
+    if (option?.returnObjects) return message ?? k;
+    return typeof message === 'string' ? message : String(message ?? k);
+  }
 
-        return (dict as Dict)[k];
-      }, messages[locale]);
-
-      if (typeof message === 'string') return message;
-      if (option?.returnObjects) return message || k;
-      return <>{message || k}</>;
-    },
-  };
+  return { locale, setLocale, t };
 };
