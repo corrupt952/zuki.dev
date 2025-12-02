@@ -31,11 +31,8 @@ export default function ProjectDetail() {
   const router = useRouter();
   const { slug } = router.query;
 
-  const projectsData = t('projects', {
-    returnObjects: true,
-  }) as Project[];
-
-  const project = projectsData?.find((p) => p.slug === slug);
+  const projects = t<Project[]>('projects', { returnObjects: true });
+  const project = projects?.find((p) => p.slug === slug);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -143,8 +140,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const enLocale = await import('@/locales/en.json');
   const jaLocale = await import('@/locales/ja.json');
 
-  const enProjects = enLocale.default.pages.portfolio.projects as Project[];
-  const jaProjects = jaLocale.default.pages.portfolio.projects as Project[];
+  const enProjects = enLocale.default.pages.portfolio.projects;
+  const jaProjects = jaLocale.default.pages.portfolio.projects;
 
   const paths: { params: { slug: string } }[] = [];
   const slugSet = new Set<string>();

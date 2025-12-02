@@ -9,9 +9,7 @@ type Affiliation = {
 
 export const AffiliationArea = () => {
   const { t } = useTranslation('pages.about.affiliation');
-  const affiliations = t('affiliations', {
-    returnObjects: true,
-  }) as Affiliation[];
+  const affiliations = t<Affiliation[]>('affiliations', { returnObjects: true });
 
   return (
     <>

@@ -10,15 +10,15 @@ const BodyHeader = ({ children }: { children: React.ReactNode }) => (
 
 function ContentArea() {
   const { t } = useTranslation('pages.work.contents');
-  const menus = t('support.menus', { returnObjects: true });
+  const menus = t<string[]>('support.menus', { returnObjects: true });
 
   return (
     <section className="mb-16">
       <Heading>{t('title')}</Heading>
       <div className="mt-6">
         <BodyHeader>{t('support.title')}</BodyHeader>
-        {t('support.descriptions', { returnObjects: true }).map(
-          (desc: string) => (
+        {t<string[]>('support.descriptions', { returnObjects: true }).map(
+          (desc) => (
             <p className="mb-4" key={desc}>
               <Markdown markdown={desc} />
             </p>
@@ -35,8 +35,8 @@ function ContentArea() {
 
       <div className="mt-12">
         <BodyHeader>{t('consultation.title')}</BodyHeader>
-        {t('consultation.descriptions', { returnObjects: true }).map(
-          (desc: string) => (
+        {t<string[]>('consultation.descriptions', { returnObjects: true }).map(
+          (desc) => (
             <p className="mb-4" key={desc}>
               <Markdown markdown={desc} />
             </p>
@@ -54,7 +54,7 @@ function PricingArea() {
     <section className="mb-16">
       <Heading>{t('title')}</Heading>
       <div className="mt-6">
-        {t('descriptions', { returnObjects: true }).map((desc: string) => (
+        {t<string[]>('descriptions', { returnObjects: true }).map((desc) => (
           <p className="mb-4" key={desc}>
             <Markdown markdown={desc} />
           </p>
@@ -63,8 +63,8 @@ function PricingArea() {
           <table className="w-full table-auto border-collapse text-white">
             <thead>
               <tr className="border-b border-gray-600">
-                {t('menus.headers', { returnObjects: true }).map(
-                  (header: string) => (
+                {t<string[]>('menus.headers', { returnObjects: true }).map(
+                  (header) => (
                     <th className="px-4 py-3" key={header}>
                       {header}
                     </th>
@@ -73,8 +73,10 @@ function PricingArea() {
               </tr>
             </thead>
             <tbody>
-              {t('menus.rows', { returnObjects: true }).map(
-                (row: { [key: string]: string }) => (
+              {t<{ name: string; unit: string; price: string }[]>(
+                'menus.rows',
+                { returnObjects: true },
+              ).map((row) => (
                   <tr key={row.name} className="border-b border-gray-600">
                     <td className="px-4 py-3">{row.name}</td>
                     <td className="px-4 py-3">{row.unit}</td>
@@ -86,7 +88,7 @@ function PricingArea() {
           </table>
         </div>
         <ul className="pl-6 mt-6">
-          {t('menus.notes', { returnObjects: true }).map((note: string) => (
+          {t<string[]>('menus.notes', { returnObjects: true }).map((note) => (
             <li className="mb-2" key={note}>
               <Body>{note}</Body>
             </li>
@@ -119,7 +121,7 @@ function InquiryArea() {
     <section className="mb-16">
       <Heading>{t('title')}</Heading>
       <div className="mt-6">
-        {t('descriptions', { returnObjects: true }).map((desc: string) => (
+        {t<string[]>('descriptions', { returnObjects: true }).map((desc) => (
           <p className="mb-4" key={desc}>
             <Markdown markdown={desc} />
           </p>
@@ -173,7 +175,7 @@ export default function Work() {
       </Head>
 
       <article>
-        {t('descriptions', { returnObjects: true }).map((desc: string) => (
+        {t<string[]>('descriptions', { returnObjects: true }).map((desc) => (
           <p className="mb-4" key={desc}>
             <Markdown markdown={desc} />
           </p>

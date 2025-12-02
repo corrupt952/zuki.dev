@@ -15,12 +15,8 @@ type Experience = {
 
 export const ExperienceArea = () => {
   const { t } = useTranslation('pages.about.experience');
-  const descriptions = t('descriptions', {
-    returnObjects: true,
-  }) as string[];
-  const experiences = t('experiences', {
-    returnObjects: true,
-  }) as Experience[];
+  const descriptions = t<string[]>('descriptions', { returnObjects: true });
+  const experiences = t<Experience[]>('experiences', { returnObjects: true });
 
   return (
     <>

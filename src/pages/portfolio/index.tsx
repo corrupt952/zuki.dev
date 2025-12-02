@@ -50,11 +50,7 @@ export default function Portfolio() {
   const [showArchived, setShowArchived] = useState(false);
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
 
-  const projectsData = t('projects', {
-    returnObjects: true,
-  });
-
-  const projects = projectsData as Project[] | null;
+  const projects = t<Project[]>('projects', { returnObjects: true });
 
   // Debounce search query
   useEffect(() => {
