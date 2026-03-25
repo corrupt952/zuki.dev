@@ -1,20 +1,9 @@
 import { Heading } from '@/components/Typography/Heading';
+import LinkText from '@/components/Elements/LinkText';
 import { useTranslation } from '@/libs/i18n';
+import type { Project } from '@/types/portfolio';
 import Head from 'next/head';
-import Link from 'next/link';
 import { useState, useMemo, useCallback, useEffect } from 'react';
-
-type Project = {
-  title: string;
-  slug: string;
-  description: string;
-  detailDescription: string;
-  link: string;
-  archived: boolean;
-  tags: string[];
-  technologies: string[];
-  images: string[];
-};
 
 const Archived = () => {
   return (
@@ -26,7 +15,7 @@ const Archived = () => {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link href={`/portfolio/${project.slug}`} className="block">
+    <LinkText href={`/portfolio/${project.slug}`} className="block">
       <div
         className="grid grid-rows-[auto,1fr] h-[160px] rounded-lg p-6 overflow-hidden hover:scale-105 hover:shadow-lg transition-all duration-200"
         style={{
@@ -39,12 +28,12 @@ function ProjectCard({ project }: { project: Project }) {
         </h2>
         <p className="text-sm overflow-hidden">{project.description}</p>
       </div>
-    </Link>
+    </LinkText>
   );
 }
 
 export default function Portfolio() {
-  const { t, locale } = useTranslation('pages.portfolio');
+  const { t } = useTranslation('pages.portfolio');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [showArchived, setShowArchived] = useState(false);
@@ -117,15 +106,22 @@ export default function Portfolio() {
   const hasActiveFilters =
     searchQuery || selectedTags.length > 0 || showArchived;
 
-  // Handle the case where projects might not be loaded yet
+  const allTags = useMemo(() => {
+    if (!projects || !Array.isArray(projects)) return [];
+    const tagSet = new Set<string>();
+    projects.forEach((project) => {
+      project.tags?.forEach((tag) => tagSet.add(tag));
+    });
+    return Array.from(tagSet).sort();
+  }, [projects]);
+
   if (!projects || !Array.isArray(projects)) {
     return (
       <>
         <Head>
-          <title>Portfolio | K@zuki.</title>
+          <title>{t('meta.title')}</title>
         </Head>
-        <Heading>Portfolio</Heading>
-        <div>Loading projects...</div>
+        <Heading>{t('title')}</Heading>
       </>
     );
   }
@@ -145,9 +141,7 @@ export default function Portfolio() {
         <div className="relative">
           <input
             type="text"
-            placeholder={
-              locale === 'ja' ? 'プロジェクトを検索...' : 'Search projects...'
-            }
+            placeholder={t('filter.searchPlaceholder')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full px-4 py-2 pl-10 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -173,48 +167,21 @@ export default function Portfolio() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-300">
-                {locale === 'ja' ? 'カテゴリ:' : 'Category:'}
+                {t('filter.category')}
               </span>
-              <button
-                onClick={() => toggleTag('CLI')}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  selectedTags.includes('CLI')
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                }`}
-              >
-                CLI
-              </button>
-              <button
-                onClick={() => toggleTag('Website')}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  selectedTags.includes('Website')
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                }`}
-              >
-                Website
-              </button>
-              <button
-                onClick={() => toggleTag('Extension')}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  selectedTags.includes('Extension')
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                }`}
-              >
-                Extension
-              </button>
-              <button
-                onClick={() => toggleTag('Other')}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  selectedTags.includes('Other')
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                }`}
-              >
-                Other
-              </button>
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => toggleTag(tag)}
+                  className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                    selectedTags.includes(tag)
+                      ? 'bg-primary-600 text-white'
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
             </div>
 
             <label className="flex items-center space-x-2 cursor-pointer">
@@ -225,7 +192,7 @@ export default function Portfolio() {
                 className="w-4 h-4 rounded text-primary-600 bg-gray-700 border-gray-600 focus:ring-primary-500"
               />
               <span className="text-sm text-gray-300">
-                {locale === 'ja' ? 'アーカイブ済みを表示' : 'Show archived'}
+                {t('filter.showArchived')}
               </span>
             </label>
           </div>
@@ -235,16 +202,17 @@ export default function Portfolio() {
               onClick={clearFilters}
               className="text-sm text-primary-400 hover:text-primary-300 transition-colors"
             >
-              {locale === 'ja' ? 'フィルターをクリア' : 'Clear filters'}
+              {t('filter.clearFilters')}
             </button>
           )}
         </div>
 
         {/* Results Count */}
         <div className="text-sm text-gray-400">
-          {locale === 'ja'
-            ? `${filteredProjects.length}件のプロジェクト`
-            : `${filteredProjects.length} project${filteredProjects.length !== 1 ? 's' : ''}`}
+          {(filteredProjects.length === 1
+            ? t('filter.projectCount')
+            : t('filter.projectCountPlural')
+          ).replace('{count}', String(filteredProjects.length))}
         </div>
       </div>
 
@@ -258,9 +226,7 @@ export default function Portfolio() {
       {/* No Results Message */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-12 text-gray-400">
-          {locale === 'ja'
-            ? '条件に一致するプロジェクトが見つかりませんでした。'
-            : 'No projects found matching your criteria.'}
+          {t('filter.noResults')}
         </div>
       )}
     </>

@@ -1,9 +1,11 @@
 import { Mail, Github, Twitter } from 'lucide-react';
 import { AvatarIcon } from '@/components/Elements/Icon';
 import LinkText from '@/components/Elements/LinkText';
+import { useTranslation } from '@/libs/i18n';
 import Head from 'next/head';
 
 export default function Home() {
+  const { t } = useTranslation('pages.home');
   const links = [
     {
       name: 'mail',
@@ -25,14 +27,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <style>{`
-          #__next > main {
-            flex: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        `}</style>
+        <meta name="description" content={t('meta.description')} />
       </Head>
       <div className="container flex flex-col items-center justify-center flex-auto text-center gap-4">
         <div>

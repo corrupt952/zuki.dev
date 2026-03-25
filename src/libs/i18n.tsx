@@ -46,15 +46,17 @@ export const I18nApp = <Props extends AppProps>(
 
     const setLocaleWithRouter = (locale: string) => {
       const { router } = props;
-      if (router.asPath.startsWith(`/${locale}/`)) return;
+      const currentLocaleSegment = router.asPath.split('/')[1];
+      if (currentLocaleSegment === locale) return;
 
       setLocale(locale);
       let pathname = router.pathname || '/';
       let asName = router.asPath || '/';
+      const localePattern = new RegExp(`^\\/(${LOCALES.join('|')})(?=/|$)`);
       if (locale === DEFAULT_LOCALE) {
         pathname = router.pathname.replace('/[locale]', '');
         pathname = pathname === '' ? '/' : pathname;
-        asName = router.asPath.replace(/^\/[a-zA-Z0-9]+/i, '');
+        asName = router.asPath.replace(localePattern, '');
       } else {
         pathname = '/[locale]' + router.pathname;
         asName = `/${locale}${router.asPath}`;
@@ -76,7 +78,7 @@ export const GetStaticPaths = async () => {
     paths: LOCALES.map((locale) => ({
       params: { locale },
     })),
-    fallback: true,
+    fallback: false,
   };
 };
 

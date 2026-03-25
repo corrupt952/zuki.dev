@@ -1,11 +1,13 @@
 import { GlobeIcon } from 'lucide-react';
 import { useContext, useState, useRef, useEffect } from 'react';
 import { I18nContext, LOCALES } from '@/libs/i18n';
+import { useTranslation } from '@/libs/i18n';
 import Image from 'next/image';
 import kofiSymbol from '@/assets/images/kofi_symbol.png';
 
 export const FixedButtons = () => {
   const { locale, setLocale } = useContext(I18nContext);
+  const { t } = useTranslation('common.kofi');
   const [showTooltip, setShowTooltip] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const longPressTimer = useRef<NodeJS.Timeout | null>(null);
@@ -61,7 +63,7 @@ export const FixedButtons = () => {
       <div className="relative">
         {showTooltip && (
           <div className="absolute bottom-full right-0 mb-2 px-3 py-1 text-sm text-white bg-gray-800 rounded-md whitespace-nowrap">
-            {isMobile ? 'Long press to support' : 'Support on Ko-fi'}
+            {isMobile ? t('tooltipMobile') : t('tooltipDesktop')}
             <div className="absolute bottom-0 right-2 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>
           </div>
         )}

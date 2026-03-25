@@ -10,7 +10,7 @@ export const Config = {
   },
   analytics: {
     google: {
-      id: 'G-ZJ7C2QM9W7',
+      id: process.env.NEXT_PUBLIC_GA_ID || 'G-ZJ7C2QM9W7',
     },
   },
 };

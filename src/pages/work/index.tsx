@@ -99,23 +99,24 @@ function PricingArea() {
   );
 }
 
+const FormInput = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
+  <input
+    {...props}
+    className="w-full mb-4 p-2 border border-gray-600 bg-background rounded-sm focus:outline-none focus:border-primary-700"
+  />
+);
+
+const FormTextarea = (
+  props: React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+) => (
+  <textarea
+    {...props}
+    className="w-full mb-4 p-2 border border-gray-600 bg-background rounded-sm focus:outline-none focus:border-primary-700"
+  />
+);
+
 function InquiryArea() {
   const { t } = useTranslation('pages.work.inquiry');
-
-  const Input = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
-    <input
-      {...props}
-      className="w-full mb-4 p-2 border border-gray-600 bg-background rounded-sm focus:outline-none focus:border-primary-700"
-    />
-  );
-  const Textarea = (
-    props: React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-  ) => (
-    <textarea
-      {...props}
-      className="w-full mb-4 p-2 border border-gray-600 bg-background rounded-sm focus:outline-none focus:border-primary-700"
-    />
-  );
 
   return (
     <section className="mb-16">
@@ -132,20 +133,20 @@ function InquiryArea() {
           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnIxC9Bk0jeQ6Qfj_fWDt6MbS4uqwE38Jpx4CUvs-dgPCZdA/formResponse"
           className="w-full py-2 flex flex-col items-center mt-6"
         >
-          <Input name="entry.772574949" placeholder={t('form.name')} required />
-          <Input
+          <FormInput name="entry.772574949" placeholder={t('form.name')} required />
+          <FormInput
             name="entry.1315418939"
             placeholder={t('form.email')}
             type="email"
             required
           />
-          <Textarea
+          <FormTextarea
             name="entry.1404312101"
             placeholder={t('form.subject')}
             rows={3}
             required
           />
-          <Textarea
+          <FormTextarea
             name="entry.745112553"
             placeholder={t('form.content')}
             rows={5}

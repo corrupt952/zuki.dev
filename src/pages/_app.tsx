@@ -1,14 +1,14 @@
 import { FixedButtons } from '@/components/Elements/FixedButtons';
 import { Footer } from '@/components/Layout/Footer';
 import { Header } from '@/components/Layout/Header';
-import { I18nApp } from '@/libs/i18n';
+import { I18nApp, I18nContext } from '@/libs/i18n';
 import { Config } from '@/config';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 
 export const GoogleAnalytics = () => {
   return (
@@ -36,6 +36,13 @@ export const GoogleAnalytics = () => {
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const { locale } = useContext(I18nContext);
+  const isHome = router.pathname === '/' || router.pathname === '/[locale]';
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   useEffect(() => {
     const handleRouterChange = (url: string) => {
       const { gtag } = window as any;
@@ -53,12 +60,11 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{Config.title}</title>
-        <meta name="description" content={Config.title} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="w-auto md:w-3/5 mx-4 md:mx-auto my-12">
+      <main className={`w-auto md:w-3/5 mx-4 md:mx-auto my-12${isHome ? ' flex flex-auto justify-center items-center' : ''}`}>
         <Component {...pageProps} />
       </main>
       <Footer />

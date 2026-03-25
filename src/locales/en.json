@@ -1,5 +1,16 @@
 {
+  "common": {
+    "kofi": {
+      "tooltipMobile": "Long press to support",
+      "tooltipDesktop": "Support on Ko-fi"
+    }
+  },
   "pages": {
+    "home": {
+      "meta": {
+        "description": "K@zuki. - Web Developer and SRE. Personal portfolio showcasing projects, skills, and professional experience."
+      }
+    },
     "about": {
       "title": "About",
       "meta": {
@@ -8,7 +19,17 @@
         "keywords": "K@zuki, About, Skills, Experience, Affiliations"
       },
       "skills": {
-        "title": "Skills"
+        "title": "Skills",
+        "categories": [
+          { "name": "Language", "items": ["Ruby", "Go", "Python", "JavaScript", "Clojure"] },
+          { "name": "CI/CD", "items": ["GitHub Actions", "CircleCI", "Argo CD"] },
+          { "name": "Monitoring", "items": ["Elastic Stack", "NewRelic", "Datadog"] },
+          { "name": "Cloud Infrastructure", "items": ["AWS", "GCP", "EKS", "ECS"] },
+          { "name": "Tools", "items": ["Ansible", "Terraform", "Docker", "Kubernetes"] },
+          { "name": "LLM/AI", "items": ["Amazon Bedrock", "LangChain", "Vector DB", "RAG"] },
+          { "name": "Technical Strategy", "items": ["Architecture Design", "System Design", "Performance Optimization"] },
+          { "name": "Organizational Development", "items": ["Engineering Management", "Team Building", "Technical Leadership"] }
+        ]
       },
       "affiliation": {
         "title": "affiliation",
@@ -483,6 +504,15 @@
           "images": []
         }
       ],
+      "filter": {
+        "searchPlaceholder": "Search projects...",
+        "category": "Category:",
+        "showArchived": "Show archived",
+        "clearFilters": "Clear filters",
+        "projectCount": "{count} project",
+        "projectCountPlural": "{count} projects",
+        "noResults": "No projects found matching your criteria."
+      },
       "detail": {
         "backToPortfolio": "← Back to Portfolio",
         "technologies": "Technologies",

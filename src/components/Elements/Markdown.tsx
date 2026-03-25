@@ -1,74 +1,71 @@
 import LinkText from './LinkText';
 import ReactMarkdown from 'markdown-to-jsx';
-import { JSX } from 'react';
 
-const MarkdownParagraph = function (props: JSX.IntrinsicAttributes) {
-  return <p className="mb-6 whitespace-pre-wrap" {...props} />;
-};
+type OverrideProps = React.HTMLAttributes<HTMLElement> & { href?: string };
 
 const options = {
   overrides: {
     h2: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <h2 className="text-2xl font-bold mb-4" {...props} />
       ),
     },
     h3: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <h3 className="text-xl font-bold mb-3" {...props} />
       ),
     },
     p: {
-      component: (props: JSX.IntrinsicAttributes) => (
-        <MarkdownParagraph {...props} />
+      component: (props: OverrideProps) => (
+        <p className="mb-6 whitespace-pre-wrap" {...props} />
       ),
     },
     span: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <span className="block" {...props} />
       ),
     },
     a: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <LinkText
           {...props}
-          href={(props as { href: string }).href || ''}
+          href={props.href || ''}
           className="text-primary-500 hover:text-primary-600"
         />
       ),
     },
     ul: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <ul className="list-disc pl-5 mb-6" {...props} />
       ),
     },
     li: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <li className="mb-1">
           <span {...props} />
         </li>
       ),
     },
     table: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <div className="overflow-x-auto mb-6">
           <table className="w-full" {...props} />
         </div>
       ),
     },
     thead: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <thead className="bg-gray-50" {...props} />
       ),
     },
     tbody: {
-      component: (props: JSX.IntrinsicAttributes) => <tbody {...props} />,
+      component: (props: OverrideProps) => <tbody {...props} />,
     },
     tr: {
-      component: (props: JSX.IntrinsicAttributes) => <tr {...props} />,
+      component: (props: OverrideProps) => <tr {...props} />,
     },
     th: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <th
           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
           {...props}
@@ -76,7 +73,7 @@ const options = {
       ),
     },
     td: {
-      component: (props: JSX.IntrinsicAttributes) => (
+      component: (props: OverrideProps) => (
         <td className="px-6 py-4 whitespace-nowrap" {...props} />
       ),
     },

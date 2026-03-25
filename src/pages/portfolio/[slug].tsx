@@ -1,22 +1,12 @@
 import { Heading } from '@/components/Typography/Heading';
 import { Body } from '@/components/Typography/Body';
+import LinkText from '@/components/Elements/LinkText';
 import { useTranslation } from '@/libs/i18n';
+import type { Project } from '@/types/portfolio';
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-
-type Project = {
-  title: string;
-  slug: string;
-  description: string;
-  detailDescription: string;
-  link: string;
-  archived: boolean;
-  tags: string[];
-  technologies: string[];
-  images: string[];
-};
 
 const Archived = () => {
   return (
@@ -34,10 +24,6 @@ export default function ProjectDetail() {
   const projects = t<Project[]>('projects', { returnObjects: true });
   const project = projects?.find((p) => p.slug === slug);
 
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -51,12 +37,12 @@ export default function ProjectDetail() {
       </Head>
 
       <div className="max-w-4xl mx-auto">
-        <Link
+        <LinkText
           href="/portfolio"
           className="text-blue-400 hover:text-blue-300 mb-6 inline-block"
         >
           {t('detail.backToPortfolio')}
-        </Link>
+        </LinkText>
 
         <div className="mb-8">
           <Heading className="mb-4">

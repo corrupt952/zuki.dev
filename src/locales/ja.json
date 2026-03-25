@@ -1,5 +1,16 @@
 {
+  "common": {
+    "kofi": {
+      "tooltipMobile": "長押しでサポート",
+      "tooltipDesktop": "Ko-fiでサポート"
+    }
+  },
   "pages": {
+    "home": {
+      "meta": {
+        "description": "K@zuki. - Web Developer / SRE。プロジェクト、スキル、経歴を紹介するポートフォリオサイト。"
+      }
+    },
     "about": {
       "title": "説明",
       "meta": {
@@ -8,7 +19,17 @@
         "keywords": "K@zuki, 説明, スキル, 経歴, 所属"
       },
       "skills": {
-        "title": "スキル"
+        "title": "スキル",
+        "categories": [
+          { "name": "Language", "items": ["Ruby", "Go", "Python", "JavaScript", "Clojure"] },
+          { "name": "CI/CD", "items": ["GitHub Actions", "CircleCI", "Argo CD"] },
+          { "name": "Monitoring", "items": ["Elastic Stack", "NewRelic", "Datadog"] },
+          { "name": "Cloud Infrastructure", "items": ["AWS", "GCP", "EKS", "ECS"] },
+          { "name": "Tools", "items": ["Ansible", "Terraform", "Docker", "Kubernetes"] },
+          { "name": "LLM/AI", "items": ["Amazon Bedrock", "LangChain", "Vector DB", "RAG"] },
+          { "name": "Technical Strategy", "items": ["Architecture Design", "System Design", "Performance Optimization"] },
+          { "name": "Organizational Development", "items": ["Engineering Management", "Team Building", "Technical Leadership"] }
+        ]
       },
       "affiliation": {
         "title": "所属",
@@ -483,6 +504,15 @@
           "images": []
         }
       ],
+      "filter": {
+        "searchPlaceholder": "プロジェクトを検索...",
+        "category": "カテゴリ:",
+        "showArchived": "アーカイブ済みを表示",
+        "clearFilters": "フィルターをクリア",
+        "projectCount": "{count}件のプロジェクト",
+        "projectCountPlural": "{count}件のプロジェクト",
+        "noResults": "条件に一致するプロジェクトが見つかりませんでした。"
+      },
       "detail": {
         "backToPortfolio": "← ポートフォリオに戻る",
         "technologies": "技術スタック",
