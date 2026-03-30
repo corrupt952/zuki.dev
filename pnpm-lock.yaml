@@ -44,7 +44,7 @@ importers:
         version: 16.1.7(@typescript-eslint/parser@8.57.1(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
       markdown-to-jsx:
         specifier: ^9.0.0
-        version: 9.7.9(react@19.2.4)
+        version: 9.7.13(react@19.2.4)
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@16.1.7(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
@@ -1505,8 +1505,8 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
-  markdown-to-jsx@9.7.9:
-    resolution: {integrity: sha512-0gO/MOmtM9N2m2F4SUwMqskQe4qih9vaA8M3MEPu51UqjX5MMb/IYSIomLVIyHjmkWql20GuXiyYsPzt6c54FA==}
+  markdown-to-jsx@9.7.13:
+    resolution: {integrity: sha512-twSoD1A2RMx+wyYTNvHvf4JTzEr4SfkgycoSRwjbezejKhqdIXHrHaA3uEm24ET/ZLWrwSzOyWahmVULC+tTbw==}
     engines: {node: '>= 18'}
     peerDependencies:
       react: '>= 16.0.0'
@@ -3498,7 +3498,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  markdown-to-jsx@9.7.9(react@19.2.4):
+  markdown-to-jsx@9.7.13(react@19.2.4):
     optionalDependencies:
       react: 19.2.4
 
