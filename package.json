@@ -26,7 +26,7 @@
     "eslint-config-next": "16.2.10",
     "markdown-to-jsx": "9.8.2",
     "next-sitemap": "4.2.3",
-    "postcss": "8.5.16",
+    "postcss": "8.5.19",
     "prettier": "3.9.4",
     "sharp": "0.35.2",
     "tailwindcss": "4.3.2",
