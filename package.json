@@ -24,7 +24,7 @@
     "autoprefixer": "10.5.4",
     "eslint": "10.7.0",
     "eslint-config-next": "16.2.11",
-    "markdown-to-jsx": "9.8.2",
+    "markdown-to-jsx": "9.9.0",
     "next-sitemap": "4.2.3",
     "postcss": "8.5.22",
     "prettier": "3.9.6",
