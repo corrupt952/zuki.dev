@@ -21,14 +21,46 @@
       "skills": {
         "title": "Skills",
         "categories": [
-          { "name": "Language", "items": ["Ruby", "Go", "Python", "JavaScript", "Clojure"] },
-          { "name": "CI/CD", "items": ["GitHub Actions", "CircleCI", "Argo CD"] },
-          { "name": "Monitoring", "items": ["Elastic Stack", "NewRelic", "Datadog"] },
-          { "name": "Cloud Infrastructure", "items": ["AWS", "GCP", "EKS", "ECS"] },
-          { "name": "Tools", "items": ["Ansible", "Terraform", "Docker", "Kubernetes"] },
-          { "name": "LLM/AI", "items": ["Amazon Bedrock", "LangChain", "Vector DB", "RAG"] },
-          { "name": "Technical Strategy", "items": ["Architecture Design", "System Design", "Performance Optimization"] },
-          { "name": "Organizational Development", "items": ["Engineering Management", "Team Building", "Technical Leadership"] }
+          {
+            "name": "Language",
+            "items": ["Ruby", "Go", "Python", "JavaScript", "Clojure"]
+          },
+          {
+            "name": "CI/CD",
+            "items": ["GitHub Actions", "CircleCI", "Argo CD"]
+          },
+          {
+            "name": "Monitoring",
+            "items": ["Elastic Stack", "NewRelic", "Datadog"]
+          },
+          {
+            "name": "Cloud Infrastructure",
+            "items": ["AWS", "GCP", "EKS", "ECS"]
+          },
+          {
+            "name": "Tools",
+            "items": ["Ansible", "Terraform", "Docker", "Kubernetes"]
+          },
+          {
+            "name": "LLM/AI",
+            "items": ["Amazon Bedrock", "LangChain", "Vector DB", "RAG"]
+          },
+          {
+            "name": "Technical Strategy",
+            "items": [
+              "Architecture Design",
+              "System Design",
+              "Performance Optimization"
+            ]
+          },
+          {
+            "name": "Organizational Development",
+            "items": [
+              "Engineering Management",
+              "Team Building",
+              "Technical Leadership"
+            ]
+          }
         ]
       },
       "affiliation": {
@@ -499,7 +531,13 @@
           "detailDescription": "Chimr is a macOS application designed to help users never miss important meetings. It provides prominent fullscreen notifications for upcoming meetings across various calendar platforms (iCloud, Google, Outlook, Exchange) with one-click meeting join functionality. The app supports MCP (Model Context Protocol), allowing integration with MCP clients like Claude Desktop. Currently in beta for macOS 14.0 (Sonoma) and later.",
           "link": "https://chimr.zuki.dev",
           "tags": ["App"],
-          "technologies": ["macOS", "Swift", "Calendar Integration", "Notifications", "MCP"],
+          "technologies": [
+            "macOS",
+            "Swift",
+            "Calendar Integration",
+            "Notifications",
+            "MCP"
+          ],
           "archived": false,
           "images": []
         }

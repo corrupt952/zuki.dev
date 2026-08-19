@@ -1,12 +1,12 @@
 import Document, {
-  Html,
+  type DocumentContext,
+  type DocumentInitialProps,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
-  DocumentInitialProps,
 } from 'next/document';
-import { LOCALES, DEFAULT_LOCALE } from '@/libs/i18n';
+import { DEFAULT_LOCALE, LOCALES } from '@/libs/i18n';
 
 type MyDocumentProps = DocumentInitialProps & {
   locale: string;
@@ -33,9 +33,7 @@ function resolveLocale(ctx: DocumentContext): string {
 }
 
 export default class MyDocument extends Document<MyDocumentProps> {
-  static async getInitialProps(
-    ctx: DocumentContext,
-  ): Promise<MyDocumentProps> {
+  static async getInitialProps(ctx: DocumentContext): Promise<MyDocumentProps> {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps, locale: resolveLocale(ctx) };
   }

@@ -1,10 +1,10 @@
+import Head from 'next/head';
 import {
-  SkillArea,
-  ExperienceArea,
   AffiliationArea,
+  ExperienceArea,
+  SkillArea,
 } from '@/components/Pages/About';
 import { useTranslation } from '@/libs/i18n';
-import Head from 'next/head';
 
 export default function About() {
   const { t } = useTranslation('pages.about');

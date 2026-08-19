@@ -1,9 +1,9 @@
-import { Heading } from '@/components/Typography/Heading';
+import Head from 'next/head';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import LinkText from '@/components/Elements/LinkText';
+import { Heading } from '@/components/Typography/Heading';
 import { useTranslation } from '@/libs/i18n';
 import type { Project } from '@/types/portfolio';
-import Head from 'next/head';
-import { useState, useMemo, useCallback, useEffect } from 'react';
 
 const Archived = () => {
   return (
@@ -110,7 +110,9 @@ export default function Portfolio() {
     if (!projects || !Array.isArray(projects)) return [];
     const tagSet = new Set<string>();
     projects.forEach((project) => {
-      project.tags?.forEach((tag) => tagSet.add(tag));
+      project.tags?.forEach((tag) => {
+        tagSet.add(tag);
+      });
     });
     return Array.from(tagSet).sort();
   }, [projects]);
@@ -151,6 +153,7 @@ export default function Portfolio() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -171,6 +174,7 @@ export default function Portfolio() {
               </span>
               {allTags.map((tag) => (
                 <button
+                  type="button"
                   key={tag}
                   onClick={() => toggleTag(tag)}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
@@ -199,6 +203,7 @@ export default function Portfolio() {
 
           {hasActiveFilters && (
             <button
+              type="button"
               onClick={clearFilters}
               className="text-sm text-primary-400 hover:text-primary-300 transition-colors"
             >

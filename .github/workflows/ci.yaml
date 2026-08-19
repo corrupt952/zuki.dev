@@ -41,9 +41,6 @@ jobs:
           node-version: lts/*
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      # `pnpm lint` is deliberately absent: eslint-config-next pulls in
-      # eslint-plugin-react, which supports eslint <=9, and typescript-eslint,
-      # which supports typescript <6.1. Both caps are violated by the versions
-      # this repository is on, so the eslint stack cannot run at all. Migrating
-      # to biome is tracked separately; lint joins this job once that lands.
+      - run: pnpm run lint
+      - run: pnpm run format:check
       - run: pnpm build

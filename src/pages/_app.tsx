@@ -1,8 +1,8 @@
 import { FixedButtons } from '@/components/Elements/FixedButtons';
 import { Footer } from '@/components/Layout/Footer';
 import { Header } from '@/components/Layout/Header';
-import { I18nApp, I18nContext } from '@/libs/i18n';
 import { Config } from '@/config';
+import { I18nApp, I18nContext } from '@/libs/i18n';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -20,6 +20,7 @@ export const GoogleAnalytics = () => {
       <Script
         id="google-analytics"
         strategy="afterInteractive"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: the gtag bootstrap is a fixed literal interpolating only a build-time config id
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];
@@ -45,7 +46,9 @@ function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const handleRouterChange = (url: string) => {
-      const { gtag } = window as any;
+      const { gtag } = window as unknown as {
+        gtag: (...args: unknown[]) => void;
+      };
       gtag('config', Config.analytics.google.id, {
         page_path: url,
       });
@@ -64,7 +67,9 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={`w-auto md:w-3/5 mx-4 md:mx-auto my-12${isHome ? ' flex flex-auto justify-center items-center' : ''}`}>
+      <main
+        className={`w-auto md:w-3/5 mx-4 md:mx-auto my-12${isHome ? ' flex flex-auto justify-center items-center' : ''}`}
+      >
         <Component {...pageProps} />
       </main>
       <Footer />

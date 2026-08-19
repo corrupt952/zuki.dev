@@ -10,6 +10,7 @@ export const AvatarIcon = ({
   height = 'auto',
 }: AvatarIconProps) => {
   return (
+    // biome-ignore lint/performance/noImgElement: the site is a static export with images.unoptimized, so next/image adds nothing here
     <img
       src={avatar.src}
       alt="avatar"

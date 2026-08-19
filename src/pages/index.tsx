@@ -1,8 +1,8 @@
 import { Mail } from 'lucide-react';
+import Head from 'next/head';
 import { AvatarIcon, GithubIcon, XIcon } from '@/components/Elements/Icon';
 import LinkText from '@/components/Elements/LinkText';
 import { useTranslation } from '@/libs/i18n';
-import Head from 'next/head';
 
 export default function Home() {
   const { t } = useTranslation('pages.home');

@@ -1,5 +1,5 @@
-import LinkText from './LinkText';
 import ReactMarkdown from 'markdown-to-jsx';
+import LinkText from './LinkText';
 
 type OverrideProps = React.HTMLAttributes<HTMLElement> & { href?: string };
 
