@@ -1,5 +1,5 @@
-import { Mail, Github, Twitter } from 'lucide-react';
-import { AvatarIcon } from '@/components/Elements/Icon';
+import { Mail } from 'lucide-react';
+import { AvatarIcon, GithubIcon, XIcon } from '@/components/Elements/Icon';
 import LinkText from '@/components/Elements/LinkText';
 import { useTranslation } from '@/libs/i18n';
 import Head from 'next/head';
@@ -15,12 +15,12 @@ export default function Home() {
     {
       name: 'github',
       href: 'https://github.com/corrupt952',
-      icon: <Github className="w-8 h-8" />,
+      icon: <GithubIcon />,
     },
     {
       name: 'twitter',
       href: 'https://twitter.com/corrupt952',
-      icon: <Twitter className="w-8 h-8" />,
+      icon: <XIcon />,
     },
   ];
 
