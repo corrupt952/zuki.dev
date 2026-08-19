@@ -1,6 +1,6 @@
-import { Config } from '@/config';
 import { Menu } from 'lucide-react';
 import React, { useRef } from 'react';
+import { Config } from '@/config';
 import LinkText from '../Elements/LinkText';
 
 const NavigationLinks = () => {
@@ -47,6 +47,7 @@ const NavigationMenu = () => {
   return (
     <>
       <button
+        type="button"
         ref={buttonRef}
         onClick={() => setOpen(!open)}
         className="block md:hidden"

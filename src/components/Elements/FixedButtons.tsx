@@ -1,9 +1,8 @@
 import { GlobeIcon } from 'lucide-react';
-import { useContext, useState, useRef, useEffect } from 'react';
-import { I18nContext, LOCALES } from '@/libs/i18n';
-import { useTranslation } from '@/libs/i18n';
 import Image from 'next/image';
+import { useContext, useEffect, useRef, useState } from 'react';
 import kofiSymbol from '@/assets/images/kofi_symbol.png';
+import { I18nContext, LOCALES, useTranslation } from '@/libs/i18n';
 
 export const FixedButtons = () => {
   const { locale, setLocale } = useContext(I18nContext);
@@ -12,7 +11,7 @@ export const FixedButtons = () => {
   const [isMobile, setIsMobile] = useState(false);
   const longPressTimer = useRef<NodeJS.Timeout | null>(null);
   const tooltipTimer = useRef<NodeJS.Timeout | null>(null);
-  
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile('ontouchstart' in window || navigator.maxTouchPoints > 0);
@@ -21,23 +20,23 @@ export const FixedButtons = () => {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-  
+
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setLocale(event.target.value);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
     e.preventDefault();
-    
+
     // Show tooltip on tap
     setShowTooltip(true);
-    
+
     // Hide tooltip after 2 seconds
     if (tooltipTimer.current) clearTimeout(tooltipTimer.current);
     tooltipTimer.current = setTimeout(() => {
       setShowTooltip(false);
     }, 2000);
-    
+
     // Start long press timer
     longPressTimer.current = setTimeout(() => {
       window.open('https://ko-fi.com/B0B31H8NIG', '_blank');
@@ -79,16 +78,16 @@ export const FixedButtons = () => {
           onTouchEnd={handleTouchEnd}
           onClick={handleClick}
         >
-          <Image 
-            src={kofiSymbol} 
-            alt="Ko-fi" 
-            width={20} 
+          <Image
+            src={kofiSymbol}
+            alt="Ko-fi"
+            width={20}
             height={20}
             className="w-5 h-5"
           />
         </a>
       </div>
-      
+
       <div className="flex items-center p-2 border border-gray-500 rounded-md bg-background">
         <GlobeIcon className="w-4 h-4 mx-1" />
 

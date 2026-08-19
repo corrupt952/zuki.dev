@@ -1,6 +1,7 @@
+import Link, { type LinkProps } from 'next/link';
+import type React from 'react';
+import { useContext } from 'react';
 import { DEFAULT_LOCALE, I18nContext } from '@/libs/i18n';
-import Link, { LinkProps } from 'next/link';
-import React, { useContext } from 'react';
 
 type LinkTextProps = LinkProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 

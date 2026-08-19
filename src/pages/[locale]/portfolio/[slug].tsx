@@ -1,6 +1,6 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import ProjectDetail from '@/pages/portfolio/[slug]';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 import { LOCALES } from '@/libs/i18n';
+import ProjectDetail from '@/pages/portfolio/[slug]';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const enLocale = await import('@/locales/en.json');

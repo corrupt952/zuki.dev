@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-background: #212121;
@@ -30,8 +30,8 @@
 }
 
 /**
-  * Global styles
-  */
+ * Global styles
+ */
 body {
   font-family: -apple-system, helvetica, arial, sans-serif;
 }

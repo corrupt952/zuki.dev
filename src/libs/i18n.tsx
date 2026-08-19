@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import React from 'react';
 import enMessages from '@/locales/en.json';
 import jaMessages from '@/locales/ja.json';
@@ -58,7 +58,7 @@ export const I18nApp = <Props extends AppProps>(
         pathname = pathname === '' ? '/' : pathname;
         asName = router.asPath.replace(localePattern, '');
       } else {
-        pathname = '/[locale]' + router.pathname;
+        pathname = `/[locale]${router.pathname}`;
         asName = `/${locale}${router.asPath}`;
       }
       props.router.push(pathname, asName, { locale });

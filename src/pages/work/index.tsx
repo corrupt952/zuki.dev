@@ -1,8 +1,8 @@
-import { Markdown } from '@/components/Elements/Markdown';
-import { Heading } from '@/components/Typography/Heading';
-import { Body } from '@/components/Typography/Body';
-import { useTranslation } from '@/libs/i18n';
 import Head from 'next/head';
+import { Markdown } from '@/components/Elements/Markdown';
+import { Body } from '@/components/Typography/Body';
+import { Heading } from '@/components/Typography/Heading';
+import { useTranslation } from '@/libs/i18n';
 
 const BodyHeader = ({ children }: { children: React.ReactNode }) => (
   <h3 className="text-2xl mb-4 brightness-200">{children}</h3>
@@ -77,13 +77,12 @@ function PricingArea() {
                 'menus.rows',
                 { returnObjects: true },
               ).map((row) => (
-                  <tr key={row.name} className="border-b border-gray-600">
-                    <td className="px-4 py-3">{row.name}</td>
-                    <td className="px-4 py-3">{row.unit}</td>
-                    <td className="px-4 py-3 text-right">{row.price}</td>
-                  </tr>
-                ),
-              )}
+                <tr key={row.name} className="border-b border-gray-600">
+                  <td className="px-4 py-3">{row.name}</td>
+                  <td className="px-4 py-3">{row.unit}</td>
+                  <td className="px-4 py-3 text-right">{row.price}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -133,7 +132,11 @@ function InquiryArea() {
           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnIxC9Bk0jeQ6Qfj_fWDt6MbS4uqwE38Jpx4CUvs-dgPCZdA/formResponse"
           className="w-full py-2 flex flex-col items-center mt-6"
         >
-          <FormInput name="entry.772574949" placeholder={t('form.name')} required />
+          <FormInput
+            name="entry.772574949"
+            placeholder={t('form.name')}
+            required
+          />
           <FormInput
             name="entry.1315418939"
             placeholder={t('form.email')}

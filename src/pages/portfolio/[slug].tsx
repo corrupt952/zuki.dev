@@ -1,12 +1,12 @@
-import { Heading } from '@/components/Typography/Heading';
-import { Body } from '@/components/Typography/Body';
-import LinkText from '@/components/Elements/LinkText';
-import { useTranslation } from '@/libs/i18n';
-import type { Project } from '@/types/portfolio';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
+import LinkText from '@/components/Elements/LinkText';
+import { Body } from '@/components/Typography/Body';
+import { Heading } from '@/components/Typography/Heading';
+import { useTranslation } from '@/libs/i18n';
+import type { Project } from '@/types/portfolio';
 
 const Archived = () => {
   return (
@@ -105,6 +105,7 @@ export default function ProjectDetail() {
                   className="ml-2 w-4 h-4"
                   fill="currentColor"
                   viewBox="0 0 20 20"
+                  aria-hidden="true"
                 >
                   <path
                     fillRule="evenodd"

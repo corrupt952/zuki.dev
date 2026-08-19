@@ -1,8 +1,8 @@
-import LinkText from '@/components/Elements/LinkText';
-import { Heading } from '@/components/Typography/Heading';
-import { Body } from '@/components/Typography/Body';
-import { useTranslation } from '@/libs/i18n';
 import { ExternalLink } from 'lucide-react';
+import LinkText from '@/components/Elements/LinkText';
+import { Body } from '@/components/Typography/Body';
+import { Heading } from '@/components/Typography/Heading';
+import { useTranslation } from '@/libs/i18n';
 
 type Experience = {
   startDate: string;
