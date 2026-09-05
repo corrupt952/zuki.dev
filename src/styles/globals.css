@@ -1,43 +1,47 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: #212121;
-  --color-foreground: #bdbdbd;
-
-  --color-primary-50: #fffee7;
-  --color-primary-100: #fffec1;
-  --color-primary-200: #fff986;
-  --color-primary-300: #ffed41;
-  --color-primary-400: #ffdc0d;
-  --color-primary-500: #ffcd01;
-  --color-primary-600: #d19600;
-  --color-primary-700: #a66b02;
-  --color-primary-800: #89530a;
-  --color-primary-900: #74440f;
-  --color-primary-950: #442304;
-
-  --color-secondary-50: #e8f5ff;
-  --color-secondary-100: #d5ecff;
-  --color-secondary-200: #b3dbff;
-  --color-secondary-300: #85c0ff;
-  --color-secondary-400: #5697ff;
-  --color-secondary-500: #2f6eff;
-  --color-secondary-600: #0c3eff;
-  --color-secondary-700: #0133ff;
-  --color-secondary-800: #0630cd;
-  --color-secondary-900: #10329f;
-  --color-secondary-950: #0a1b5c;
-}
-
-/**
- * Global styles
+/*
+ * Ink on a dark ground. See docs/00_overview/design-identity.md.
+ * background is the one ground; foreground / muted / faint are three strengths of ink;
+ * line is drawn only where a row would otherwise be lost; accent is spent on meaning.
  */
-body {
-  font-family: -apple-system, helvetica, arial, sans-serif;
+@theme {
+  --color-background: #04060a;
+  --color-foreground: #ececec;
+  --color-muted: #9a9a9f;
+  --color-faint: #5c5c62;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-accent: #ffcd01;
+
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans",
+    "Noto Sans JP", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 
-#__next {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
 }

@@ -1,0 +1,13 @@
+---
+import Heading from '@/components/Heading.astro';
+import PortfolioList from '@/components/PortfolioList.astro';
+import Layout from '@/layouts/Layout.astro';
+import { type Locale, t } from '@/libs/i18n';
+
+const locale: Locale = 'en';
+---
+
+<Layout title={t(locale, 'pages.portfolio.meta.title')} description={t(locale, 'pages.portfolio.meta.description')} keywords={t(locale, 'pages.portfolio.meta.keywords')} locale={locale}>
+  <Heading class="mb-10">{t(locale, 'pages.portfolio.title')}</Heading>
+  <PortfolioList locale={locale} />
+</Layout>

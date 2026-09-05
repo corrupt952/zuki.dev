@@ -1,0 +1,13 @@
+---
+// The Zenn mark as distributed in white (see src/assets/brand/NOTICE.md). Zenn asks for clear
+// space of half the mark's size around it; the footer's gap already provides that at 16px.
+import ZennMark from '@/assets/brand/zenn-mark-white.svg';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = 'w-4 h-4' } = Astro.props;
+---
+
+<ZennMark class={className} aria-hidden="true" />

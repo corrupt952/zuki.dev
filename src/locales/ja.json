@@ -7,6 +7,10 @@
   },
   "pages": {
     "home": {
+      "motion": {
+        "pause": "森の歩行を一時停止",
+        "play": "森の歩行を再開"
+      },
       "meta": {
         "description": "K@zuki. - Web Developer / SRE。プロジェクト、スキル、経歴を紹介するポートフォリオサイト。"
       }
@@ -20,45 +24,73 @@
       },
       "skills": {
         "title": "スキル",
+        "description": "ここに並べたのは、実際に手を動かして使ってきたものです。",
         "categories": [
           {
-            "name": "Language",
-            "items": ["Ruby", "Go", "Python", "JavaScript", "Clojure"]
-          },
-          {
-            "name": "CI/CD",
-            "items": ["GitHub Actions", "CircleCI", "Argo CD"]
-          },
-          {
-            "name": "Monitoring",
-            "items": ["Elastic Stack", "NewRelic", "Datadog"]
-          },
-          {
-            "name": "Cloud Infrastructure",
-            "items": ["AWS", "GCP", "EKS", "ECS"]
-          },
-          {
-            "name": "Tools",
-            "items": ["Ansible", "Terraform", "Docker", "Kubernetes"]
-          },
-          {
-            "name": "LLM/AI",
-            "items": ["Amazon Bedrock", "LangChain", "Vector DB", "RAG"]
-          },
-          {
-            "name": "Technical Strategy",
+            "name": "Languages",
             "items": [
-              "Architecture Design",
-              "System Design",
-              "Performance Optimization"
+              "Ruby",
+              "Go",
+              "Swift",
+              "TypeScript",
+              "Python",
+              "Shell",
+              "C++",
+              "C#",
+              "Dart",
+              "Java",
+              "Rust",
+              "Lua"
             ]
           },
           {
-            "name": "Organizational Development",
+            "name": "Infrastructure & Reliability",
             "items": [
-              "Engineering Management",
-              "Team Building",
-              "Technical Leadership"
+              "AWS",
+              "Google Cloud",
+              "Cloudflare",
+              "Vercel",
+              "Kubernetes",
+              "Argo",
+              "Terraform",
+              "Ansible",
+              "GitHub Actions",
+              "Xcode Cloud",
+              "CircleCI",
+              "Renovate",
+              "Prometheus",
+              "Elastic Stack",
+              "NewRelic",
+              "Datadog"
+            ]
+          },
+          {
+            "name": "Web",
+            "items": ["Ruby on Rails", "Vue.js", "Next.js", "Astro"]
+          },
+          {
+            "name": "Apple Platforms",
+            "items": ["SwiftUI", "Metal", "Core ML"]
+          },
+          {
+            "name": "LLM & AI Agents",
+            "items": [
+              "Claude Code",
+              "MCP",
+              "Amazon Bedrock",
+              "Apple Foundation Models",
+              "RAG",
+              "Vector DB"
+            ]
+          },
+          {
+            "name": "Technology Leadership",
+            "items": [
+              "Technical Strategy",
+              "Architecture",
+              "Engineering Practices",
+              "Security",
+              "Organizational Design"
             ]
           }
         ]
@@ -74,7 +106,7 @@
           {
             "name": "株式会社スタディスト",
             "date": "2018/10 ~",
-            "role": "SRE・プロダクト技術責任者・R&D"
+            "role": "R&D・VP of Technology"
           },
           {
             "name": "茨谷企画（個人事業主）",
@@ -97,10 +129,19 @@
         "title": "経歴",
         "descriptions": [
           "2013年6月から2018年9月まで、株式会社タイムインターメディアにて、基幹システム、VODウェブサービス、資格管理システム、ECサービスなど、様々なシステムの開発・運用に従事。開発メンバーから開発リーダーとしての成長を経験し、チームメンバーの育成やPM支援も担当しました。",
-          "2018年10月より株式会社スタディストにて、SRE・プロダクト技術責任者として、サービスの立ち上げ、運用、保守、開発支援、構築、可用性・性能向上に携わり、2023年3月からはプロダクト技術責任者として技術的な決定やロードマップ実現を担当。2025年3月からは全社の技術に関する最終的な意思決定者として、技術戦略、アーキテクチャ、エンジニアリングプラクティスの統括を行っています。",
+          "2018年10月より株式会社スタディストにて、SRE・プロダクト技術責任者として、サービスの立ち上げ、運用、保守、開発支援、構築、可用性・性能向上に携わり、2023年3月からはプロダクト技術責任者として技術的な決定やロードマップ実現を担当。2025年3月からは全社の技術に関する最終的な意思決定者として、技術戦略、アーキテクチャ、エンジニアリングプラクティスの統括を行っています。2025年9月からはVP of Technologyを務めています。",
           "2019年1月より、会社員と兼業しながら個人事業主として他社への開発・運用支援を行い、2024年4月からはラビー合同会社の代表としても活動しています。"
         ],
         "experiences": [
+          {
+            "startDate": "2024/04",
+            "title": "自社プロダクトの開発・運営",
+            "company": "ラビー合同会社",
+            "body": "ラビー合同会社を設立し、自社プロダクトの開発・運営を中心に、時折受託開発も行っています。",
+            "links": {
+              "ラビー合同会社": "https://labee.jp"
+            }
+          },
           {
             "startDate": "2019/01",
             "title": "Webサービスの開発・運用支援",
@@ -159,7 +200,7 @@
             "body": "新サービス立ち上げのためのクラウド基盤、開発環境、CI/CDを担当していました。そのサービスはClojureで開発されていたのですが、会社標準のAPMではRingに対応していなかったため、ミドルウェアを導入して会社で対応することになったのです。"
           },
           {
-            "startDate": "2018/11",
+            "startDate": "2018/10",
             "title": "他チーム・組織へのサポート",
             "company": "株式会社スタディスト",
             "body": "他チーム・組織へのサポートとして、クラウド基盤の構築や、サービスの開発・運用を支援しています。"
@@ -189,112 +230,31 @@
       }
     },
     "work": {
-      "descriptions": [
-        "茨谷企画という屋号の K@zuki. として活動しています。",
-        "各種インフラ、監視ツール、コンテナ関連技術などのサポート、サービス開発、支援を行っています。ご相談もお受けしておりますので、お気軽にお問い合わせください。",
-        "仕事の依頼やお誘いなどは、[Twitter](https://twitter.com/corrupt952)や[E-mail](mailto:k@zuki.dev)でご連絡ください。"
-      ],
+      "title": "業務内容",
       "meta": {
         "title": "業務内容 | K@zuki.",
         "description": "K@zuki.の業務内容 - Webサービスの開発・運用支援、技術コンサルティング",
         "keywords": "K@zuki, 業務内容, Webサービス, 開発, 運用, 技術コンサルティング, SRE, AWS"
       },
-      "contents": {
-        "title": "業務内容",
-        "support": {
-          "title": "Webサービスの開発・運用支援",
-          "descriptions": [
-            "Webサービスの開発・運用に関わるさまざまな業務について、支援・コンサルティングを行います。"
-          ],
-          "menus": [
-            "サービス開始のサポート",
-            "AWSの導入支援（マルチアカウント構成含む）。",
-            "Infrastrucutre as Codeの導入と立ち上げのサポート。",
-            "コンテナ移行のコンサルティング、立ち上げ支援",
-            "トラブルシューティングのサポートと相談",
-            "各種ミドルウェア、サービスの導入・アップグレードに関するコンサルティング、サポート。",
-            "モニタリングの実施支援 "
-          ]
-        },
-        "consultation": {
-          "title": "技術面での相談・メンタリング",
-          "descriptions": [
-            "現在、このサービスは積極的に提供していませんが、必要に応じて提供します。",
-            "メンタリングは、DiscordまたはSlackのいずれかのプラットフォームでベストエフォート方式で提供されます。"
-          ]
-        }
-      },
-      "pricing": {
-        "title": "参考価格",
-        "descriptions": [
-          "参考価格は以下のようになります。",
-          "全社技術責任者、SRE・プロダクト技術責任者としての経験、コンテナ技術、LLM/AI関連の経験を活かした支援を提供します。",
-          "特に、技術戦略の立案、組織開発、エンジニアリングマネジメントに関する支援を得意としています。"
+      "descriptions": [
+        "2019年から、会社員と並行して茨谷企画という屋号で仕事を受けています。",
+        "内容は本業と同じです。Webサービスを作って運用すること、そのまわりの技術と組織の判断をすることです。"
+      ],
+      "services": {
+        "title": "できること",
+        "items": [
+          "技術戦略と組織設計",
+          "SRE・アーキテクトとしての開発・運用支援",
+          "AWSの導入（マルチアカウント構成を含む）",
+          "Infrastructure as Codeとコンテナ移行の立ち上げ",
+          "モニタリングとトラブルシューティング",
+          "LLM・AI機能の開発"
         ],
-        "menus": {
-          "headers": ["項目", "単位", "価格（税抜）"],
-          "rows": [
-            {
-              "name": "技術戦略・組織開発支援",
-              "unit": "1時間",
-              "price": "35,000円"
-            },
-            {
-              "name": "開発・運用支援（SRE・アーキテクト）",
-              "unit": "1時間",
-              "price": "30,000円"
-            },
-            {
-              "name": "開発・運用支援（エンジニア）",
-              "unit": "1時間",
-              "price": "25,000円"
-            },
-            {
-              "name": "LLM/AI関連の開発支援",
-              "unit": "1時間",
-              "price": "35,000円"
-            },
-            {
-              "name": "オンライン相談（初回）",
-              "unit": "1時間",
-              "price": "15,000円"
-            },
-            {
-              "name": "オンライン相談（2回目以降）",
-              "unit": "1時間",
-              "price": "20,000円"
-            },
-            {
-              "name": "オフライン相談 ※1",
-              "unit": "1時間",
-              "price": "30,000円"
-            },
-            {
-              "name": "メンタリング ※1",
-              "unit": "1時間",
-              "price": "30,000円"
-            }
-          ],
-          "notes": [
-            "※1 オフラインでの相談・メンタリングの場合は、別途交通費を請求します",
-            "※2 長期契約の場合は、別途ご相談させていただきます",
-            "※3 技術戦略・組織開発支援は、最低4時間からの契約となります"
-          ]
-        }
+        "note": "相談とメンタリングは常設ではなく、必要に応じて受けています。メンタリングはDiscordかSlackで、ベストエフォートです。"
       },
-      "inquiry": {
-        "title": "お問い合わせ",
-        "descriptions": [
-          "仕事の依頼やお誘いなどは、[Twitter](https://twitter.com/corrupt952)や[E-mail](mailto:k@zuki.dev)でご連絡ください。",
-          "※ Googleフォームのため送信後ページ遷移するので、ご注意ください。"
-        ],
-        "form": {
-          "name": "お名前",
-          "email": "メールアドレス",
-          "subject": "件名",
-          "content": "お問い合わせ内容",
-          "submit": "送信"
-        }
+      "contact": {
+        "title": "連絡先",
+        "description": "依頼や質問は [k@zuki.dev](mailto:k@zuki.dev) へお送りください。"
       }
     },
     "portfolio": {
@@ -309,11 +269,11 @@
           "title": "zuki.dev",
           "slug": "zuki-dev",
           "description": "このウェブサイト",
-          "detailDescription": "Next.jsとTypeScriptで構築された個人ポートフォリオサイト。国際化対応、静的サイト生成、レスポンシブデザインを実装。Tailwind CSSを使用したモダンなUIデザイン。",
+          "detailDescription": "AstroとTypeScriptで構築された個人ポートフォリオサイト。完全な静的サイト生成に国際化対応と、Tailwind CSSによるデザインを実装。",
           "link": "https://github.com/corrupt952/zuki.dev",
           "archived": false,
           "tags": ["Website"],
-          "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "i18n"],
+          "technologies": ["Astro", "TypeScript", "Tailwind CSS", "i18n"],
           "images": []
         },
         {
@@ -344,7 +304,7 @@
           "description": "送信元IP、リクエストヘッダー、リクエストボディ、クエリ文字列を返すHTTPサーバー",
           "detailDescription": "デバッグやテスト用途のHTTPサーバー。リクエスト情報を詳細に表示し、API開発時の動作確認やネットワークのトラブルシューティングに活用。軽量でコンテナ化対応。",
           "link": "https://github.com/corrupt952/revealer",
-          "archived": false,
+          "archived": true,
           "tags": ["Website"],
           "technologies": ["Go", "HTTP Server", "Docker", "JSON"],
           "images": []
@@ -396,11 +356,11 @@
           "title": "closest",
           "slug": "closest",
           "description": "現在のディレクトリまたは親ディレクトリから特定のファイルを検索し、最も近いパスを返すコマンド",
-          "detailDescription": "ディレクトリツリーを上方向に検索して、指定したファイルの最も近い場所を見つけるコマンドラインツール。設定ファイルやプロジェクトルートの検出に便利。",
+          "detailDescription": "ディレクトリツリーを上方向に検索して、指定したファイルの最も近い場所を見つけるコマンドラインツール。設定ファイルやプロジェクトルートの検出に便利。Go製の単一バイナリで、Nix flakeでのパッケージングとCI検証済みのリリースを備える。",
           "link": "https://github.com/corrupt952/closest",
           "archived": false,
           "tags": ["CLI"],
-          "technologies": ["JavaScript", "Node.js", "CLI"],
+          "technologies": ["Go", "Nix", "CLI"],
           "images": []
         },
         {
@@ -540,22 +500,67 @@
           ],
           "archived": false,
           "images": []
+        },
+        {
+          "title": "sallyport",
+          "slug": "sallyport",
+          "description": "ディレクトリ単位で信頼を明示するzsh/bash向けシェルフック",
+          "detailDescription": "direnvのように、cdしたディレクトリの.sallyport.jsonc に書かれた環境変数を自動適用するが、すべての設定は事前に明示的な信頼(trust)を経ないと適用されない。信頼は設定の識別子と内容のハッシュで管理され、レビュー後の書き換えは黙って信頼を失効させる。信頼ストア自体が自分の所有かつ他者から書き込めないことも検証する。",
+          "link": "https://github.com/corrupt952/sallyport",
+          "tags": ["CLI"],
+          "technologies": ["Go", "Nix", "zsh", "Security"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "nooon",
+          "slug": "nooon",
+          "description": "トークン効率を最優先に設計した読み取り専用のNotion MCPサーバー",
+          "detailDescription": "Claude CodeなどのAIコーディングエージェント向けのNotion MCPサーバー。TOON形式で出力を最小化し、last_edited_timeベースのキャッシュと、入れ子になったブロックの再帰取得を1回の呼び出しで行う。設計上読み取り専用。",
+          "link": "https://github.com/corrupt952/nooon",
+          "tags": ["CLI"],
+          "technologies": ["TypeScript", "Bun", "MCP"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "xckit",
+          "slug": "xckit",
+          "description": "Xcode String Catalog（.xcstrings）を管理するCLIツール",
+          "detailDescription": "翻訳キーの一覧・フィルタ・検査、未翻訳・失効エントリの検出、CSVによるインポート/エクスポートに対応。Go製の単一バイナリなので、Xcodeなしでヘッドレスに動作しLinux CI上でも実行できる。",
+          "link": "https://github.com/corrupt952/xckit",
+          "tags": ["CLI"],
+          "technologies": ["Go", "Xcode", "i18n"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "SnackCards",
+          "slug": "snack-cards",
+          "description": "Chromeの「あとで読む」リストをサイドパネルにカード表示するChrome拡張機能",
+          "detailDescription": "Snack Timeの姉妹アプリ。ブラウザのサイドパネルに、後で読む記事や動画をカード形式ですっきりと表示する。",
+          "link": "https://chromewebstore.google.com/detail/snack-cards-reading-list/pegiigaifjibokehgiofjhndlkfnocoe",
+          "tags": ["Extension"],
+          "technologies": ["TypeScript", "Chrome Extension API"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "Voyager",
+          "slug": "voyager",
+          "description": "Vue.jsコンポーネントの依存関係をインタラクティブな図で可視化するツール",
+          "detailDescription": "Vue.jsコードベースのimportを解析し、パン・ズーム可能なインタラクティブな依存関係グラフを描画。Atomic Designのコンポーネント階層を自動検出する機能も持つ。暫定公開版として公開し、現在はメンテナンスを終了しアーカイブ済み。",
+          "link": "https://github.com/corrupt952/voyager",
+          "tags": ["CLI"],
+          "technologies": ["TypeScript", "Vue.js"],
+          "archived": true,
+          "images": []
         }
       ],
-      "filter": {
-        "searchPlaceholder": "プロジェクトを検索...",
-        "category": "カテゴリ:",
-        "showArchived": "アーカイブ済みを表示",
-        "clearFilters": "フィルターをクリア",
-        "projectCount": "{count}件のプロジェクト",
-        "projectCountPlural": "{count}件のプロジェクト",
-        "noResults": "条件に一致するプロジェクトが見つかりませんでした。"
-      },
+      "archived": "アーカイブ",
       "detail": {
-        "backToPortfolio": "← ポートフォリオに戻る",
         "technologies": "技術スタック",
-        "tags": "タグ",
-        "viewProject": "プロジェクトを見る"
+        "tags": "タグ"
       }
     }
   }

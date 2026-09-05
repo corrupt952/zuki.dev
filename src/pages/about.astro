@@ -1,0 +1,17 @@
+---
+import AffiliationArea from '@/components/AffiliationArea.astro';
+import ExperienceArea from '@/components/ExperienceArea.astro';
+import SkillArea from '@/components/SkillArea.astro';
+import Layout from '@/layouts/Layout.astro';
+import { type Locale, t } from '@/libs/i18n';
+
+const locale: Locale = 'en';
+---
+
+<Layout title={t(locale, 'pages.about.meta.title')} description={t(locale, 'pages.about.meta.description')} keywords={t(locale, 'pages.about.meta.keywords')} locale={locale}>
+  <div class="flex flex-col gap-14 text-[14px]">
+    <ExperienceArea locale={locale} />
+    <AffiliationArea locale={locale} />
+    <SkillArea locale={locale} />
+  </div>
+</Layout>

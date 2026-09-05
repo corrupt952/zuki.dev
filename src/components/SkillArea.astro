@@ -1,0 +1,37 @@
+---
+import Heading from '@/components/Heading.astro';
+import type { Locale } from '@/libs/i18n';
+import { t } from '@/libs/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+type SkillCategory = {
+  name: string;
+  items: string[];
+};
+
+const title = t(locale, 'pages.about.skills.title');
+const description = t(locale, 'pages.about.skills.description');
+const categories = t<SkillCategory[]>(locale, 'pages.about.skills.categories', {
+  returnObjects: true,
+});
+---
+
+<section>
+  <Heading>{title}</Heading>
+  {description && (
+    <p class="mb-6 text-muted leading-relaxed max-w-prose">{description}</p>
+  )}
+  <dl class="flex flex-col gap-3 text-[13px]">
+    {categories.map((category) => (
+      <div class="flex flex-col sm:flex-row sm:gap-6">
+        <dt class="text-faint sm:w-48 sm:shrink-0">{category.name}</dt>
+        <dd class="text-muted leading-relaxed">{category.items.join(', ')}</dd>
+      </div>
+    ))}
+  </dl>
+</section>

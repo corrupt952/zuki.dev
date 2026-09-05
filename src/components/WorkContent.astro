@@ -1,0 +1,52 @@
+---
+import Heading from '@/components/Heading.astro';
+import Markdown from '@/components/Markdown.astro';
+import type { Locale } from '@/libs/i18n';
+import { t } from '@/libs/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const descriptions = t<string[]>(locale, 'pages.work.descriptions', {
+  returnObjects: true,
+});
+const services = t<{ title: string; items: string[]; note: string }>(
+  locale,
+  'pages.work.services',
+  { returnObjects: true },
+);
+const contact = t<{ title: string; description: string }>(
+  locale,
+  'pages.work.contact',
+  { returnObjects: true },
+);
+---
+
+<article class="flex flex-col gap-14 text-[14px]">
+  <div class="flex flex-col gap-3 max-w-prose">
+    {descriptions.map((text) => (
+      <p class="text-muted leading-relaxed"><Markdown markdown={text} locale={locale} /></p>
+    ))}
+  </div>
+
+  <section>
+    <Heading>{services.title}</Heading>
+    <ul class="flex flex-col gap-2 text-muted">
+      {services.items.map((item) => (
+        <li class="flex gap-3">
+          <span class="text-faint select-none" aria-hidden="true">·</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+    <p class="mt-5 text-[13px] text-faint max-w-prose leading-relaxed">{services.note}</p>
+  </section>
+
+  <section>
+    <Heading>{contact.title}</Heading>
+    <p class="text-muted"><Markdown markdown={contact.description} locale={locale} /></p>
+  </section>
+</article>

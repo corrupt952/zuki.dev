@@ -7,6 +7,10 @@
   },
   "pages": {
     "home": {
+      "motion": {
+        "pause": "Pause the forest walk",
+        "play": "Resume the forest walk"
+      },
       "meta": {
         "description": "K@zuki. - Web Developer and SRE. Personal portfolio showcasing projects, skills, and professional experience."
       }
@@ -20,45 +24,73 @@
       },
       "skills": {
         "title": "Skills",
+        "description": "Everything here is something I've used for real work — not a complete list.",
         "categories": [
           {
-            "name": "Language",
-            "items": ["Ruby", "Go", "Python", "JavaScript", "Clojure"]
-          },
-          {
-            "name": "CI/CD",
-            "items": ["GitHub Actions", "CircleCI", "Argo CD"]
-          },
-          {
-            "name": "Monitoring",
-            "items": ["Elastic Stack", "NewRelic", "Datadog"]
-          },
-          {
-            "name": "Cloud Infrastructure",
-            "items": ["AWS", "GCP", "EKS", "ECS"]
-          },
-          {
-            "name": "Tools",
-            "items": ["Ansible", "Terraform", "Docker", "Kubernetes"]
-          },
-          {
-            "name": "LLM/AI",
-            "items": ["Amazon Bedrock", "LangChain", "Vector DB", "RAG"]
-          },
-          {
-            "name": "Technical Strategy",
+            "name": "Languages",
             "items": [
-              "Architecture Design",
-              "System Design",
-              "Performance Optimization"
+              "Ruby",
+              "Go",
+              "Swift",
+              "TypeScript",
+              "Python",
+              "Shell",
+              "C++",
+              "C#",
+              "Dart",
+              "Java",
+              "Rust",
+              "Lua"
             ]
           },
           {
-            "name": "Organizational Development",
+            "name": "Infrastructure & Reliability",
             "items": [
-              "Engineering Management",
-              "Team Building",
-              "Technical Leadership"
+              "AWS",
+              "Google Cloud",
+              "Cloudflare",
+              "Vercel",
+              "Kubernetes",
+              "Argo",
+              "Terraform",
+              "Ansible",
+              "GitHub Actions",
+              "Xcode Cloud",
+              "CircleCI",
+              "Renovate",
+              "Prometheus",
+              "Elastic Stack",
+              "NewRelic",
+              "Datadog"
+            ]
+          },
+          {
+            "name": "Web",
+            "items": ["Ruby on Rails", "Vue.js", "Next.js", "Astro"]
+          },
+          {
+            "name": "Apple Platforms",
+            "items": ["SwiftUI", "Metal", "Core ML"]
+          },
+          {
+            "name": "LLM & AI Agents",
+            "items": [
+              "Claude Code",
+              "MCP",
+              "Amazon Bedrock",
+              "Apple Foundation Models",
+              "RAG",
+              "Vector DB"
+            ]
+          },
+          {
+            "name": "Technology Leadership",
+            "items": [
+              "Technical Strategy",
+              "Architecture",
+              "Engineering Practices",
+              "Security",
+              "Organizational Design"
             ]
           }
         ]
@@ -74,7 +106,7 @@
           {
             "name": "Studist Corporation.",
             "date": "2018/10 ~",
-            "role": "SRE・Product Tech Lead・R&D"
+            "role": "R&D・VP of Technology"
           },
           {
             "name": "茨谷企画(BARATANI KIKAKU) - Self employment",
@@ -84,7 +116,7 @@
           {
             "name": "Labee LLC",
             "date": "2024/04 ~",
-            "role": "Founder"
+            "role": "Founder & CEO"
           },
           {
             "name": "Time Intermedia Inc.",
@@ -97,10 +129,19 @@
         "title": "Work Experience",
         "descriptions": [
           "From June 2013 to September 2018, at Time Intermedia Inc., I was involved in the development and operation of various systems including core systems, VOD web services, qualification management systems, and e-commerce services. I experienced growth from a development member to a development leader, also taking on team member training and PM support roles.",
-          "Since October 2018 at Studist Corporation, I have been working as an SRE and Product Tech Lead on service launches, operations, maintenance, development support, construction, and availability/performance improvements. From March 2023, I took on the role of Product Tech Lead, making technical decisions and realizing roadmaps. Starting from March 2025, I will serve as the final decision maker for all technical matters across the company, overseeing technical strategy, architecture, and engineering practices.",
+          "Since October 2018 at Studist Corporation, I have been working as an SRE and Product Tech Lead on service launches, operations, maintenance, development support, construction, and availability/performance improvements. From March 2023, I took on the role of Product Tech Lead, making technical decisions and realizing roadmaps. Starting from March 2025, I will serve as the final decision maker for all technical matters across the company, overseeing technical strategy, architecture, and engineering practices. Since September 2025, I have served as VP of Technology.",
           "Since January 2019, while working as a company employee, I have been providing development and operational support to other companies as a sole proprietor, and from April 2024, I have also been active as the CEO of Labee LLC."
         ],
         "experiences": [
+          {
+            "startDate": "2024/04",
+            "title": "Developing and maintaining in-house products",
+            "company": "Labee LLC",
+            "body": "I founded Labee LLC and focus on developing and maintaining in-house products, while occasionally taking on client projects.",
+            "links": {
+              "Labee LLC": "https://labee.jp"
+            }
+          },
           {
             "startDate": "2019/01",
             "title": "Support for Development and operation of web services",
@@ -189,112 +230,31 @@
       }
     },
     "work": {
-      "descriptions": [
-        "Working as K@zuki. under the trade name 茨谷企画(BARATANI KIKAKU).",
-        "I provide support, service development and assistance for various infrastructures, monitoring tools and container related technologies. I am also available for consultations, so please feel free to contact me.",
-        "Please contact me via [Twitter](https://twitter.com/corrupt952) or [E-mail](mailto:k@zuki.dev) for job requests and invitations."
-      ],
+      "title": "Work",
       "meta": {
         "title": "Work | K@zuki.",
         "description": "K@zuki.'s Work - Web Service Development, Operations Support, and Technical Consultation",
         "keywords": "K@zuki, Work, Web Service, Development, Operations, Technical Consultation, SRE, AWS"
       },
-      "contents": {
-        "title": "Contents",
-        "support": {
-          "title": "Web Service Development and Operation Support",
-          "descriptions": [
-            "We provide assistance and consultation on various tasks related to the development and operation of web services."
-          ],
-          "menus": [
-            "Support for launching services",
-            "AWS implementation support (including multi-account configuration)",
-            "Infrastrucutre as Code implementation and start-up support",
-            "Consultation and start-up support for container migration",
-            "Troubleshooting support and consultation",
-            "Consultation and support for introduction and upgrade of various middleware and services",
-            "Monitoring implementation support"
-          ]
-        },
-        "consultation": {
-          "title": "Technical consultation and mentoring",
-          "descriptions": [
-            "We do not actively provide this service at this time, but do so as needed.",
-            "Mentoring will be provided on a best-effort basis on either Discord or Slack platforms."
-          ]
-        }
-      },
-      "pricing": {
-        "title": "Pricing",
-        "descriptions": [
-          "The following is the price list for the services I provide.",
-          "I provide support leveraging my experience as a company-wide technical lead, SRE・Product Tech Lead, container technology, and LLM/AI knowledge.",
-          "I specialize in technical strategy development, organizational development, and engineering management support."
+      "descriptions": [
+        "I take on work as 茨谷企画 (BARATANI KIKAKU), a sole proprietorship I have run since 2019 alongside my full-time role.",
+        "The work is the same as my day job: building and running web services, and making the technical and organizational decisions around them."
+      ],
+      "services": {
+        "title": "What I do",
+        "items": [
+          "Technical strategy and organizational design",
+          "Development and operations support as an SRE or architect",
+          "Cloud setup on AWS, including multi-account layouts",
+          "Infrastructure as Code and container migration, from the first setup onward",
+          "Monitoring and troubleshooting",
+          "LLM and AI feature development"
         ],
-        "menus": {
-          "headers": ["Menu", "Unit", "Price（Not included tax）"],
-          "rows": [
-            {
-              "name": "Technical Strategy & Organizational Development Support",
-              "unit": "1Hour",
-              "price": "￥35,000"
-            },
-            {
-              "name": "Development & Operations Support (SRE・Architect)",
-              "unit": "1Hour",
-              "price": "￥30,000"
-            },
-            {
-              "name": "Development & Operations Support (Engineer)",
-              "unit": "1Hour",
-              "price": "￥25,000"
-            },
-            {
-              "name": "LLM/AI Development Support",
-              "unit": "1Hour",
-              "price": "￥35,000"
-            },
-            {
-              "name": "Online Consultation (First time)",
-              "unit": "1Hour",
-              "price": "￥15,000"
-            },
-            {
-              "name": "Online Consultation (2nd or later)",
-              "unit": "1Hour",
-              "price": "￥20,000"
-            },
-            {
-              "name": "Offline Consultation *1",
-              "unit": "1Hour",
-              "price": "￥30,000"
-            },
-            {
-              "name": "Mentoring *1",
-              "unit": "1Hour",
-              "price": "￥30,000"
-            }
-          ],
-          "notes": [
-            "*1 Travel expenses will be charged separately for offline consultation and mentoring.",
-            "*2 Long-term contracts are subject to separate consultation.",
-            "*3 Technical Strategy & Organizational Development Support requires a minimum of 4 hours."
-          ]
-        }
+        "note": "Consultation and mentoring are available on request rather than as a standing service. Mentoring runs on Discord or Slack, best effort."
       },
-      "inquiry": {
-        "title": "Inquiry",
-        "descriptions": [
-          "Please contact me via [Twitter](https://twitter.com/corrupt952) or [E-mail](mailto:k@zuki.dev) for job requests and invitations.",
-          "※ Submit to be redirected to Google Form."
-        ],
-        "form": {
-          "name": "Name",
-          "email": "E-mail",
-          "subject": "Subject",
-          "content": "Message",
-          "submit": "Submit"
-        }
+      "contact": {
+        "title": "Contact",
+        "description": "For requests and questions, write to [k@zuki.dev](mailto:k@zuki.dev)."
       }
     },
     "portfolio": {
@@ -309,11 +269,11 @@
           "title": "zuki.dev",
           "slug": "zuki-dev",
           "description": "this website",
-          "detailDescription": "A personal portfolio website built with Next.js and TypeScript. Features internationalization, static site generation, and responsive design. Modern UI design using Tailwind CSS.",
+          "detailDescription": "A personal portfolio website built with Astro and TypeScript. Fully static site generation with internationalization and a Tailwind CSS design.",
           "link": "https://github.com/corrupt952/zuki.dev",
           "archived": false,
           "tags": ["Website"],
-          "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "i18n"],
+          "technologies": ["Astro", "TypeScript", "Tailwind CSS", "i18n"],
           "images": []
         },
         {
@@ -344,7 +304,7 @@
           "description": "HTTP server that returns the source IP, request headers, request body, and query string.",
           "detailDescription": "A debugging and testing HTTP server that provides detailed request information. Useful for API development verification and network troubleshooting. Lightweight and containerized for easy deployment in various environments.",
           "link": "https://github.com/corrupt952/revealer",
-          "archived": false,
+          "archived": true,
           "tags": ["Website"],
           "technologies": ["Go", "HTTP Server", "Docker", "JSON"],
           "images": []
@@ -396,11 +356,11 @@
           "title": "closest",
           "slug": "closest",
           "description": "The command that searches the current directory or parent directories for a specific file and returns the closest path.",
-          "detailDescription": "Command-line tool that searches upward through directory tree to find the nearest location of a specified file. Useful for finding configuration files and project roots.",
+          "detailDescription": "Command-line tool that searches upward through directory tree to find the nearest location of a specified file. Useful for finding configuration files and project roots. Ships as a single Go binary with Nix flake packaging and CI-verified releases.",
           "link": "https://github.com/corrupt952/closest",
           "archived": false,
           "tags": ["CLI"],
-          "technologies": ["JavaScript", "Node.js", "CLI"],
+          "technologies": ["Go", "Nix", "CLI"],
           "images": []
         },
         {
@@ -540,22 +500,67 @@
           ],
           "archived": false,
           "images": []
+        },
+        {
+          "title": "sallyport",
+          "slug": "sallyport",
+          "description": "A trust-based, per-directory shell hook for zsh and bash.",
+          "detailDescription": "Applies environment variables declared in a .sallyport.jsonc file the moment you cd into the directory that owns it, like direnv, but every config must be explicitly trusted before it's ever applied. Trust is a hash of the config's identity and content, so an edit after review silently revokes it. Also verifies the trust store itself is owned by you and not writable by anyone else.",
+          "link": "https://github.com/corrupt952/sallyport",
+          "tags": ["CLI"],
+          "technologies": ["Go", "Nix", "zsh", "Security"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "nooon",
+          "slug": "nooon",
+          "description": "Lightweight, read-only Notion MCP server optimized for token efficiency.",
+          "detailDescription": "A Notion MCP server built for AI coding agents like Claude Code. Uses the TOON format to minimize output size, caches based on last_edited_time, and fetches nested blocks recursively in a single call. Read-only by design.",
+          "link": "https://github.com/corrupt952/nooon",
+          "tags": ["CLI"],
+          "technologies": ["TypeScript", "Bun", "MCP"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "xckit",
+          "slug": "xckit",
+          "description": "CLI tool for managing Xcode String Catalogs (.xcstrings).",
+          "detailDescription": "Lists, filters, and inspects translation keys, detects untranslated and stale entries, and supports CSV import/export for spreadsheet-based translation workflows. Ships as a single Go binary, so it runs headless on Linux CI without Xcode.",
+          "link": "https://github.com/corrupt952/xckit",
+          "tags": ["CLI"],
+          "technologies": ["Go", "Xcode", "i18n"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "SnackCards",
+          "slug": "snack-cards",
+          "description": "Chrome extension that shows your Reading List as cards in a side panel.",
+          "detailDescription": "A companion to Snack Time: a clean, card-based view of the Chrome Reading List rendered in the browser's side panel, for articles and videos saved for later.",
+          "link": "https://chromewebstore.google.com/detail/snack-cards-reading-list/pegiigaifjibokehgiofjhndlkfnocoe",
+          "tags": ["Extension"],
+          "technologies": ["TypeScript", "Chrome Extension API"],
+          "archived": false,
+          "images": []
+        },
+        {
+          "title": "Voyager",
+          "slug": "voyager",
+          "description": "Generates interactive dependency diagrams from Vue.js components.",
+          "detailDescription": "Analyzes a Vue.js codebase's imports and renders an interactive, pannable, zoomable dependency graph, with automatic detection of Atomic Design component hierarchy. Published as a preliminary release; archived and no longer maintained.",
+          "link": "https://github.com/corrupt952/voyager",
+          "tags": ["CLI"],
+          "technologies": ["TypeScript", "Vue.js"],
+          "archived": true,
+          "images": []
         }
       ],
-      "filter": {
-        "searchPlaceholder": "Search projects...",
-        "category": "Category:",
-        "showArchived": "Show archived",
-        "clearFilters": "Clear filters",
-        "projectCount": "{count} project",
-        "projectCountPlural": "{count} projects",
-        "noResults": "No projects found matching your criteria."
-      },
+      "archived": "Archived",
       "detail": {
-        "backToPortfolio": "← Back to Portfolio",
         "technologies": "Technologies",
-        "tags": "Tags",
-        "viewProject": "View Project"
+        "tags": "Tags"
       }
     }
   }

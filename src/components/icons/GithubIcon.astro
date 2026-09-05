@@ -1,0 +1,13 @@
+---
+// The GitHub Invertocat as distributed in white (see src/assets/brand/NOTICE.md). It is never
+// recolored; muting is done by opacity on the link around it.
+import Invertocat from '@/assets/brand/github-invertocat-white.svg';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = 'w-4 h-4' } = Astro.props;
+---
+
+<Invertocat class={className} aria-hidden="true" />

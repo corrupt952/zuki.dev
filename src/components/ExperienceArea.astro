@@ -1,0 +1,84 @@
+---
+import Heading from '@/components/Heading.astro';
+import type { Locale } from '@/libs/i18n';
+import { getLocalePath, t } from '@/libs/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+type Experience = {
+  startDate: string;
+  endDate?: string;
+  title: string;
+  company: string;
+  body: string;
+  links?: Record<string, string>;
+};
+
+const title = t(locale, 'pages.about.experience.title');
+const descriptions = t<string[]>(
+  locale,
+  'pages.about.experience.descriptions',
+  { returnObjects: true },
+);
+const experiences = t<Experience[]>(
+  locale,
+  'pages.about.experience.experiences',
+  { returnObjects: true },
+).toSorted(
+  (a, b) =>
+    b.startDate.localeCompare(a.startDate) ||
+    (b.endDate ?? '9999/12').localeCompare(a.endDate ?? '9999/12'),
+);
+
+const isExternal = (url: string) => url.startsWith('http');
+---
+
+<section>
+  <Heading>{title}</Heading>
+
+  {descriptions.length > 0 && (
+    <div class="mb-10 flex flex-col gap-3 max-w-prose">
+      {descriptions.map((description) => (
+        <p class="text-muted leading-relaxed">{description}</p>
+      ))}
+    </div>
+  )}
+
+  <ul class="divide-y divide-line">
+    {experiences.map((experience) => {
+      const period = experience.endDate
+        ? `${experience.startDate} – ${experience.endDate}`
+        : `${experience.startDate} –`;
+      return (
+        <li class="py-6 flex flex-col gap-2">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <h3 class="text-foreground leading-snug">{experience.title}</h3>
+            <span class="text-[13px] text-faint tabular-nums whitespace-nowrap">{period}</span>
+          </div>
+          <p class="text-[13px] text-faint">{experience.company}</p>
+          <p class="text-[13px] text-muted leading-relaxed max-w-prose whitespace-pre-wrap">{experience.body}</p>
+          {experience.links && Object.keys(experience.links).length > 0 && (
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-[13px]">
+              {Object.entries(experience.links).map(([text, link]) => (
+                <li>
+                  <a
+                    href={isExternal(link) ? link : getLocalePath(locale, link)}
+                    class="text-foreground hover:underline underline-offset-4 no-underline"
+                    target={isExternal(link) ? '_blank' : undefined}
+                    rel={isExternal(link) ? 'noopener noreferrer' : undefined}
+                  >
+                    {text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+</section>

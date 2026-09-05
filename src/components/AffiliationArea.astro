@@ -1,0 +1,63 @@
+---
+import Heading from '@/components/Heading.astro';
+import type { Locale } from '@/libs/i18n';
+import { t } from '@/libs/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+type Affiliation = {
+  name: string;
+  date: string;
+  role: string;
+};
+
+const title = t(locale, 'pages.about.affiliation.title');
+const theadName = t(locale, 'pages.about.affiliation.thead.name');
+const theadRole = t(locale, 'pages.about.affiliation.thead.role');
+const theadDate = t(locale, 'pages.about.affiliation.thead.date');
+const affiliations = t<Affiliation[]>(
+  locale,
+  'pages.about.affiliation.affiliations',
+  { returnObjects: true },
+);
+---
+
+<section>
+  <Heading>{title}</Heading>
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse text-[13px]">
+      <thead>
+        <tr class="text-left text-faint">
+          <th class="pb-2 pr-6 font-normal">{theadName}</th>
+          <th class="pb-2 pr-6 font-normal">{theadRole}</th>
+          <th class="pb-2 font-normal whitespace-nowrap">{theadDate}</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-line">
+        {affiliations.map((affiliation) => {
+          {/* The one accent on the page: the affiliation that is current. */}
+          const isActive = affiliation.date.endsWith('~');
+          return (
+            <tr>
+              <td class="py-2.5 pr-6 text-foreground">
+                <span class="flex items-baseline gap-2">
+                  <span
+                    class={`inline-block w-1.5 h-1.5 rounded-full shrink-0 ${isActive ? 'bg-accent' : 'bg-transparent'}`}
+                    aria-hidden="true"
+                  />
+                  {affiliation.name}
+                </span>
+              </td>
+              <td class="py-2.5 pr-6 text-muted">{affiliation.role}</td>
+              <td class="py-2.5 text-muted tabular-nums whitespace-nowrap">{affiliation.date}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+</section>

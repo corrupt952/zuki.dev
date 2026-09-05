@@ -1,0 +1,13 @@
+---
+// The X logo as distributed in white (see src/assets/brand/NOTICE.md). It is never recolored;
+// muting is done by opacity on the link around it.
+import XLogo from '@/assets/brand/x-logo.svg';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = 'w-4 h-4' } = Astro.props;
+---
+
+<XLogo class={className} aria-hidden="true" />

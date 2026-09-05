@@ -1,0 +1,17 @@
+---
+import AvatarIcon from '@/components/AvatarIcon.astro';
+import Layout from '@/layouts/Layout.astro';
+import { type Locale, t } from '@/libs/i18n';
+
+const locale: Locale = 'en';
+---
+
+<Layout title="zuki.dev" description={t(locale, 'pages.home.meta.description')} locale={locale} isHome={true}>
+  <div class="flex flex-col items-center text-center gap-7">
+    <AvatarIcon class="w-24 h-24" />
+    <div class="flex flex-col gap-1.5">
+      <h1 class="text-[28px] leading-none font-semibold tracking-tight text-foreground">K@zuki.</h1>
+      <p class="text-[15px] text-muted">SRE at heart</p>
+    </div>
+  </div>
+</Layout>

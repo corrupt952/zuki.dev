@@ -1,0 +1,13 @@
+---
+import Heading from '@/components/Heading.astro';
+import WorkContent from '@/components/WorkContent.astro';
+import Layout from '@/layouts/Layout.astro';
+import { type Locale, t } from '@/libs/i18n';
+
+const locale: Locale = 'ja';
+---
+
+<Layout title={t(locale, 'pages.work.meta.title')} description={t(locale, 'pages.work.meta.description')} keywords={t(locale, 'pages.work.meta.keywords')} locale={locale}>
+  <Heading class="mb-10">{t(locale, 'pages.work.title')}</Heading>
+  <WorkContent locale={locale} />
+</Layout>

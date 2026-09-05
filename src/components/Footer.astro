@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import kofiSymbol from '@/assets/images/kofi_symbol.png';
+import GithubIcon from '@/components/icons/GithubIcon.astro';
+import MailIcon from '@/components/icons/MailIcon.astro';
+import XIcon from '@/components/icons/XIcon.astro';
+import ZennIcon from '@/components/icons/ZennIcon.astro';
+import type { Locale } from '@/libs/i18n';
+import { t } from '@/libs/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const kofiLabel = t(locale, 'common.kofi.tooltipDesktop');
+
+const ZENN_URL = 'https://zenn.dev/khasegawa';
+
+// Every mark is shown in the color its owner distributes it in; muting is opacity, not recoloring.
+const markClass =
+  'flex items-center text-white opacity-55 hover:opacity-100 transition-opacity duration-150';
+---
+
+<footer class="mt-auto">
+  <div class="max-w-2xl mx-auto px-6 h-16 flex items-center justify-between gap-6 text-[12px]">
+    <p class="text-faint">&copy; K@zuki.</p>
+
+    <div class="flex items-center gap-4">
+      <a
+        href="https://khasegawa.hatenablog.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-muted hover:text-foreground transition-colors duration-150 no-underline"
+      >
+        Blog
+      </a>
+
+      <div class="flex items-center gap-3">
+        <a href={ZENN_URL} target="_blank" rel="noopener noreferrer" class={markClass} aria-label="Zenn">
+          <ZennIcon class="w-4 h-4" />
+        </a>
+        <a href="mailto:k@zuki.dev" class={markClass} aria-label="Email">
+          <MailIcon class="w-4 h-4" />
+        </a>
+        <a href="https://github.com/corrupt952" target="_blank" rel="noopener noreferrer" class={markClass} aria-label="GitHub">
+          <GithubIcon class="w-4 h-4" />
+        </a>
+        <a href="https://twitter.com/corrupt952" target="_blank" rel="noopener noreferrer" class={markClass} aria-label="X (Twitter)">
+          <XIcon class="w-4 h-4" />
+        </a>
+        <a
+          href="https://ko-fi.com/B0B31H8NIG"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={markClass}
+          aria-label={kofiLabel}
+          title={kofiLabel}
+        >
+          <Image src={kofiSymbol} alt="" width={16} height={16} class="w-4 h-4" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

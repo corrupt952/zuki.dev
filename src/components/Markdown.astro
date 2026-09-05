@@ -1,0 +1,29 @@
+---
+import type { Locale } from '@/libs/i18n';
+import { getLocalePath } from '@/libs/i18n';
+
+interface Props {
+  content?: string;
+  markdown?: string;
+  locale?: Locale;
+}
+
+const { content, markdown, locale = 'en' } = Astro.props;
+const text = content ?? markdown ?? '';
+
+function parseMarkdownLinks(text: string, locale: string): string {
+  if (!text) return '';
+  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, linkText, url) => {
+    const isExternal = url.startsWith('http');
+    if (isExternal) {
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-foreground hover:underline underline-offset-4">${linkText}</a>`;
+    }
+    const localizedUrl = locale === 'en' ? url : `/${locale}${url}`;
+    return `<a href="${localizedUrl}" class="text-foreground hover:underline underline-offset-4">${linkText}</a>`;
+  });
+}
+
+const html = parseMarkdownLinks(text, locale);
+---
+
+<span set:html={html} />

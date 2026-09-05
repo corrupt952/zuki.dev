@@ -1,12 +1,10 @@
-.DS_Store
-.firebase/
-node_modules/
-public/
-resources/
-*.lock
+# Created by https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode,astro
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,react,visualstudiocode,astro
 
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,react
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,node,react
+### Astro ###
+# Gitignore template for Astro projects
+# Ignore content collection generated files
+.astro
 
 ### Node ###
 # Logs
@@ -180,4 +178,12 @@ sketch
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,react
+# End of https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode,astro
+
+.DS_Store
+.firebase/
+node_modules/
+public/
+resources/
+*.lock
+

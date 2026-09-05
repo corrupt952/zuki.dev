@@ -1,0 +1,150 @@
+---
+import type { Locale } from '@/libs/i18n';
+import { t } from '@/libs/i18n';
+import type { Project } from '@/types/portfolio';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const projects = t<Project[]>(locale, 'pages.portfolio.projects', {
+  returnObjects: true,
+});
+
+// Groups are the first tag of each project, in this order. A tag not listed here
+// falls after the listed ones, in first-seen order.
+const GROUP_ORDER = ['App', 'CLI', 'Extension', 'Website', 'Other'];
+
+const groupOf = (project: Project) => project.tags[0] ?? 'Other';
+
+const groupBy = (list: Project[]) => {
+  const groups = new Map<string, Project[]>();
+  for (const name of GROUP_ORDER) groups.set(name, []);
+  for (const project of list) {
+    const name = groupOf(project);
+    if (!groups.has(name)) groups.set(name, []);
+    groups.get(name)?.push(project);
+  }
+  return [...groups].filter(([, items]) => items.length > 0);
+};
+
+const active = groupBy(projects.filter((p) => !p.archived));
+const archived = projects.filter((p) => p.archived);
+
+const hostOf = (url: string) => {
+  try {
+    return new URL(url).host + new URL(url).pathname.replace(/\/$/, '');
+  } catch {
+    return url;
+  }
+};
+
+const labels = {
+  archived: t(locale, 'pages.portfolio.archived'),
+  technologies: t(locale, 'pages.portfolio.detail.technologies'),
+};
+---
+
+{/* One row per project. A row opens in place; nothing leaves the page. */}
+<div class="flex flex-col gap-12">
+  {active.map(([group, items]) => (
+    <section>
+      <h2 class="text-[12px] text-faint mb-2">{group}</h2>
+      <ul class="divide-y divide-line">
+        {items.map((project) => (
+          <li>
+            <details id={project.slug} class="group">
+              <summary class="cursor-pointer py-3.5 flex items-baseline justify-between gap-6 select-none">
+                <span class="flex flex-col gap-0.5 min-w-0">
+                  <span class="text-[14px] text-foreground">{project.title}</span>
+                  <span class="text-[13px] text-muted">{project.description}</span>
+                </span>
+              </summary>
+              <div class="pb-6 flex flex-col gap-4 text-[13px]">
+                <p class="text-muted leading-relaxed max-w-prose">{project.detailDescription}</p>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="self-start text-foreground hover:underline underline-offset-4 no-underline"
+                  >
+                    {hostOf(project.link)}
+                  </a>
+                )}
+                {project.technologies.length > 0 && (
+                  <p class="text-muted">
+                    <span class="text-faint">{labels.technologies}</span>
+                    <span class="mx-2 text-faint" aria-hidden="true">·</span>
+                    {project.technologies.join(', ')}
+                  </p>
+                )}
+              </div>
+            </details>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  {archived.length > 0 && (
+    <details class="group">
+      <summary class="cursor-pointer select-none text-[12px] text-faint hover:text-muted transition-colors duration-150">
+        {labels.archived}
+        <span class="ml-2">{archived.length}</span>
+      </summary>
+      <div class="mt-2 flex flex-col gap-10">
+        {groupBy(archived).map(([group, items]) => (
+          <section>
+            <h2 class="text-[12px] text-faint mb-2">{group}</h2>
+            <ul class="divide-y divide-line">
+              {items.map((project) => (
+                <li>
+                  <details id={project.slug}>
+                    <summary class="cursor-pointer py-3.5 flex flex-col gap-0.5 select-none">
+                      <span class="text-[14px] text-muted">{project.title}</span>
+                      <span class="text-[13px] text-faint">{project.description}</span>
+                    </summary>
+                    <div class="pb-6 flex flex-col gap-4 text-[13px]">
+                      <p class="text-muted leading-relaxed max-w-prose">{project.detailDescription}</p>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="self-start text-foreground hover:underline underline-offset-4 no-underline"
+                        >
+                          {hostOf(project.link)}
+                        </a>
+                      )}
+                      {project.technologies.length > 0 && (
+                        <p class="text-muted">
+                          <span class="text-faint">{labels.technologies}</span>
+                          <span class="mx-2 text-faint" aria-hidden="true">·</span>
+                          {project.technologies.join(', ')}
+                        </p>
+                      )}
+                    </div>
+                  </details>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </details>
+  )}
+</div>
+
+{/* A link to /portfolio#slug lands on a closed row; open it, and its archive if it is in one. */}
+<script is:inline>
+  (function () {
+    var target = location.hash && document.getElementById(location.hash.slice(1));
+    if (!target || target.tagName !== 'DETAILS') return;
+    target.open = true;
+    var parent = target.parentElement && target.parentElement.closest('details');
+    if (parent) parent.open = true;
+  })();
+</script>

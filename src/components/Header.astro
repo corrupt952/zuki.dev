@@ -1,0 +1,63 @@
+---
+import type { Locale } from '@/libs/i18n';
+import { getLocalePath, LOCALES } from '@/libs/i18n';
+
+interface Props {
+  locale: Locale;
+  pathname: string;
+}
+
+const { locale, pathname } = Astro.props;
+
+const navItems = [
+  { name: 'About', href: '/about' },
+  { name: 'Work', href: '/work' },
+  { name: 'Portfolio', href: '/portfolio' },
+];
+
+// The path without its locale prefix, so the other language links to the same page.
+const bare = pathname.replace(/^\/(en|ja)(?=\/|$)/, '') || '/';
+const isCurrent = (href: string) =>
+  bare === href || bare.startsWith(`${href}/`);
+---
+
+<header class="w-full">
+  <div class="max-w-2xl mx-auto px-6 h-14 flex items-center justify-between gap-6">
+    <a
+      href={getLocalePath(locale, '/')}
+      class="text-[13px] font-medium tracking-tight text-foreground no-underline"
+    >
+      K@zuki.
+    </a>
+
+    <div class="flex items-center gap-5">
+      <nav class="flex items-center gap-4 text-[13px]" aria-label="Primary">
+        {navItems.map((item) => (
+          <a
+            href={getLocalePath(locale, item.href)}
+            class={`no-underline transition-colors duration-150 hover:text-foreground ${isCurrent(item.href) ? 'text-foreground' : 'text-muted'}`}
+            aria-current={isCurrent(item.href) ? 'page' : undefined}
+          >
+            {item.name}
+          </a>
+        ))}
+      </nav>
+
+      <nav class="flex items-center gap-1.5 text-[11px] tracking-wide" aria-label="Language">
+        {LOCALES.map((loc, i) => (
+          <>
+            {i > 0 && <span class="text-faint" aria-hidden="true">/</span>}
+            <a
+              href={getLocalePath(loc, bare)}
+              hreflang={loc}
+              class={`no-underline uppercase transition-colors duration-150 hover:text-foreground ${loc === locale ? 'text-foreground' : 'text-faint'}`}
+              aria-current={loc === locale ? 'true' : undefined}
+            >
+              {loc}
+            </a>
+          </>
+        ))}
+      </nav>
+    </div>
+  </div>
+</header>
