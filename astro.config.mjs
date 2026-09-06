@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 
 // Project detail pages were folded into the list; old links land on the row.
@@ -23,4 +24,7 @@ export default defineConfig({
   },
   redirects,
   integrations: [sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
