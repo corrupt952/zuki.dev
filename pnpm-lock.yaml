@@ -28,7 +28,7 @@ importers:
         specifier: 24.13.3
         version: 24.13.3
       '@types/three':
-        specifier: ^0.185.4
+        specifier: 0.185.4
         version: 0.185.4
       sharp:
         specifier: 0.35.4
